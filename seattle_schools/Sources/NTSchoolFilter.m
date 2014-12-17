@@ -61,7 +61,7 @@
             else gradePred = pred;
         }
         
-        if (compoundPredicate) {
+        if (compoundPredicate && gradePred) {
             compoundPredicate = [NSCompoundPredicate andPredicateWithSubpredicates:@[compoundPredicate, gradePred]];
         } else {
             compoundPredicate = gradePred;

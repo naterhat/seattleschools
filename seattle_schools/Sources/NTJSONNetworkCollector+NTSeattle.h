@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 ifcantel. All rights reserved.
 //
 
-#import "NTDataNetwork.h"
+#import "NTDataCollector.h"
 
-@interface NTDataNetwork (NTSeattleNetwork)
+@interface NTJSONNetworkCollector (NTSeattle)
 
 - (void)retrieveSchoolsWithHandler:(NTNetworkRetrieveCollection)handler;
 

@@ -20,16 +20,18 @@
 		431F85DD1A3E977D003DA6E9 /* UIActivityIndicatorView+NTShow.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85D81A3E977D003DA6E9 /* UIActivityIndicatorView+NTShow.m */; };
 		431F85DE1A3E977D003DA6E9 /* UIAlertView+NTShow.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85DA1A3E977D003DA6E9 /* UIAlertView+NTShow.m */; };
 		431F85E71A3E98B4003DA6E9 /* NTSchool.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85E61A3E98B4003DA6E9 /* NTSchool.m */; };
-		431F85EA1A3E9B44003DA6E9 /* NTDataNetwork+NTSeattleNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85E91A3E9B44003DA6E9 /* NTDataNetwork+NTSeattleNetwork.m */; };
-		431F85ED1A3E9E12003DA6E9 /* NTDataNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85EC1A3E9E12003DA6E9 /* NTDataNetwork.m */; };
+		431F85EA1A3E9B44003DA6E9 /* NTJSONNetworkCollector+NTSeattle.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85E91A3E9B44003DA6E9 /* NTJSONNetworkCollector+NTSeattle.m */; };
+		431F85ED1A3E9E12003DA6E9 /* NTDataCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85EC1A3E9E12003DA6E9 /* NTDataCollector.m */; };
 		431F85F01A3EA2A1003DA6E9 /* NTFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85EF1A3EA2A1003DA6E9 /* NTFilterViewController.m */; };
 		431F85F31A3EA352003DA6E9 /* NTSchoolAnnotateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85F21A3EA352003DA6E9 /* NTSchoolAnnotateView.m */; };
 		431F85F51A3EA588003DA6E9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 431F85F41A3EA588003DA6E9 /* MapKit.framework */; };
 		431F85F81A3EA623003DA6E9 /* NTFilterInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85F71A3EA623003DA6E9 /* NTFilterInstance.m */; };
-		431F85FB1A3EA694003DA6E9 /* schools.json in Resources */ = {isa = PBXBuildFile; fileRef = 431F85FA1A3EA694003DA6E9 /* schools.json */; };
 		431F85FE1A3EA756003DA6E9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 431F85FD1A3EA756003DA6E9 /* CoreLocation.framework */; };
 		431F86011A3EB738003DA6E9 /* NTLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F86001A3EB738003DA6E9 /* NTLocationManager.m */; };
 		431F86071A3EDE1C003DA6E9 /* NTSchoolAnnotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F86061A3EDE1C003DA6E9 /* NTSchoolAnnotate.m */; };
+		4336A1EC1A421B9C005BC764 /* NTJSONLocalCollector+NTSeattle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4336A1EB1A421B9C005BC764 /* NTJSONLocalCollector+NTSeattle.m */; };
+		435B713D1A420DBB00D39352 /* private_schools.json in Resources */ = {isa = PBXBuildFile; fileRef = 435B713B1A420DBB00D39352 /* private_schools.json */; };
+		435B713E1A420DBB00D39352 /* public_schools.json in Resources */ = {isa = PBXBuildFile; fileRef = 435B713C1A420DBB00D39352 /* public_schools.json */; };
 		43F3A6A81A41809100F55C05 /* NTSchoolFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F3A6A71A41809100F55C05 /* NTSchoolFilter.m */; };
 		43F57BD71A4017630081E4B0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43F57BD61A4017630081E4B0 /* Images.xcassets */; };
 /* End PBXBuildFile section */
@@ -71,10 +73,10 @@
 		431F85DA1A3E977D003DA6E9 /* UIAlertView+NTShow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+NTShow.m"; sourceTree = "<group>"; };
 		431F85E51A3E98B4003DA6E9 /* NTSchool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTSchool.h; sourceTree = "<group>"; };
 		431F85E61A3E98B4003DA6E9 /* NTSchool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTSchool.m; sourceTree = "<group>"; };
-		431F85E81A3E9B44003DA6E9 /* NTDataNetwork+NTSeattleNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NTDataNetwork+NTSeattleNetwork.h"; sourceTree = "<group>"; };
-		431F85E91A3E9B44003DA6E9 /* NTDataNetwork+NTSeattleNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NTDataNetwork+NTSeattleNetwork.m"; sourceTree = "<group>"; };
-		431F85EB1A3E9E12003DA6E9 /* NTDataNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTDataNetwork.h; sourceTree = "<group>"; };
-		431F85EC1A3E9E12003DA6E9 /* NTDataNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTDataNetwork.m; sourceTree = "<group>"; };
+		431F85E81A3E9B44003DA6E9 /* NTJSONNetworkCollector+NTSeattle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NTJSONNetworkCollector+NTSeattle.h"; sourceTree = "<group>"; };
+		431F85E91A3E9B44003DA6E9 /* NTJSONNetworkCollector+NTSeattle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NTJSONNetworkCollector+NTSeattle.m"; sourceTree = "<group>"; };
+		431F85EB1A3E9E12003DA6E9 /* NTDataCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTDataCollector.h; sourceTree = "<group>"; };
+		431F85EC1A3E9E12003DA6E9 /* NTDataCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTDataCollector.m; sourceTree = "<group>"; };
 		431F85EE1A3EA2A1003DA6E9 /* NTFilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTFilterViewController.h; sourceTree = "<group>"; };
 		431F85EF1A3EA2A1003DA6E9 /* NTFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTFilterViewController.m; sourceTree = "<group>"; };
 		431F85F11A3EA352003DA6E9 /* NTSchoolAnnotateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTSchoolAnnotateView.h; sourceTree = "<group>"; };
@@ -82,7 +84,6 @@
 		431F85F41A3EA588003DA6E9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		431F85F61A3EA623003DA6E9 /* NTFilterInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTFilterInstance.h; sourceTree = "<group>"; };
 		431F85F71A3EA623003DA6E9 /* NTFilterInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTFilterInstance.m; sourceTree = "<group>"; };
-		431F85FA1A3EA694003DA6E9 /* schools.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schools.json; sourceTree = "<group>"; };
 		431F85FD1A3EA756003DA6E9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		431F85FF1A3EB738003DA6E9 /* NTLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTLocationManager.h; sourceTree = "<group>"; };
 		431F86001A3EB738003DA6E9 /* NTLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTLocationManager.m; sourceTree = "<group>"; };
@@ -90,6 +91,11 @@
 		431F86051A3EDE1C003DA6E9 /* NTSchoolAnnotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTSchoolAnnotate.h; sourceTree = "<group>"; };
 		431F86061A3EDE1C003DA6E9 /* NTSchoolAnnotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTSchoolAnnotate.m; sourceTree = "<group>"; };
 		4335B4871A41353B00825112 /* NTFilterProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTFilterProvider.h; sourceTree = "<group>"; };
+		4336A1EA1A421B9C005BC764 /* NTJSONLocalCollector+NTSeattle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NTJSONLocalCollector+NTSeattle.h"; sourceTree = "<group>"; };
+		4336A1EB1A421B9C005BC764 /* NTJSONLocalCollector+NTSeattle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NTJSONLocalCollector+NTSeattle.m"; sourceTree = "<group>"; };
+		435B713B1A420DBB00D39352 /* private_schools.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = private_schools.json; sourceTree = "<group>"; };
+		435B713C1A420DBB00D39352 /* public_schools.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = public_schools.json; sourceTree = "<group>"; };
+		435B713F1A420F3C00D39352 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		43F3A6A61A41809100F55C05 /* NTSchoolFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTSchoolFilter.h; sourceTree = "<group>"; };
 		43F3A6A71A41809100F55C05 /* NTSchoolFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTSchoolFilter.m; sourceTree = "<group>"; };
 		43F57BD61A4017630081E4B0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -119,6 +125,7 @@
 		431F856C1A3E911D003DA6E9 = {
 			isa = PBXGroup;
 			children = (
+				435B713F1A420F3C00D39352 /* README.md */,
 				431F85FC1A3EA749003DA6E9 /* Frameworks */,
 				431F85771A3E911D003DA6E9 /* seattle_schools */,
 				431F85941A3E911E003DA6E9 /* seattle_schoolsTests */,
@@ -198,8 +205,8 @@
 				431F85AB1A3E9405003DA6E9 /* NTHomeViewController.m */,
 				431F85E51A3E98B4003DA6E9 /* NTSchool.h */,
 				431F85E61A3E98B4003DA6E9 /* NTSchool.m */,
-				431F85E81A3E9B44003DA6E9 /* NTDataNetwork+NTSeattleNetwork.h */,
-				431F85E91A3E9B44003DA6E9 /* NTDataNetwork+NTSeattleNetwork.m */,
+				431F85E81A3E9B44003DA6E9 /* NTJSONNetworkCollector+NTSeattle.h */,
+				431F85E91A3E9B44003DA6E9 /* NTJSONNetworkCollector+NTSeattle.m */,
 				431F85EE1A3EA2A1003DA6E9 /* NTFilterViewController.h */,
 				431F85EF1A3EA2A1003DA6E9 /* NTFilterViewController.m */,
 				431F85F11A3EA352003DA6E9 /* NTSchoolAnnotateView.h */,
@@ -214,6 +221,8 @@
 				4335B4871A41353B00825112 /* NTFilterProvider.h */,
 				43F3A6A61A41809100F55C05 /* NTSchoolFilter.h */,
 				43F3A6A71A41809100F55C05 /* NTSchoolFilter.m */,
+				4336A1EA1A421B9C005BC764 /* NTJSONLocalCollector+NTSeattle.h */,
+				4336A1EB1A421B9C005BC764 /* NTJSONLocalCollector+NTSeattle.m */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -238,8 +247,8 @@
 		431F85D11A3E977D003DA6E9 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				431F85EB1A3E9E12003DA6E9 /* NTDataNetwork.h */,
-				431F85EC1A3E9E12003DA6E9 /* NTDataNetwork.m */,
+				431F85EB1A3E9E12003DA6E9 /* NTDataCollector.h */,
+				431F85EC1A3E9E12003DA6E9 /* NTDataCollector.m */,
 				431F85D21A3E977D003DA6E9 /* NSDictionary+ConvertValue.h */,
 				431F85D31A3E977D003DA6E9 /* NSDictionary+ConvertValue.m */,
 				431F85D41A3E977D003DA6E9 /* NSDictionary+Null.h */,
@@ -257,7 +266,8 @@
 		431F85F91A3EA694003DA6E9 /* Json */ = {
 			isa = PBXGroup;
 			children = (
-				431F85FA1A3EA694003DA6E9 /* schools.json */,
+				435B713B1A420DBB00D39352 /* private_schools.json */,
+				435B713C1A420DBB00D39352 /* public_schools.json */,
 			);
 			path = Json;
 			sourceTree = "<group>";
@@ -374,9 +384,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				431F85871A3E911D003DA6E9 /* Main.storyboard in Resources */,
+				435B713D1A420DBB00D39352 /* private_schools.json in Resources */,
 				43F57BD71A4017630081E4B0 /* Images.xcassets in Resources */,
 				431F858C1A3E911D003DA6E9 /* LaunchScreen.xib in Resources */,
-				431F85FB1A3EA694003DA6E9 /* schools.json in Resources */,
+				435B713E1A420DBB00D39352 /* public_schools.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,7 +405,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				431F85EA1A3E9B44003DA6E9 /* NTDataNetwork+NTSeattleNetwork.m in Sources */,
+				431F85EA1A3E9B44003DA6E9 /* NTJSONNetworkCollector+NTSeattle.m in Sources */,
 				431F85DD1A3E977D003DA6E9 /* UIActivityIndicatorView+NTShow.m in Sources */,
 				431F85B21A3E9430003DA6E9 /* seattle_schools.xcdatamodeld in Sources */,
 				431F85F81A3EA623003DA6E9 /* NTFilterInstance.m in Sources */,
@@ -403,7 +414,8 @@
 				431F85AE1A3E9405003DA6E9 /* NTHomeViewController.m in Sources */,
 				431F857B1A3E911D003DA6E9 /* main.m in Sources */,
 				431F85AC1A3E9405003DA6E9 /* AppDelegate.m in Sources */,
-				431F85ED1A3E9E12003DA6E9 /* NTDataNetwork.m in Sources */,
+				4336A1EC1A421B9C005BC764 /* NTJSONLocalCollector+NTSeattle.m in Sources */,
+				431F85ED1A3E9E12003DA6E9 /* NTDataCollector.m in Sources */,
 				431F85E71A3E98B4003DA6E9 /* NTSchool.m in Sources */,
 				431F85DB1A3E977D003DA6E9 /* NSDictionary+ConvertValue.m in Sources */,
 				431F85F01A3EA2A1003DA6E9 /* NTFilterViewController.m in Sources */,

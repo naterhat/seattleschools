@@ -9,7 +9,8 @@
 #import "NTHomeViewController.h"
 #import <CoreLocation/CoreLocation.h>
 
-#import "NTDataNetwork+NTSeattleNetwork.h"
+#import "NTJSONNetworkCollector+NTSeattle.h"
+#import "NTJSONLocalCollector+NTSeattle.h"
 #import "UIAlertView+NTShow.h"
 #import "NTGlobal.h"
 #import "NTFilterViewController.h"
@@ -22,7 +23,7 @@
 static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.0, 1.0}};
 
 @interface NTHomeViewController ()<MKMapViewDelegate, NTLocationManagerDelegate, NTFilterViewControllerDelegate>
-@property (nonatomic) NTDataNetwork *network;
+@property (nonatomic) NTJSONLocalCollector *network;
 @property (nonatomic) NSMutableArray *schools;
 @property (nonatomic) NTFilterViewController *filterVC;
 @property (nonatomic) NTLocationManager *locationManager;
@@ -39,7 +40,7 @@ static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.
     [super viewDidLoad];
     
     _schools = [NSMutableArray array];
-    _network = [NTDataNetwork sharedInstance];
+    _network = [NTJSONLocalCollector sharedInstance];
     _locationManager = [NTLocationManager sharedInstance];
     [_locationManager setDelegate:self];
     

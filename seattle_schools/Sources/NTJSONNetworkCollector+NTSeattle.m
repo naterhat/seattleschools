@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 ifcantel. All rights reserved.
 //
 
-#import "NTDataNetwork+NTSeattleNetwork.h"
+#import "NTJSONNetworkCollector+NTSeattle.h"
 #import "NTSchool.h"
 #import "NSDictionary+Null.h"
 
@@ -18,40 +18,28 @@ static NSString *const kURLPath = @"/resource";
 static NSString *const kURLPrivate = @"/gza6-uqxz.json";
 static NSString *const kURLPublic = @"/ywms-iep2.json";
 
-@interface NTDataNetwork ()
-@property (nonatomic) BOOL downloading;
-@property (nonatomic) NSInteger queueCount;
-@end
-
-@implementation NTDataNetwork (NTSeattleNetwork)
+@implementation NTJSONNetworkCollector (NTSeattle)
 
 - (void)retrieveSchoolsWithHandler:(NTNetworkRetrieveCollection)handler
 {
     __block NSMutableArray *schools = [NSMutableArray array];
+    
+    // retrieve public schools
     [self retrieveSchoolsWithHandler:^(NSArray *items, NSError *error) {
         if(items) {
             [schools addObjectsFromArray:items];
         }
+        
+        // retrieve private schools
         [self retrieveSchoolsWithHandler:^(NSArray *items, NSError *error) {
             if(items) {
                 [schools addObjectsFromArray:items];
             }
+            
+            // return all schools
             handler(schools, error);
         } isPublic:NO];
     } isPublic:YES];
-    
-//    NSString *path = [NSString stringWithFormat:@"https://%@%@%@", kURLDomain, kURLPath, kURLPublic];
-//    [self retrieveCollectionWithHandler:^(NSArray *items, NSError *error) {
-//        
-//        // create each passed school from server into native object.
-//        NSMutableArray *schools = [NSMutableArray array];
-//        for (NSDictionary *dItem in items) {
-//            NSDictionary *removedNullDictionary = dItem.dictionaryByRemovingNull;
-//            NTSchool *school = [[NTSchool alloc] initWithSeattleNetworkData:removedNullDictionary];
-//            [schools addObject:school];
-//        }
-//        handler(schools, nil);
-//    } atPath:path];
 }
 
 - (void)retrieveSchoolsWithHandler:(NTNetworkRetrieveCollection)handler isPublic:(BOOL)isPublic

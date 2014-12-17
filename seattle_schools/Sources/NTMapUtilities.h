@@ -31,7 +31,7 @@ NS_INLINE NSString *NSStringFromMKCoordinateRegion(MKCoordinateRegion region){
     return [NSString stringWithFormat:@"{ %f, %f } { %f, %f }", region.center.longitude,region.center.latitude, region.span.longitudeDelta, region.span.latitudeDelta];
 }
 
-static  MKCoordinateRegion MKCoordinateRegionsRestrictInBounds(MKCoordinateRegion inner, MKCoordinateRegion outer){
+NS_INLINE  MKCoordinateRegion MKCoordinateRegionsRestrictInBounds(MKCoordinateRegion inner, MKCoordinateRegion outer){
     // restrict zoom
     if(inner.span.latitudeDelta > outer.span.latitudeDelta)
         inner.span.latitudeDelta = outer.span.latitudeDelta;
