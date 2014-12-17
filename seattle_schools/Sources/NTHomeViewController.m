@@ -7,21 +7,228 @@
 //
 
 #import "NTHomeViewController.h"
+#import <CoreLocation/CoreLocation.h>
 
-@interface NTHomeViewController ()
+#import "NTDataNetwork+NTSeattleNetwork.h"
+#import "UIAlertView+NTShow.h"
+#import "NTGlobal.h"
+#import "NTFilterViewController.h"
+#import "NTLocationManager.h"
+#import "NTMapUtilities.h"
+#import "NTSchoolAnnotate.h"
+#import "NTDetailViewController.h"
+#import "NTSchoolFilter.h"
 
+static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.0, 1.0}};
+
+@interface NTHomeViewController ()<MKMapViewDelegate, NTLocationManagerDelegate, NTFilterViewControllerDelegate>
+@property (nonatomic) NTDataNetwork *network;
+@property (nonatomic) NSMutableArray *schools;
+@property (nonatomic) NTFilterViewController *filterVC;
+@property (nonatomic) NTLocationManager *locationManager;
+@property (nonatomic) BOOL modifyingMap;
+@property (nonatomic) BOOL rendered;
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @end
 
 @implementation NTHomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    _schools = [NSMutableArray array];
+    _network = [NTDataNetwork sharedInstance];
+    _locationManager = [NTLocationManager sharedInstance];
+    [_locationManager setDelegate:self];
+    
+    
+    // add filter view controller
+    _filterVC = [self.storyboard instantiateViewControllerWithIdentifier:@"filterViewController"];
+    [_filterVC setDelegate:self];
+    [self addChildViewController:_filterVC];
+    [self.view addSubview:_filterVC.view];
+    CGRect frame =  _filterVC.view.frame;
+    frame.origin.y = -frame.size.height + 200;
+    _filterVC.view.frame = frame;
+    
+    // add current location button
+    MKUserTrackingBarButtonItem *trackingItem = [[MKUserTrackingBarButtonItem alloc] initWithMapView:self.mapView];
+    [self.navigationItem setLeftBarButtonItem:trackingItem];
+    
+    // set mapview
+    [self.mapView setDelegate:self];
+
+    // retrieve data
+    [self retrieveSchools];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    id<MKAnnotation> annotation = self.mapView.selectedAnnotations.lastObject;
+    if ([annotation isKindOfClass:[NTSchoolAnnotate class]]) {
+        NTDetailViewController *vc = segue.destinationViewController;
+        [vc setSchool:[(id)annotation school]];
+    }
 }
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+}
+
+
+- (void)retrieveSchools
+{
+    __weak typeof(self) weakself = self;
+    [_network retrieveSchoolsWithHandler:^(NSArray *items, NSError *error) {
+        if(error) {
+            [UIAlertView showAlertWithMessage:error.localizedDescription];
+        } else {
+            [weakself addSchools:items];
+        }
+    }];
+}
+
+- (void)addSchools:(NSArray *)schools
+{
+    [self.schools addObjectsFromArray:schools];
+    [self addSchoolAnnotationsWithSchools:schools];
+}
+
+- (void)addSchoolAnnotationsWithSchools:(NSArray *)schools
+{
+    NSMutableArray *annotations = [NSMutableArray array];
+    for (NTSchool *school in schools) {
+        [annotations addObject:[[NTSchoolAnnotate alloc] initWithSchool:school]];
+    }
+    [self.mapView addAnnotations:annotations];
+}
+
+- (void)showCurrentLocation
+{
+    if (![self.locationManager authorizedLocation]) return;
+    [self.mapView setRegion:[self.locationManager regionByCurrentLocation]  animated:YES];
+}
+
+#pragma mark - Actions
+
+- (IBAction)selectCurrentLocation:(id)sender {
+    [self showCurrentLocation];
+}
+
+#pragma mark - Map View Delegate
+
+- (void)mapViewWillStartLocatingUser:(MKMapView *)mapView
+{
+    [self showCurrentLocation];
+}
+
+- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
+{
+    // prevent restricting until map is fully rendered
+    if(!self.rendered) return;
+    
+    // restrict map region to bounds
+    MKCoordinateRegion mapRegion = self.mapView.region;
+    mapRegion = MKCoordinateRegionsRestrictInBounds(mapRegion, kBoundRegion);
+    
+    // reset map view with new region
+    [self.mapView setRegion:mapRegion animated:YES];
+}
+
+- (void)mapViewDidFinishRenderingMap:(MKMapView *)mapView fullyRendered:(BOOL)fullyRendered
+{
+    self.rendered = YES;
+}
+
+- (void)mapView:(MKMapView *)mapView didAddAnnotationViews:(NSArray *)views
+{
+    NSLog(@"views: %i", (int32_t)views.count);
+}
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
+{
+    static NSString *schoolIdentifier = @"school";
+    static NSString *current = @"current";
+    
+    NSString *identifier;
+    if ( [annotation isKindOfClass:[NTSchoolAnnotate class]] ) {
+        identifier = schoolIdentifier;
+    } else {
+        identifier = current;
+    }
+    
+    MKAnnotationView *view = [mapView dequeueReusableAnnotationViewWithIdentifier:schoolIdentifier];
+    if (!view) {
+        if ( [annotation isKindOfClass:[NTSchoolAnnotate class]] ) {
+            view = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
+            [view setEnabled:YES];
+            [view setCanShowCallout:YES];
+            
+            // create accessory button to view more detail about school.
+            UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+            [rightButton addTarget:self action:@selector(selectCallOutButton:) forControlEvents:UIControlEventTouchUpInside];
+            view.rightCalloutAccessoryView = rightButton;
+        } else {
+            view = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
+            [(MKPinAnnotationView *)view setPinColor:MKPinAnnotationColorGreen];
+        }
+        
+        
+    } else {
+        
+        [view setAnnotation:annotation];
+    }
+    
+    
+    
+    // validate if NTSchoolAnnotate class. MKUserLocation annotate might come through.
+    if ( [annotation isKindOfClass:[NTSchoolAnnotate class]] ) {
+        // set pin image
+        [view setImage:[UIImage imageNamed:@"school7"]];
+        NSUInteger index = [self.schools containsObject:[((NTSchoolAnnotate *)annotation) school]];
+        [view.rightCalloutAccessoryView setTag:index];
+    }
+    
+    return view;
+}
+
+- (void)selectCallOutButton:(UIButton *)button
+{
+    [self performSegueWithIdentifier:@"detail" sender:self];
+}
+
+
+#pragma mark - Location Manager
+
+- (void)locationAuthorized:(BOOL)authorized
+{
+    if (authorized) {
+        if (!self.mapView.showsUserLocation) self.mapView.showsUserLocation = YES;
+        [self showCurrentLocation];
+    } else {
+        [UIAlertView showWithTitle:@"Error" message:@"Location Denied"];
+    }
+}
+
+#pragma mark - Filter Delegate
+
+- (void)filterViewControllerDidChangePredicate:(id<NTFilterProvider>)filter
+{
+    NSPredicate *predicate = [filter predicate];
+    if(predicate) {
+        NSLog(@"predicate: %@", predicate.description);
+        NSArray *keptSchools = [self.schools filteredArrayUsingPredicate:predicate];
+        [self.mapView removeAnnotations:self.mapView.annotations];
+        [self addSchoolAnnotationsWithSchools:keptSchools];
+    } else {
+        // show all schools
+        
+        NSLog(@"Show all schools");
+        [self.mapView removeAnnotations:self.mapView.annotations];
+        [self addSchoolAnnotationsWithSchools:self.schools];
+    }
+}
+
 
 @end

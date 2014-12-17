@@ -1,5 +1,5 @@
 //
-//  NTDetailViewController.h
+//  NTSchoolAnnotateView.h
 //  seattle_schools
 //
 //  Created by Nate on 12/14/14.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@class NTSchool;
+@interface NTSchoolAnnotateView : UIView
 
-@interface NTDetailViewController : UIViewController
-@property (nonatomic) NTSchool *school;
 @end

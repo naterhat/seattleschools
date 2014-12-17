@@ -7,16 +7,24 @@
 //
 
 #import "NTDetailViewController.h"
+#import "NTSchool.h"
 
 @interface NTDetailViewController ()
-
+@property (weak, nonatomic) IBOutlet UILabel *addressLabel;
+@property (weak, nonatomic) IBOutlet UILabel *phoneLabel;
+@property (weak, nonatomic) IBOutlet UILabel *websiteLabel;
 @end
 
 @implementation NTDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    if(self.school) {
+        [self.addressLabel setText:self.school.address];
+        [self.phoneLabel setText:self.school.phone];
+        [self.websiteLabel setText:self.school.website];
+    }
 }
 
 

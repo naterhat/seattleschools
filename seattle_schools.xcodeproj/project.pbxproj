@@ -8,15 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		431F857B1A3E911D003DA6E9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F857A1A3E911D003DA6E9 /* main.m */; };
-		431F85811A3E911D003DA6E9 /* seattle_schools.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 431F857F1A3E911D003DA6E9 /* seattle_schools.xcdatamodeld */; };
 		431F85871A3E911D003DA6E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431F85851A3E911D003DA6E9 /* Main.storyboard */; };
-		431F85891A3E911D003DA6E9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 431F85881A3E911D003DA6E9 /* Images.xcassets */; };
 		431F858C1A3E911D003DA6E9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 431F858A1A3E911D003DA6E9 /* LaunchScreen.xib */; };
 		431F85981A3E911E003DA6E9 /* seattle_schoolsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85971A3E911E003DA6E9 /* seattle_schoolsTests.m */; };
 		431F85AC1A3E9405003DA6E9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85A71A3E9405003DA6E9 /* AppDelegate.m */; };
 		431F85AD1A3E9405003DA6E9 /* NTDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85A91A3E9405003DA6E9 /* NTDetailViewController.m */; };
 		431F85AE1A3E9405003DA6E9 /* NTHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85AB1A3E9405003DA6E9 /* NTHomeViewController.m */; };
 		431F85B21A3E9430003DA6E9 /* seattle_schools.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 431F85B01A3E9430003DA6E9 /* seattle_schools.xcdatamodeld */; };
+		431F85DB1A3E977D003DA6E9 /* NSDictionary+ConvertValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85D31A3E977D003DA6E9 /* NSDictionary+ConvertValue.m */; };
+		431F85DC1A3E977D003DA6E9 /* NSDictionary+Null.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85D51A3E977D003DA6E9 /* NSDictionary+Null.m */; };
+		431F85DD1A3E977D003DA6E9 /* UIActivityIndicatorView+NTShow.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85D81A3E977D003DA6E9 /* UIActivityIndicatorView+NTShow.m */; };
+		431F85DE1A3E977D003DA6E9 /* UIAlertView+NTShow.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85DA1A3E977D003DA6E9 /* UIAlertView+NTShow.m */; };
+		431F85E71A3E98B4003DA6E9 /* NTSchool.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85E61A3E98B4003DA6E9 /* NTSchool.m */; };
+		431F85EA1A3E9B44003DA6E9 /* NTDataNetwork+NTSeattleNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85E91A3E9B44003DA6E9 /* NTDataNetwork+NTSeattleNetwork.m */; };
+		431F85ED1A3E9E12003DA6E9 /* NTDataNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85EC1A3E9E12003DA6E9 /* NTDataNetwork.m */; };
+		431F85F01A3EA2A1003DA6E9 /* NTFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85EF1A3EA2A1003DA6E9 /* NTFilterViewController.m */; };
+		431F85F31A3EA352003DA6E9 /* NTSchoolAnnotateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85F21A3EA352003DA6E9 /* NTSchoolAnnotateView.m */; };
+		431F85F51A3EA588003DA6E9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 431F85F41A3EA588003DA6E9 /* MapKit.framework */; };
+		431F85F81A3EA623003DA6E9 /* NTFilterInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85F71A3EA623003DA6E9 /* NTFilterInstance.m */; };
+		431F85FB1A3EA694003DA6E9 /* schools.json in Resources */ = {isa = PBXBuildFile; fileRef = 431F85FA1A3EA694003DA6E9 /* schools.json */; };
+		431F85FE1A3EA756003DA6E9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 431F85FD1A3EA756003DA6E9 /* CoreLocation.framework */; };
+		431F86011A3EB738003DA6E9 /* NTLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F86001A3EB738003DA6E9 /* NTLocationManager.m */; };
+		431F86071A3EDE1C003DA6E9 /* NTSchoolAnnotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F86061A3EDE1C003DA6E9 /* NTSchoolAnnotate.m */; };
+		43F3A6A81A41809100F55C05 /* NTSchoolFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F3A6A71A41809100F55C05 /* NTSchoolFilter.m */; };
+		43F57BD71A4017630081E4B0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43F57BD61A4017630081E4B0 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,9 +48,7 @@
 		431F85751A3E911D003DA6E9 /* seattle_schools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = seattle_schools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		431F85791A3E911D003DA6E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		431F857A1A3E911D003DA6E9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		431F85801A3E911D003DA6E9 /* seattle_schools.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = seattle_schools.xcdatamodel; sourceTree = "<group>"; };
 		431F85861A3E911D003DA6E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		431F85881A3E911D003DA6E9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		431F858B1A3E911D003DA6E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		431F85911A3E911E003DA6E9 /* seattle_schoolsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = seattle_schoolsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		431F85961A3E911E003DA6E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +60,40 @@
 		431F85AA1A3E9405003DA6E9 /* NTHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTHomeViewController.h; sourceTree = "<group>"; };
 		431F85AB1A3E9405003DA6E9 /* NTHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTHomeViewController.m; sourceTree = "<group>"; };
 		431F85B11A3E9430003DA6E9 /* seattle_schools.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = seattle_schools.xcdatamodel; sourceTree = "<group>"; };
+		431F85D21A3E977D003DA6E9 /* NSDictionary+ConvertValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+ConvertValue.h"; sourceTree = "<group>"; };
+		431F85D31A3E977D003DA6E9 /* NSDictionary+ConvertValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+ConvertValue.m"; sourceTree = "<group>"; };
+		431F85D41A3E977D003DA6E9 /* NSDictionary+Null.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Null.h"; sourceTree = "<group>"; };
+		431F85D51A3E977D003DA6E9 /* NSDictionary+Null.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Null.m"; sourceTree = "<group>"; };
+		431F85D61A3E977D003DA6E9 /* NTGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTGlobal.h; sourceTree = "<group>"; };
+		431F85D71A3E977D003DA6E9 /* UIActivityIndicatorView+NTShow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActivityIndicatorView+NTShow.h"; sourceTree = "<group>"; };
+		431F85D81A3E977D003DA6E9 /* UIActivityIndicatorView+NTShow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActivityIndicatorView+NTShow.m"; sourceTree = "<group>"; };
+		431F85D91A3E977D003DA6E9 /* UIAlertView+NTShow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+NTShow.h"; sourceTree = "<group>"; };
+		431F85DA1A3E977D003DA6E9 /* UIAlertView+NTShow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+NTShow.m"; sourceTree = "<group>"; };
+		431F85E51A3E98B4003DA6E9 /* NTSchool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTSchool.h; sourceTree = "<group>"; };
+		431F85E61A3E98B4003DA6E9 /* NTSchool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTSchool.m; sourceTree = "<group>"; };
+		431F85E81A3E9B44003DA6E9 /* NTDataNetwork+NTSeattleNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NTDataNetwork+NTSeattleNetwork.h"; sourceTree = "<group>"; };
+		431F85E91A3E9B44003DA6E9 /* NTDataNetwork+NTSeattleNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NTDataNetwork+NTSeattleNetwork.m"; sourceTree = "<group>"; };
+		431F85EB1A3E9E12003DA6E9 /* NTDataNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTDataNetwork.h; sourceTree = "<group>"; };
+		431F85EC1A3E9E12003DA6E9 /* NTDataNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTDataNetwork.m; sourceTree = "<group>"; };
+		431F85EE1A3EA2A1003DA6E9 /* NTFilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTFilterViewController.h; sourceTree = "<group>"; };
+		431F85EF1A3EA2A1003DA6E9 /* NTFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTFilterViewController.m; sourceTree = "<group>"; };
+		431F85F11A3EA352003DA6E9 /* NTSchoolAnnotateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTSchoolAnnotateView.h; sourceTree = "<group>"; };
+		431F85F21A3EA352003DA6E9 /* NTSchoolAnnotateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTSchoolAnnotateView.m; sourceTree = "<group>"; };
+		431F85F41A3EA588003DA6E9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		431F85F61A3EA623003DA6E9 /* NTFilterInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTFilterInstance.h; sourceTree = "<group>"; };
+		431F85F71A3EA623003DA6E9 /* NTFilterInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTFilterInstance.m; sourceTree = "<group>"; };
+		431F85FA1A3EA694003DA6E9 /* schools.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schools.json; sourceTree = "<group>"; };
+		431F85FD1A3EA756003DA6E9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		431F85FF1A3EB738003DA6E9 /* NTLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTLocationManager.h; sourceTree = "<group>"; };
+		431F86001A3EB738003DA6E9 /* NTLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTLocationManager.m; sourceTree = "<group>"; };
+		431F86021A3EDBB4003DA6E9 /* NTMapUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTMapUtilities.h; sourceTree = "<group>"; };
+		431F86051A3EDE1C003DA6E9 /* NTSchoolAnnotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTSchoolAnnotate.h; sourceTree = "<group>"; };
+		431F86061A3EDE1C003DA6E9 /* NTSchoolAnnotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTSchoolAnnotate.m; sourceTree = "<group>"; };
+		4335B4871A41353B00825112 /* NTFilterProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTFilterProvider.h; sourceTree = "<group>"; };
+		43F3A6A61A41809100F55C05 /* NTSchoolFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTSchoolFilter.h; sourceTree = "<group>"; };
+		43F3A6A71A41809100F55C05 /* NTSchoolFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTSchoolFilter.m; sourceTree = "<group>"; };
+		43F57BD61A4017630081E4B0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		43F57BD81A401BFD0081E4B0 /* NTMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTMath.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +101,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				431F85FE1A3EA756003DA6E9 /* CoreLocation.framework in Frameworks */,
+				431F85F51A3EA588003DA6E9 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +119,7 @@
 		431F856C1A3E911D003DA6E9 = {
 			isa = PBXGroup;
 			children = (
+				431F85FC1A3EA749003DA6E9 /* Frameworks */,
 				431F85771A3E911D003DA6E9 /* seattle_schools */,
 				431F85941A3E911E003DA6E9 /* seattle_schoolsTests */,
 				431F85761A3E911D003DA6E9 /* Products */,
@@ -91,9 +141,8 @@
 				431F85A41A3E9405003DA6E9 /* Resources */,
 				431F85A51A3E9405003DA6E9 /* Sources */,
 				431F85851A3E911D003DA6E9 /* Main.storyboard */,
-				431F85881A3E911D003DA6E9 /* Images.xcassets */,
 				431F858A1A3E911D003DA6E9 /* LaunchScreen.xib */,
-				431F857F1A3E911D003DA6E9 /* seattle_schools.xcdatamodeld */,
+				43F57BD61A4017630081E4B0 /* Images.xcassets */,
 				431F85781A3E911D003DA6E9 /* Supporting Files */,
 			);
 			path = seattle_schools;
@@ -128,6 +177,8 @@
 		431F85A41A3E9405003DA6E9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				431F86081A3EE05A003DA6E9 /* Images */,
+				431F85F91A3EA694003DA6E9 /* Json */,
 				431F85AF1A3E9430003DA6E9 /* Datamodels */,
 			);
 			path = Resources;
@@ -136,12 +187,33 @@
 		431F85A51A3E9405003DA6E9 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				43F57BDC1A40267D0081E4B0 /* Models */,
+				43F57BDB1A4026750081E4B0 /* View Controllers */,
+				431F85D01A3E977D003DA6E9 /* NTLibrary */,
 				431F85A61A3E9405003DA6E9 /* AppDelegate.h */,
 				431F85A71A3E9405003DA6E9 /* AppDelegate.m */,
 				431F85A81A3E9405003DA6E9 /* NTDetailViewController.h */,
 				431F85A91A3E9405003DA6E9 /* NTDetailViewController.m */,
 				431F85AA1A3E9405003DA6E9 /* NTHomeViewController.h */,
 				431F85AB1A3E9405003DA6E9 /* NTHomeViewController.m */,
+				431F85E51A3E98B4003DA6E9 /* NTSchool.h */,
+				431F85E61A3E98B4003DA6E9 /* NTSchool.m */,
+				431F85E81A3E9B44003DA6E9 /* NTDataNetwork+NTSeattleNetwork.h */,
+				431F85E91A3E9B44003DA6E9 /* NTDataNetwork+NTSeattleNetwork.m */,
+				431F85EE1A3EA2A1003DA6E9 /* NTFilterViewController.h */,
+				431F85EF1A3EA2A1003DA6E9 /* NTFilterViewController.m */,
+				431F85F11A3EA352003DA6E9 /* NTSchoolAnnotateView.h */,
+				431F85F21A3EA352003DA6E9 /* NTSchoolAnnotateView.m */,
+				431F85F61A3EA623003DA6E9 /* NTFilterInstance.h */,
+				431F85F71A3EA623003DA6E9 /* NTFilterInstance.m */,
+				431F85FF1A3EB738003DA6E9 /* NTLocationManager.h */,
+				431F86001A3EB738003DA6E9 /* NTLocationManager.m */,
+				431F86021A3EDBB4003DA6E9 /* NTMapUtilities.h */,
+				431F86051A3EDE1C003DA6E9 /* NTSchoolAnnotate.h */,
+				431F86061A3EDE1C003DA6E9 /* NTSchoolAnnotate.m */,
+				4335B4871A41353B00825112 /* NTFilterProvider.h */,
+				43F3A6A61A41809100F55C05 /* NTSchoolFilter.h */,
+				43F3A6A71A41809100F55C05 /* NTSchoolFilter.m */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -152,6 +224,72 @@
 				431F85B01A3E9430003DA6E9 /* seattle_schools.xcdatamodeld */,
 			);
 			path = Datamodels;
+			sourceTree = "<group>";
+		};
+		431F85D01A3E977D003DA6E9 /* NTLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				431F85D11A3E977D003DA6E9 /* Helpers */,
+			);
+			name = NTLibrary;
+			path = ../../../NTLibrary;
+			sourceTree = "<group>";
+		};
+		431F85D11A3E977D003DA6E9 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				431F85EB1A3E9E12003DA6E9 /* NTDataNetwork.h */,
+				431F85EC1A3E9E12003DA6E9 /* NTDataNetwork.m */,
+				431F85D21A3E977D003DA6E9 /* NSDictionary+ConvertValue.h */,
+				431F85D31A3E977D003DA6E9 /* NSDictionary+ConvertValue.m */,
+				431F85D41A3E977D003DA6E9 /* NSDictionary+Null.h */,
+				431F85D51A3E977D003DA6E9 /* NSDictionary+Null.m */,
+				431F85D61A3E977D003DA6E9 /* NTGlobal.h */,
+				431F85D71A3E977D003DA6E9 /* UIActivityIndicatorView+NTShow.h */,
+				431F85D81A3E977D003DA6E9 /* UIActivityIndicatorView+NTShow.m */,
+				431F85D91A3E977D003DA6E9 /* UIAlertView+NTShow.h */,
+				431F85DA1A3E977D003DA6E9 /* UIAlertView+NTShow.m */,
+				43F57BD81A401BFD0081E4B0 /* NTMath.h */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		431F85F91A3EA694003DA6E9 /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				431F85FA1A3EA694003DA6E9 /* schools.json */,
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
+		431F85FC1A3EA749003DA6E9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				431F85FD1A3EA756003DA6E9 /* CoreLocation.framework */,
+				431F85F41A3EA588003DA6E9 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		431F86081A3EE05A003DA6E9 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		43F57BDB1A4026750081E4B0 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		43F57BDC1A40267D0081E4B0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,8 +374,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				431F85871A3E911D003DA6E9 /* Main.storyboard in Resources */,
+				43F57BD71A4017630081E4B0 /* Images.xcassets in Resources */,
 				431F858C1A3E911D003DA6E9 /* LaunchScreen.xib in Resources */,
-				431F85891A3E911D003DA6E9 /* Images.xcassets in Resources */,
+				431F85FB1A3EA694003DA6E9 /* schools.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,12 +394,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				431F85EA1A3E9B44003DA6E9 /* NTDataNetwork+NTSeattleNetwork.m in Sources */,
+				431F85DD1A3E977D003DA6E9 /* UIActivityIndicatorView+NTShow.m in Sources */,
 				431F85B21A3E9430003DA6E9 /* seattle_schools.xcdatamodeld in Sources */,
+				431F85F81A3EA623003DA6E9 /* NTFilterInstance.m in Sources */,
+				431F86011A3EB738003DA6E9 /* NTLocationManager.m in Sources */,
+				431F86071A3EDE1C003DA6E9 /* NTSchoolAnnotate.m in Sources */,
 				431F85AE1A3E9405003DA6E9 /* NTHomeViewController.m in Sources */,
-				431F85811A3E911D003DA6E9 /* seattle_schools.xcdatamodeld in Sources */,
 				431F857B1A3E911D003DA6E9 /* main.m in Sources */,
 				431F85AC1A3E9405003DA6E9 /* AppDelegate.m in Sources */,
+				431F85ED1A3E9E12003DA6E9 /* NTDataNetwork.m in Sources */,
+				431F85E71A3E98B4003DA6E9 /* NTSchool.m in Sources */,
+				431F85DB1A3E977D003DA6E9 /* NSDictionary+ConvertValue.m in Sources */,
+				431F85F01A3EA2A1003DA6E9 /* NTFilterViewController.m in Sources */,
+				431F85DC1A3E977D003DA6E9 /* NSDictionary+Null.m in Sources */,
 				431F85AD1A3E9405003DA6E9 /* NTDetailViewController.m in Sources */,
+				43F3A6A81A41809100F55C05 /* NTSchoolFilter.m in Sources */,
+				431F85F31A3EA352003DA6E9 /* NTSchoolAnnotateView.m in Sources */,
+				431F85DE1A3E977D003DA6E9 /* UIAlertView+NTShow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,7 +533,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = seattle_schools/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -392,7 +545,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = seattle_schools/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -451,6 +606,7 @@
 				431F859D1A3E911E003DA6E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		431F859E1A3E911E003DA6E9 /* Build configuration list for PBXNativeTarget "seattle_schoolsTests" */ = {
 			isa = XCConfigurationList;
@@ -459,20 +615,11 @@
 				431F85A01A3E911E003DA6E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		431F857F1A3E911D003DA6E9 /* seattle_schools.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				431F85801A3E911D003DA6E9 /* seattle_schools.xcdatamodel */,
-			);
-			currentVersion = 431F85801A3E911D003DA6E9 /* seattle_schools.xcdatamodel */;
-			path = seattle_schools.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
 		431F85B01A3E9430003DA6E9 /* seattle_schools.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
