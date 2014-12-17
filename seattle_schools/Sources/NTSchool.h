@@ -24,6 +24,8 @@
 //objectid: "1",
 //city: "Seattle"
 
+// TEST TEST TEST
+
 @interface NTSchool : NSObject
 
 @property (nonatomic) NSString *zip;
