@@ -29,6 +29,8 @@ static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.
 @property (nonatomic) BOOL modifyingMap;
 @property (nonatomic) BOOL rendered;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (nonatomic) CGFloat zoomLevel;
+@property (nonatomic) NSArray *filterSchools;
 @end
 
 @implementation NTHomeViewController
@@ -92,7 +94,8 @@ static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.
 - (void)addSchools:(NSArray *)schools
 {
     [self.schools addObjectsFromArray:schools];
-    [self addSchoolAnnotationsWithSchools:schools];
+    self.filterSchools = self.schools;
+    [self addSchoolAnnotationsWithSchools:self.filterSchools];
 }
 
 - (void)addSchoolAnnotationsWithSchools:(NSArray *)schools
@@ -134,6 +137,12 @@ static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.
     
     // reset map view with new region
     [self.mapView setRegion:mapRegion animated:YES];
+    
+    
+    if (self.zoomLevel!=mapView.region.span.longitudeDelta) {
+        [self filterAnnotations:self.filterSchools];
+        self.zoomLevel=mapView.region.span.longitudeDelta;
+    }
 }
 
 - (void)mapViewDidFinishRenderingMap:(MKMapView *)mapView fullyRendered:(BOOL)fullyRendered
@@ -198,6 +207,72 @@ static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.
     [self performSegueWithIdentifier:@"detail" sender:self];
 }
 
+-(void)filterAnnotations:(NSArray *)placesToFilter{
+    [self.mapView removeAnnotations:self.mapView.annotations];
+    
+    CGFloat annotationWidth = 32;
+    CGFloat annotationHeight = 29;
+    
+    CGFloat iphoneScaleFactorLatitude = self.view.frame.size.width / annotationWidth;
+    CGFloat iphoneScaleFactorLongitude = self.view.frame.size.height / annotationHeight;
+    
+    float latDelta=self.mapView.region.span.latitudeDelta/iphoneScaleFactorLatitude;
+    float longDelta=self.mapView.region.span.longitudeDelta/iphoneScaleFactorLongitude;
+    NSMutableArray *displayAnnotations=[[NSMutableArray alloc] initWithCapacity:0];
+    
+    for (int i=0; i<[placesToFilter count]; i++) {
+        NTSchool *checkingLocation = (id)placesToFilter[i];
+        CLLocationDegrees latitude = checkingLocation.latitude.doubleValue;
+        CLLocationDegrees longitude = checkingLocation.longitude.doubleValue;
+        bool found=FALSE;
+        for (NTSchool *school in displayAnnotations) {
+            if(fabs(school.latitude.doubleValue-latitude) < latDelta &&
+               fabs(school.longitude.doubleValue-longitude) < longDelta ){
+                found=TRUE;
+                break;
+            }
+        }
+        if (!found) {
+            [displayAnnotations addObject:checkingLocation];
+            [self addSchoolAnnotationsWithSchools:@[checkingLocation]];
+            
+//            [displayAnnotations addObject:checkingLocation];
+//            [self.mapView addAnnotation:checkingLocation];
+        }
+    }
+}
+
+//-(void)filterAnnotations:(NSArray *)placesToFilter{
+//    CGFloat annotationWidth = 32;
+//    CGFloat annotationHeight = 29;
+//    
+//    CGFloat iphoneScaleFactorLatitude = self.view.frame.size.width / annotationWidth;
+//    CGFloat iphoneScaleFactorLongitude = self.view.frame.size.height / annotationHeight;
+//    
+//    float latDelta=self.mapView.region.span.latitudeDelta/iphoneScaleFactorLatitude;
+//    float longDelta=self.mapView.region.span.longitudeDelta/iphoneScaleFactorLongitude;
+//    NSMutableArray *displayAnnotations=[[NSMutableArray alloc] initWithCapacity:0];
+//    
+//    for (int i=0; i<[placesToFilter count]; i++) {
+//        id<MKAnnotation> checkingLocation = (id)placesToFilter[i];
+//        CLLocationDegrees latitude = [checkingLocation coordinate].latitude;
+//        CLLocationDegrees longitude = [checkingLocation coordinate].longitude;
+//        bool found=FALSE;
+//        for (id<MKAnnotation> temp in displayAnnotations) {
+//            if(fabs([temp coordinate].latitude-latitude) < latDelta &&
+//               fabs([temp coordinate].longitude-longitude) < longDelta ){
+//                [self.mapView removeAnnotation:checkingLocation];
+//                found=TRUE;
+//                break;
+//            }
+//        }
+//        if (!found) {
+//            [displayAnnotations addObject:checkingLocation];
+//            [self.mapView addAnnotation:checkingLocation];
+//        }
+//    }
+//}
+
 
 #pragma mark - Location Manager
 
@@ -220,13 +295,15 @@ static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.
         NSLog(@"predicate: %@", predicate.description);
         NSArray *keptSchools = [self.schools filteredArrayUsingPredicate:predicate];
         [self.mapView removeAnnotations:self.mapView.annotations];
-        [self addSchoolAnnotationsWithSchools:keptSchools];
+        self.filterSchools = keptSchools;
+        [self addSchoolAnnotationsWithSchools:self.filterSchools];
     } else {
         // show all schools
         
         NSLog(@"Show all schools");
         [self.mapView removeAnnotations:self.mapView.annotations];
-        [self addSchoolAnnotationsWithSchools:self.schools];
+        self.filterSchools = self.schools;
+        [self addSchoolAnnotationsWithSchools:self.filterSchools];
     }
 }
 
