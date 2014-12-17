@@ -17,12 +17,13 @@ static NSString *const kURLPublic = @"public_schools.json";
 
 - (void)retrieveSchoolsWithHandler:(NTNetworkRetrieveCollection)handler
 {
+    __weak typeof (self) weakself = self;
     __block NSMutableArray *schools = [NSMutableArray array];
     [self retrieveSchoolsWithHandler:^(NSArray *items, NSError *error) {
         if(items) {
             [schools addObjectsFromArray:items];
         }
-        [self retrieveSchoolsWithHandler:^(NSArray *items, NSError *error) {
+        [weakself retrieveSchoolsWithHandler:^(NSArray *items, NSError *error) {
             if(items) {
                 [schools addObjectsFromArray:items];
             }

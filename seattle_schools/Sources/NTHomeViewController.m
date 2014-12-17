@@ -9,6 +9,7 @@
 #import "NTHomeViewController.h"
 #import <CoreLocation/CoreLocation.h>
 
+#import "NTJSONNetworkCollector+Google.h"
 #import "NTJSONNetworkCollector+NTSeattle.h"
 #import "NTJSONLocalCollector+NTSeattle.h"
 #import "UIAlertView+NTShow.h"
@@ -23,7 +24,7 @@
 static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.0, 1.0}};
 
 @interface NTHomeViewController ()<MKMapViewDelegate, NTLocationManagerDelegate, NTFilterViewControllerDelegate>
-@property (nonatomic) NTJSONLocalCollector *network;
+@property (nonatomic) NTJSONNetworkCollector *network;
 @property (nonatomic) NSMutableArray *schools;
 @property (nonatomic) NTFilterViewController *filterVC;
 @property (nonatomic) NTLocationManager *locationManager;
@@ -40,7 +41,7 @@ static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.
     [super viewDidLoad];
     
     _schools = [NSMutableArray array];
-    _network = [NTJSONLocalCollector sharedInstance];
+    _network = [NTJSONNetworkCollector sharedInstance];
     _locationManager = [NTLocationManager sharedInstance];
     [_locationManager setDelegate:self];
     
@@ -179,12 +180,14 @@ static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.
             UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
             [rightButton addTarget:self action:@selector(selectCallOutButton:) forControlEvents:UIControlEventTouchUpInside];
             view.rightCalloutAccessoryView = rightButton;
+            
+            // create left accessory image
+            UIImageView *iv = [[UIImageView alloc] initWithImage: [UIImage imageNamed:@"school47"]];
+            view.leftCalloutAccessoryView = iv;
         } else {
             view = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
             [(MKPinAnnotationView *)view setPinColor:MKPinAnnotationColorGreen];
         }
-        
-        
     } else {
         
         [view setAnnotation:annotation];
@@ -196,11 +199,45 @@ static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.
     if ( [annotation isKindOfClass:[NTSchoolAnnotate class]] ) {
         // set pin image
         [view setImage:[UIImage imageNamed:@"school7"]];
-        NSUInteger index = [self.schools containsObject:[((NTSchoolAnnotate *)annotation) school]];
+        
+        __block NTSchool *school = [((NTSchoolAnnotate *)annotation) school];
+        
+        // set tag for button
+        NSUInteger index = [self.schools containsObject:school];
         [view.rightCalloutAccessoryView setTag:index];
+        
+//        // set image for callout
+//        __block UIImageView *iv = (id)view.leftCalloutAccessoryView;
+//        if(school.image) {
+//            [iv setImage:school.image];
+//        } else {
+//            [self.network retrieveImageWithHandler:^(UIImage *image, NSError *error) {
+//                [school setImage:image];
+//                [iv setImage:image];
+//            } withKeyword:school.website];
+//        }
     }
     
     return view;
+}
+
+- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
+{
+    // validate if NTSchoolAnnotate class. MKUserLocation annotate might come through.
+    if ( [view.annotation isKindOfClass:[NTSchoolAnnotate class]] ) {
+        __block NTSchool *school = [((NTSchoolAnnotate *)view.annotation) school];
+        
+        // set image for callout
+        __block UIImageView *iv = (id)view.leftCalloutAccessoryView;
+        if(school.image) {
+            [iv setImage:school.image];
+        } else {
+            [self.network retrieveImageWithHandler:^(UIImage *image, NSError *error) {
+                [school setImage:image];
+                [iv setImage:image];
+            } withKeyword:school.website];
+        }
+    }
 }
 
 - (void)selectCallOutButton:(UIButton *)button
@@ -249,7 +286,7 @@ static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.
 //    
 //    CGFloat iphoneScaleFactorLatitude = self.view.frame.size.width / annotationWidth;
 //    CGFloat iphoneScaleFactorLongitude = self.view.frame.size.height / annotationHeight;
-//    
+//
 //    float latDelta=self.mapView.region.span.latitudeDelta/iphoneScaleFactorLatitude;
 //    float longDelta=self.mapView.region.span.longitudeDelta/iphoneScaleFactorLongitude;
 //    NSMutableArray *displayAnnotations=[[NSMutableArray alloc] initWithCapacity:0];

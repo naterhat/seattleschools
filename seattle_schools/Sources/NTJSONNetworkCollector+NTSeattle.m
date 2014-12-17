@@ -22,6 +22,7 @@ static NSString *const kURLPublic = @"/ywms-iep2.json";
 
 - (void)retrieveSchoolsWithHandler:(NTNetworkRetrieveCollection)handler
 {
+    __weak typeof (self) weakself = self;
     __block NSMutableArray *schools = [NSMutableArray array];
     
     // retrieve public schools
@@ -31,7 +32,7 @@ static NSString *const kURLPublic = @"/ywms-iep2.json";
         }
         
         // retrieve private schools
-        [self retrieveSchoolsWithHandler:^(NSArray *items, NSError *error) {
+        [weakself retrieveSchoolsWithHandler:^(NSArray *items, NSError *error) {
             if(items) {
                 [schools addObjectsFromArray:items];
             }

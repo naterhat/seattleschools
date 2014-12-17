@@ -30,6 +30,7 @@
 		431F86011A3EB738003DA6E9 /* NTLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F86001A3EB738003DA6E9 /* NTLocationManager.m */; };
 		431F86071A3EDE1C003DA6E9 /* NTSchoolAnnotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F86061A3EDE1C003DA6E9 /* NTSchoolAnnotate.m */; };
 		4336A1EC1A421B9C005BC764 /* NTJSONLocalCollector+NTSeattle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4336A1EB1A421B9C005BC764 /* NTJSONLocalCollector+NTSeattle.m */; };
+		4336A1EF1A422642005BC764 /* NTJSONNetworkCollector+Google.m in Sources */ = {isa = PBXBuildFile; fileRef = 4336A1EE1A422642005BC764 /* NTJSONNetworkCollector+Google.m */; };
 		435B713D1A420DBB00D39352 /* private_schools.json in Resources */ = {isa = PBXBuildFile; fileRef = 435B713B1A420DBB00D39352 /* private_schools.json */; };
 		435B713E1A420DBB00D39352 /* public_schools.json in Resources */ = {isa = PBXBuildFile; fileRef = 435B713C1A420DBB00D39352 /* public_schools.json */; };
 		43F3A6A81A41809100F55C05 /* NTSchoolFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F3A6A71A41809100F55C05 /* NTSchoolFilter.m */; };
@@ -93,6 +94,8 @@
 		4335B4871A41353B00825112 /* NTFilterProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTFilterProvider.h; sourceTree = "<group>"; };
 		4336A1EA1A421B9C005BC764 /* NTJSONLocalCollector+NTSeattle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NTJSONLocalCollector+NTSeattle.h"; sourceTree = "<group>"; };
 		4336A1EB1A421B9C005BC764 /* NTJSONLocalCollector+NTSeattle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NTJSONLocalCollector+NTSeattle.m"; sourceTree = "<group>"; };
+		4336A1ED1A422642005BC764 /* NTJSONNetworkCollector+Google.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NTJSONNetworkCollector+Google.h"; sourceTree = "<group>"; };
+		4336A1EE1A422642005BC764 /* NTJSONNetworkCollector+Google.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NTJSONNetworkCollector+Google.m"; sourceTree = "<group>"; };
 		435B713B1A420DBB00D39352 /* private_schools.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = private_schools.json; sourceTree = "<group>"; };
 		435B713C1A420DBB00D39352 /* public_schools.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = public_schools.json; sourceTree = "<group>"; };
 		435B713F1A420F3C00D39352 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -223,6 +226,8 @@
 				43F3A6A71A41809100F55C05 /* NTSchoolFilter.m */,
 				4336A1EA1A421B9C005BC764 /* NTJSONLocalCollector+NTSeattle.h */,
 				4336A1EB1A421B9C005BC764 /* NTJSONLocalCollector+NTSeattle.m */,
+				4336A1ED1A422642005BC764 /* NTJSONNetworkCollector+Google.h */,
+				4336A1EE1A422642005BC764 /* NTJSONNetworkCollector+Google.m */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -420,6 +425,7 @@
 				431F85DB1A3E977D003DA6E9 /* NSDictionary+ConvertValue.m in Sources */,
 				431F85F01A3EA2A1003DA6E9 /* NTFilterViewController.m in Sources */,
 				431F85DC1A3E977D003DA6E9 /* NSDictionary+Null.m in Sources */,
+				4336A1EF1A422642005BC764 /* NTJSONNetworkCollector+Google.m in Sources */,
 				431F85AD1A3E9405003DA6E9 /* NTDetailViewController.m in Sources */,
 				43F3A6A81A41809100F55C05 /* NTSchoolFilter.m in Sources */,
 				431F85F31A3EA352003DA6E9 /* NTSchoolAnnotateView.m in Sources */,
