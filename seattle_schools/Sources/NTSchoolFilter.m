@@ -44,19 +44,19 @@
     if (_grade != NTSchoolGradeAll) {
         NSPredicate *gradePred = nil;
         if(_grade & NTSchoolGradeElementary) {
-            NSPredicate *pred = [NSPredicate predicateWithFormat:@"grade = %@", @"elementary"];
+            NSPredicate *pred = [NSPredicate predicateWithFormat:@"(gradeIndex & %d) == %d", NTSchoolGradeElementary, NTSchoolGradeElementary];
             if (gradePred) gradePred = [NSCompoundPredicate orPredicateWithSubpredicates:@[pred, gradePred]];
             else gradePred = pred;
         }
         
         if(_grade & NTSchoolGradeMiddle) {
-            NSPredicate *pred = [NSPredicate predicateWithFormat:@"grade = %@", @"middle"];
+            NSPredicate *pred = [NSPredicate predicateWithFormat:@"(gradeIndex & %d) == %d", NTSchoolGradeMiddle, NTSchoolGradeMiddle];
             if (gradePred) gradePred = [NSCompoundPredicate orPredicateWithSubpredicates:@[pred, gradePred]];
             else gradePred = pred;
         }
         
         if(_grade & NTSchoolGradeHigh) {
-            NSPredicate *pred = [NSPredicate predicateWithFormat:@"grade = %@", @"high"];
+            NSPredicate *pred = [NSPredicate predicateWithFormat:@"(gradeIndex & %d) == %d", NTSchoolGradeHigh, NTSchoolGradeHigh];
             if (gradePred) gradePred = [NSCompoundPredicate orPredicateWithSubpredicates:@[pred, gradePred]];
             else gradePred = pred;
         }

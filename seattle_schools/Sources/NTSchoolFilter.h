@@ -10,19 +10,6 @@
 #import "NTFilterProvider.h"
 #import "NTSchool.h"
 
-typedef NS_ENUM(NSUInteger, NTSchoolType) {
-    NTSchoolTypeAll,
-    NTSchoolTypePrivate,
-    NTSchoolTypePublic,
-};
-
-typedef NS_ENUM(NSUInteger, NTSchoolGrade) {
-    NTSchoolGradeAll = 0,
-    NTSchoolGradeElementary = 1 << 1,
-    NTSchoolGradeMiddle = 1 << 2,
-    NTSchoolGradeHigh = 1 << 3,
-};
-
 @interface NTSchoolFilter : NSObject<NTFilterProvider>
 @property (nonatomic) NTSchoolType type;
 @property (nonatomic) NTSchoolGrade grade;

@@ -9,6 +9,21 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIImage.h>
 
+typedef NS_ENUM(NSUInteger, NTSchoolType) {
+    NTSchoolTypeAll,
+    NTSchoolTypePrivate,
+    NTSchoolTypePublic,
+};
+
+typedef NS_ENUM(NSUInteger, NTSchoolGrade) {
+    NTSchoolGradeAll = 0,
+    NTSchoolGradeElementary = 1 << 1,
+    NTSchoolGradeMiddle = 1 << 2,
+    NTSchoolGradeHigh = 1 << 3,
+};
+
+extern NSString *NSStringFromSchoolGrade(NTSchoolGrade grade);
+
 //zip: "98107",
 //phone: "(206) 252-1300",
 //school: "Adams",
@@ -40,7 +55,7 @@
 @property (nonatomic) NSString *website;
 @property (nonatomic) BOOL isPublic;
 @property (nonatomic) UIImage *image;
-
+@property (nonatomic) NTSchoolGrade gradeIndex;
 @end
 
 @interface NTSchool (SeattleNetwork)

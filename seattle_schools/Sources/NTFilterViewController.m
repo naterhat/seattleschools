@@ -133,9 +133,9 @@ static const CGFloat leeway = 100;
     [button setSelected:!button.selected];
     
     if(button.selected) {
-        if(button == self.typePrivateButton)
+        if (button == self.typePrivateButton)
             [self.typePublicButton setSelected:NO];
-        else
+        else if (button == self.typePublicButton)
             [self.typePrivateButton setSelected:NO];
     }
     

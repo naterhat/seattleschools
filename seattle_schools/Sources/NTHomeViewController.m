@@ -21,6 +21,7 @@
 #import "NTDetailViewController.h"
 #import "NTSchoolFilter.h"
 #import "UIImage+NTExtra.h"
+#import "NTGroupAnnotation.h"
 
 static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.0, 1.0}};
 
@@ -350,6 +351,33 @@ static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.
         self.filterSchools = self.schools;
         [self addSchoolAnnotationsWithSchools:self.filterSchools];
     }
+}
+
+- (void)filterSchoolsWithPredicate:(NSPredicate *)predicate addedItems:(NSMutableArray *)added removedItems:(NSMutableArray *)removed
+{
+    NSMutableArray *oldArray = [NSMutableArray arrayWithArray:self.filterSchools];
+    NSMutableArray *newArray = [NSMutableArray arrayWithArray: [self.schools filteredArrayUsingPredicate:predicate]];
+    
+    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
+    [oldArray sortUsingDescriptors:@[sort]];
+    [newArray sortUsingDescriptors:@[sort]];
+    
+    int oldIndex = 0;
+    int newIndex = 0;
+    while (oldIndex < oldArray.count && newIndex < newArray.count) {
+        NSComparisonResult result = [oldArray[oldIndex] compare:newArray[newIndex]];
+        if (result == NSOrderedAscending) {
+            // removed
+            oldIndex++;
+            [removed addObject:oldArray[newIndex]];
+        } else if (result == NSOrderedDescending) {
+            // added
+            newIndex++;
+            [added addObject:newArray[newIndex]];
+        } else {
+            newIndex++; oldIndex++;
+        }
+    }    
 }
 
 
