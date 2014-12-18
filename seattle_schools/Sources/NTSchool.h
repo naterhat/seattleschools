@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIImage.h>
 
 //zip: "98107",
 //phone: "(206) 252-1300",
@@ -38,6 +39,7 @@
 @property (nonatomic) NSString *type;
 @property (nonatomic) NSString *website;
 @property (nonatomic) BOOL isPublic;
+@property (nonatomic) UIImage *image;
 
 @end
 
