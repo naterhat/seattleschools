@@ -19,25 +19,15 @@ static NSInteger const kTagAlertWeb = 3;
 @property (weak, nonatomic) IBOutlet UILabel *addressLabel;
 @property (weak, nonatomic) IBOutlet UILabel *phoneLabel;
 @property (weak, nonatomic) IBOutlet UILabel *websiteLabel;
-<<<<<<< Updated upstream
-=======
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UIButton *phoneButton;
 @property (weak, nonatomic) IBOutlet UIButton *webButton;
->>>>>>> Stashed changes
 @end
 
 @implementation NTDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-<<<<<<< Updated upstream
-    
-    if(self.school) {
-        [self.addressLabel setText:self.school.address];
-        [self.phoneLabel setText:self.school.phone];
-        [self.websiteLabel setText:self.school.website];
-=======
 
     if(self.school) {
         self.title = [self.school.name capitalizedString];
@@ -59,7 +49,6 @@ static NSInteger const kTagAlertWeb = 3;
         if (!self.school.website) {
             [self.webButton setEnabled:NO];
         }
->>>>>>> Stashed changes
     }
 }
 
