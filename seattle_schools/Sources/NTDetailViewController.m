@@ -14,7 +14,6 @@ static NSInteger const kTagAlertDirection = 1;
 static NSInteger const kTagAlertPhone = 2;
 static NSInteger const kTagAlertWeb = 3;
 
-
 @interface NTDetailViewController ()<UIAlertViewDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *addressLabel;
 @property (weak, nonatomic) IBOutlet UILabel *phoneLabel;
@@ -22,13 +21,18 @@ static NSInteger const kTagAlertWeb = 3;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UIButton *phoneButton;
 @property (weak, nonatomic) IBOutlet UIButton *webButton;
+@property (weak, nonatomic) IBOutlet UIButton *addressButton;
 @end
 
 @implementation NTDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    // set image view to aspect fit
+    [ @[self.addressButton, self.webButton, self.phoneButton] setValue:@(UIViewContentModeScaleAspectFit) forKeyPath:@"imageView.contentMode"];
 
+    
     if(self.school) {
         self.title = [self.school.name capitalizedString];
         [self.addressLabel setText:self.school.address];
@@ -67,8 +71,8 @@ static NSInteger const kTagAlertWeb = 3;
 }
 
 - (IBAction)selectWeb:(id)sender {
-    NSURL *url = [NSURL URLWithString:self.school.website];
-    [[UIApplication sharedApplication] openURL:url];
+    NSString *urlPath = [NSString stringWithFormat:@"http://%@", self.school.website];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlPath]];
 }
 
 #pragma mark - Alert View Delegate

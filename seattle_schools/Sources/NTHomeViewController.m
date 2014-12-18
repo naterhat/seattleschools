@@ -20,6 +20,7 @@
 #import "NTSchoolAnnotate.h"
 #import "NTDetailViewController.h"
 #import "NTSchoolFilter.h"
+#import "UIImage+NTExtra.h"
 
 static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.0, 1.0}};
 
@@ -198,9 +199,15 @@ static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.
     // validate if NTSchoolAnnotate class. MKUserLocation annotate might come through.
     if ( [annotation isKindOfClass:[NTSchoolAnnotate class]] ) {
         // set pin image
-        [view setImage:[UIImage imageNamed:@"school7"]];
         
         __block NTSchool *school = [((NTSchoolAnnotate *)annotation) school];
+        
+        if (school.isPublic) {
+            [view setImage:[UIImage imageOfPublicSchool]];
+        } else {
+            [view setImage:[UIImage imageOfPrivateSchool]];
+        }
+        
         
         // set tag for button
         NSUInteger index = [self.schools containsObject:school];

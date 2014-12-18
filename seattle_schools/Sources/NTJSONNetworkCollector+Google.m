@@ -14,8 +14,10 @@
 
 - (void)retrieveImageWithHandler:(NTNetworkRetrieveImage)handler withKeyword:(NSString *)keyword;
 {
-    keyword = [keyword stringByReplacingOccurrencesOfString:@"http://" withString:@""];
-    keyword = [keyword stringByReplacingOccurrencesOfString:@"https://" withString:@""];
+    if(!keyword) {
+        handler(nil, nil);
+        return;
+    }
     
     __weak typeof (self) weakself = self;
     __block NSString *path = [NSString stringWithFormat:@"https://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=%@", keyword];

@@ -30,7 +30,13 @@
         _longitude = data[@"shape"][@"longitude"];
         _latitude = data[@"shape"][@"latitude"];
         _type = data[@"type"];
+        
         _website = data[@"website"];
+        if (_website) {
+            _website = [_website stringByReplacingOccurrencesOfString:@"http://" withString:@""];
+            _website = [_website stringByReplacingOccurrencesOfString:@"https://" withString:@""];
+        }
+        
         _isPublic = YES;
         if(!_type) {
             _isPublic = NO;
