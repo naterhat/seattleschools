@@ -13,4 +13,5 @@
 + (UIImage *)imageOfPublicSchool;
 + (UIImage *)imageOfPrivateSchool;
 + (UIImage *)imageOfCombineSchool;
++ (UIImage *)imageOfNumber:(NSNumber *)number;
 @end

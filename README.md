@@ -6,13 +6,17 @@ x Dependencies injection for local storage
 x Retrieve image from url
 x Create actions links to phone, web, and address
 
-- For group of annotations, show number count
+x For group of annotations, show number count
 - If its group of annotations, disable call out.
 - Fix annotation refresh
 - Change Color of Annotation by Public or Private
 
-- Filter Grades
+x Filter Grades
 - Deal with address nil
 - Deal with website nil
 - Disable call button if no phone
 - Disable web if no website.
+
+- Tap on Seattle Title - Go Center of Seattle
+
+- BUG - some annotation are not being removed, Stuck at a location. It has no interaction.

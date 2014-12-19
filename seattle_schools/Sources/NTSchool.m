@@ -23,7 +23,7 @@ NSString *NSStringFromSchoolGrade(NTSchoolGrade grade)
 
 - (NSString *)description
 {
-    return [NSString stringWithFormat:@"isPublic: %@", self.isPublic ? @"YES": @"NO"];
+    return [NSString stringWithFormat:@"name: %@, isPublic: %@", self.name, self.isPublic ? @"YES": @"NO"];
 }
 
 - (void)setGrade:(NSString *)grade
@@ -46,11 +46,6 @@ NSString *NSStringFromSchoolGrade(NTSchoolGrade grade)
         // E: 0 - 6
         // M: 7 - 8
         // H: 9 - 12
-        
-        // 0 - 5
-        // 9 - 12
-        // 0 - 8
-        // 0 - 12
         
         // check elementary
         _gradeIndex = 0;

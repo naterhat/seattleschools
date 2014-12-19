@@ -32,7 +32,7 @@
 		4336A1EC1A421B9C005BC764 /* NTJSONLocalCollector+NTSeattle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4336A1EB1A421B9C005BC764 /* NTJSONLocalCollector+NTSeattle.m */; };
 		4336A1EF1A422642005BC764 /* NTJSONNetworkCollector+Google.m in Sources */ = {isa = PBXBuildFile; fileRef = 4336A1EE1A422642005BC764 /* NTJSONNetworkCollector+Google.m */; };
 		4336A1F21A429327005BC764 /* UIImage+NTExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = 4336A1F11A429327005BC764 /* UIImage+NTExtra.m */; };
-		4336A1F51A42A5F2005BC764 /* NTGroupAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4336A1F41A42A5F1005BC764 /* NTGroupAnnotation.m */; };
+		4336A1F51A42A5F2005BC764 /* NTSchoolGroupAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4336A1F41A42A5F1005BC764 /* NTSchoolGroupAnnotation.m */; };
 		4336A1F71A42B29F005BC764 /* NTSchoolGradeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4336A1F61A42B29F005BC764 /* NTSchoolGradeTests.m */; };
 		435B713D1A420DBB00D39352 /* private_schools.json in Resources */ = {isa = PBXBuildFile; fileRef = 435B713B1A420DBB00D39352 /* private_schools.json */; };
 		435B713E1A420DBB00D39352 /* public_schools.json in Resources */ = {isa = PBXBuildFile; fileRef = 435B713C1A420DBB00D39352 /* public_schools.json */; };
@@ -101,8 +101,8 @@
 		4336A1EE1A422642005BC764 /* NTJSONNetworkCollector+Google.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NTJSONNetworkCollector+Google.m"; sourceTree = "<group>"; };
 		4336A1F01A429327005BC764 /* UIImage+NTExtra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+NTExtra.h"; sourceTree = "<group>"; };
 		4336A1F11A429327005BC764 /* UIImage+NTExtra.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+NTExtra.m"; sourceTree = "<group>"; };
-		4336A1F31A42A5F1005BC764 /* NTGroupAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTGroupAnnotation.h; sourceTree = "<group>"; };
-		4336A1F41A42A5F1005BC764 /* NTGroupAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTGroupAnnotation.m; sourceTree = "<group>"; };
+		4336A1F31A42A5F1005BC764 /* NTSchoolGroupAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTSchoolGroupAnnotation.h; sourceTree = "<group>"; };
+		4336A1F41A42A5F1005BC764 /* NTSchoolGroupAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTSchoolGroupAnnotation.m; sourceTree = "<group>"; };
 		4336A1F61A42B29F005BC764 /* NTSchoolGradeTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTSchoolGradeTests.m; sourceTree = "<group>"; };
 		435B713B1A420DBB00D39352 /* private_schools.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = private_schools.json; sourceTree = "<group>"; };
 		435B713C1A420DBB00D39352 /* public_schools.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = public_schools.json; sourceTree = "<group>"; };
@@ -239,8 +239,8 @@
 				4336A1EE1A422642005BC764 /* NTJSONNetworkCollector+Google.m */,
 				4336A1F01A429327005BC764 /* UIImage+NTExtra.h */,
 				4336A1F11A429327005BC764 /* UIImage+NTExtra.m */,
-				4336A1F31A42A5F1005BC764 /* NTGroupAnnotation.h */,
-				4336A1F41A42A5F1005BC764 /* NTGroupAnnotation.m */,
+				4336A1F31A42A5F1005BC764 /* NTSchoolGroupAnnotation.h */,
+				4336A1F41A42A5F1005BC764 /* NTSchoolGroupAnnotation.m */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -443,7 +443,7 @@
 				431F85AD1A3E9405003DA6E9 /* NTDetailViewController.m in Sources */,
 				43F3A6A81A41809100F55C05 /* NTSchoolFilter.m in Sources */,
 				431F85F31A3EA352003DA6E9 /* NTSchoolAnnotateView.m in Sources */,
-				4336A1F51A42A5F2005BC764 /* NTGroupAnnotation.m in Sources */,
+				4336A1F51A42A5F2005BC764 /* NTSchoolGroupAnnotation.m in Sources */,
 				431F85DE1A3E977D003DA6E9 /* UIAlertView+NTShow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
