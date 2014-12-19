@@ -16,6 +16,7 @@ x Filter Grades
 - Deal with website nil
 - Disable call button if no phone
 - Disable web if no website.
+- Check if out of Area.
 
 - Tap on Seattle Title - Go Center of Seattle
 

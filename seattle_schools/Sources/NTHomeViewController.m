@@ -22,7 +22,6 @@
 #import "UIImage+NTExtra.h"
 #import "NTSchoolGroupAnnotation.h"
 #import "NTMath.h"
-#import "NTPanGestureRecognizer.h"
 #import "NTPoleView.h"
 #import "NTTheme.h"
 

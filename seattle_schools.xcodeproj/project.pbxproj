@@ -36,7 +36,6 @@
 		4336A1F71A42B29F005BC764 /* NTSchoolGradeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4336A1F61A42B29F005BC764 /* NTSchoolGradeTests.m */; };
 		435B713D1A420DBB00D39352 /* private_schools.json in Resources */ = {isa = PBXBuildFile; fileRef = 435B713B1A420DBB00D39352 /* private_schools.json */; };
 		435B713E1A420DBB00D39352 /* public_schools.json in Resources */ = {isa = PBXBuildFile; fileRef = 435B713C1A420DBB00D39352 /* public_schools.json */; };
-		43A876DE1A4400D900AD9CCD /* NTPanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A876DD1A4400D900AD9CCD /* NTPanGestureRecognizer.m */; };
 		43A876E41A4469B900AD9CCD /* Caviar_Dreams_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43A876E01A4469B900AD9CCD /* Caviar_Dreams_Bold.ttf */; };
 		43A876E51A4469B900AD9CCD /* CaviarDreams.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43A876E11A4469B900AD9CCD /* CaviarDreams.ttf */; };
 		43A876E61A4469B900AD9CCD /* CaviarDreams_BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43A876E21A4469B900AD9CCD /* CaviarDreams_BoldItalic.ttf */; };
@@ -47,6 +46,7 @@
 		43A876F31A447A9800AD9CCD /* NTPoleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A876F21A447A9800AD9CCD /* NTPoleView.m */; };
 		43A876F61A4483B200AD9CCD /* NTFlagButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A876F51A4483B200AD9CCD /* NTFlagButton.m */; };
 		43A876F91A4483C000AD9CCD /* NTButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A876F81A4483C000AD9CCD /* NTButton.m */; };
+		43A876FD1A448E7B00AD9CCD /* NTDetailLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A876FC1A448E7B00AD9CCD /* NTDetailLabel.m */; };
 		43F3A6A81A41809100F55C05 /* NTSchoolFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F3A6A71A41809100F55C05 /* NTSchoolFilter.m */; };
 		43F57BD71A4017630081E4B0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43F57BD61A4017630081E4B0 /* Images.xcassets */; };
 /* End PBXBuildFile section */
@@ -118,8 +118,6 @@
 		435B713B1A420DBB00D39352 /* private_schools.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = private_schools.json; sourceTree = "<group>"; };
 		435B713C1A420DBB00D39352 /* public_schools.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = public_schools.json; sourceTree = "<group>"; };
 		435B713F1A420F3C00D39352 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		43A876DC1A4400D900AD9CCD /* NTPanGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTPanGestureRecognizer.h; sourceTree = "<group>"; };
-		43A876DD1A4400D900AD9CCD /* NTPanGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTPanGestureRecognizer.m; sourceTree = "<group>"; };
 		43A876E01A4469B900AD9CCD /* Caviar_Dreams_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Caviar_Dreams_Bold.ttf; sourceTree = "<group>"; };
 		43A876E11A4469B900AD9CCD /* CaviarDreams.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams.ttf; sourceTree = "<group>"; };
 		43A876E21A4469B900AD9CCD /* CaviarDreams_BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams_BoldItalic.ttf; sourceTree = "<group>"; };
@@ -136,6 +134,8 @@
 		43A876F51A4483B200AD9CCD /* NTFlagButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTFlagButton.m; sourceTree = "<group>"; };
 		43A876F71A4483C000AD9CCD /* NTButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTButton.h; sourceTree = "<group>"; };
 		43A876F81A4483C000AD9CCD /* NTButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTButton.m; sourceTree = "<group>"; };
+		43A876FB1A448E7B00AD9CCD /* NTDetailLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTDetailLabel.h; sourceTree = "<group>"; };
+		43A876FC1A448E7B00AD9CCD /* NTDetailLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTDetailLabel.m; sourceTree = "<group>"; };
 		43F3A6A61A41809100F55C05 /* NTSchoolFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTSchoolFilter.h; sourceTree = "<group>"; };
 		43F3A6A71A41809100F55C05 /* NTSchoolFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTSchoolFilter.m; sourceTree = "<group>"; };
 		43F57BD61A4017630081E4B0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -236,55 +236,12 @@
 		431F85A51A3E9405003DA6E9 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				43F57BDC1A40267D0081E4B0 /* Models */,
+				43A876FA1A448D9800AD9CCD /* Views & Themes */,
+				43F57BDC1A40267D0081E4B0 /* Models & Others */,
 				43F57BDB1A4026750081E4B0 /* View Controllers */,
 				431F85D01A3E977D003DA6E9 /* NTLibrary */,
 				431F85A61A3E9405003DA6E9 /* AppDelegate.h */,
 				431F85A71A3E9405003DA6E9 /* AppDelegate.m */,
-				431F85A81A3E9405003DA6E9 /* NTDetailViewController.h */,
-				431F85A91A3E9405003DA6E9 /* NTDetailViewController.m */,
-				431F85AA1A3E9405003DA6E9 /* NTHomeViewController.h */,
-				431F85AB1A3E9405003DA6E9 /* NTHomeViewController.m */,
-				431F85E51A3E98B4003DA6E9 /* NTSchool.h */,
-				431F85E61A3E98B4003DA6E9 /* NTSchool.m */,
-				431F85E81A3E9B44003DA6E9 /* NTJSONNetworkCollector+NTSeattle.h */,
-				431F85E91A3E9B44003DA6E9 /* NTJSONNetworkCollector+NTSeattle.m */,
-				431F85EE1A3EA2A1003DA6E9 /* NTFilterViewController.h */,
-				431F85EF1A3EA2A1003DA6E9 /* NTFilterViewController.m */,
-				431F85F11A3EA352003DA6E9 /* NTSchoolAnnotateView.h */,
-				431F85F21A3EA352003DA6E9 /* NTSchoolAnnotateView.m */,
-				431F85F61A3EA623003DA6E9 /* NTFilterInstance.h */,
-				431F85F71A3EA623003DA6E9 /* NTFilterInstance.m */,
-				431F85FF1A3EB738003DA6E9 /* NTLocationManager.h */,
-				431F86001A3EB738003DA6E9 /* NTLocationManager.m */,
-				431F86021A3EDBB4003DA6E9 /* NTMapUtilities.h */,
-				431F86051A3EDE1C003DA6E9 /* NTSchoolAnnotate.h */,
-				431F86061A3EDE1C003DA6E9 /* NTSchoolAnnotate.m */,
-				4335B4871A41353B00825112 /* NTFilterProvider.h */,
-				43F3A6A61A41809100F55C05 /* NTSchoolFilter.h */,
-				43F3A6A71A41809100F55C05 /* NTSchoolFilter.m */,
-				4336A1EA1A421B9C005BC764 /* NTJSONLocalCollector+NTSeattle.h */,
-				4336A1EB1A421B9C005BC764 /* NTJSONLocalCollector+NTSeattle.m */,
-				4336A1ED1A422642005BC764 /* NTJSONNetworkCollector+Google.h */,
-				4336A1EE1A422642005BC764 /* NTJSONNetworkCollector+Google.m */,
-				4336A1F01A429327005BC764 /* UIImage+NTExtra.h */,
-				4336A1F11A429327005BC764 /* UIImage+NTExtra.m */,
-				4336A1F31A42A5F1005BC764 /* NTSchoolGroupAnnotation.h */,
-				4336A1F41A42A5F1005BC764 /* NTSchoolGroupAnnotation.m */,
-				43A876DC1A4400D900AD9CCD /* NTPanGestureRecognizer.h */,
-				43A876DD1A4400D900AD9CCD /* NTPanGestureRecognizer.m */,
-				43A876E81A446B1F00AD9CCD /* NTNavigationBar.h */,
-				43A876E91A446B1F00AD9CCD /* NTNavigationBar.m */,
-				43A876EB1A4472D600AD9CCD /* NTTheme.h */,
-				43A876EC1A4472D600AD9CCD /* NTTheme.m */,
-				43A876EE1A447A0E00AD9CCD /* NTFilterView.h */,
-				43A876EF1A447A0E00AD9CCD /* NTFilterView.m */,
-				43A876F11A447A9800AD9CCD /* NTPoleView.h */,
-				43A876F21A447A9800AD9CCD /* NTPoleView.m */,
-				43A876F41A4483B200AD9CCD /* NTFlagButton.h */,
-				43A876F51A4483B200AD9CCD /* NTFlagButton.m */,
-				43A876F71A4483C000AD9CCD /* NTButton.h */,
-				43A876F81A4483C000AD9CCD /* NTButton.m */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -361,18 +318,69 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		43A876FA1A448D9800AD9CCD /* Views & Themes */ = {
+			isa = PBXGroup;
+			children = (
+				43A876E81A446B1F00AD9CCD /* NTNavigationBar.h */,
+				43A876E91A446B1F00AD9CCD /* NTNavigationBar.m */,
+				43A876EB1A4472D600AD9CCD /* NTTheme.h */,
+				43A876EC1A4472D600AD9CCD /* NTTheme.m */,
+				43A876EE1A447A0E00AD9CCD /* NTFilterView.h */,
+				43A876EF1A447A0E00AD9CCD /* NTFilterView.m */,
+				43A876F11A447A9800AD9CCD /* NTPoleView.h */,
+				43A876F21A447A9800AD9CCD /* NTPoleView.m */,
+				43A876F41A4483B200AD9CCD /* NTFlagButton.h */,
+				43A876F51A4483B200AD9CCD /* NTFlagButton.m */,
+				43A876F71A4483C000AD9CCD /* NTButton.h */,
+				43A876F81A4483C000AD9CCD /* NTButton.m */,
+				431F85F11A3EA352003DA6E9 /* NTSchoolAnnotateView.h */,
+				431F85F21A3EA352003DA6E9 /* NTSchoolAnnotateView.m */,
+				43A876FB1A448E7B00AD9CCD /* NTDetailLabel.h */,
+				43A876FC1A448E7B00AD9CCD /* NTDetailLabel.m */,
+			);
+			name = "Views & Themes";
+			sourceTree = "<group>";
+		};
 		43F57BDB1A4026750081E4B0 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				431F85EE1A3EA2A1003DA6E9 /* NTFilterViewController.h */,
+				431F85EF1A3EA2A1003DA6E9 /* NTFilterViewController.m */,
+				431F85A81A3E9405003DA6E9 /* NTDetailViewController.h */,
+				431F85A91A3E9405003DA6E9 /* NTDetailViewController.m */,
+				431F85AA1A3E9405003DA6E9 /* NTHomeViewController.h */,
+				431F85AB1A3E9405003DA6E9 /* NTHomeViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
 		};
-		43F57BDC1A40267D0081E4B0 /* Models */ = {
+		43F57BDC1A40267D0081E4B0 /* Models & Others */ = {
 			isa = PBXGroup;
 			children = (
+				431F85F61A3EA623003DA6E9 /* NTFilterInstance.h */,
+				431F85F71A3EA623003DA6E9 /* NTFilterInstance.m */,
+				431F85FF1A3EB738003DA6E9 /* NTLocationManager.h */,
+				431F86001A3EB738003DA6E9 /* NTLocationManager.m */,
+				431F86021A3EDBB4003DA6E9 /* NTMapUtilities.h */,
+				431F86051A3EDE1C003DA6E9 /* NTSchoolAnnotate.h */,
+				431F86061A3EDE1C003DA6E9 /* NTSchoolAnnotate.m */,
+				4335B4871A41353B00825112 /* NTFilterProvider.h */,
+				43F3A6A61A41809100F55C05 /* NTSchoolFilter.h */,
+				43F3A6A71A41809100F55C05 /* NTSchoolFilter.m */,
+				4336A1EA1A421B9C005BC764 /* NTJSONLocalCollector+NTSeattle.h */,
+				4336A1EB1A421B9C005BC764 /* NTJSONLocalCollector+NTSeattle.m */,
+				4336A1ED1A422642005BC764 /* NTJSONNetworkCollector+Google.h */,
+				4336A1EE1A422642005BC764 /* NTJSONNetworkCollector+Google.m */,
+				4336A1F01A429327005BC764 /* UIImage+NTExtra.h */,
+				4336A1F11A429327005BC764 /* UIImage+NTExtra.m */,
+				4336A1F31A42A5F1005BC764 /* NTSchoolGroupAnnotation.h */,
+				4336A1F41A42A5F1005BC764 /* NTSchoolGroupAnnotation.m */,
+				431F85E81A3E9B44003DA6E9 /* NTJSONNetworkCollector+NTSeattle.h */,
+				431F85E91A3E9B44003DA6E9 /* NTJSONNetworkCollector+NTSeattle.m */,
+				431F85E51A3E98B4003DA6E9 /* NTSchool.h */,
+				431F85E61A3E98B4003DA6E9 /* NTSchool.m */,
 			);
-			name = Models;
+			name = "Models & Others";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -484,6 +492,7 @@
 			files = (
 				43A876ED1A4472D600AD9CCD /* NTTheme.m in Sources */,
 				431F85EA1A3E9B44003DA6E9 /* NTJSONNetworkCollector+NTSeattle.m in Sources */,
+				43A876FD1A448E7B00AD9CCD /* NTDetailLabel.m in Sources */,
 				43A876F01A447A0E00AD9CCD /* NTFilterView.m in Sources */,
 				43A876F91A4483C000AD9CCD /* NTButton.m in Sources */,
 				431F85DD1A3E977D003DA6E9 /* UIActivityIndicatorView+NTShow.m in Sources */,
@@ -491,7 +500,6 @@
 				43A876F61A4483B200AD9CCD /* NTFlagButton.m in Sources */,
 				431F85F81A3EA623003DA6E9 /* NTFilterInstance.m in Sources */,
 				431F86011A3EB738003DA6E9 /* NTLocationManager.m in Sources */,
-				43A876DE1A4400D900AD9CCD /* NTPanGestureRecognizer.m in Sources */,
 				431F86071A3EDE1C003DA6E9 /* NTSchoolAnnotate.m in Sources */,
 				431F85AE1A3E9405003DA6E9 /* NTHomeViewController.m in Sources */,
 				431F857B1A3E911D003DA6E9 /* main.m in Sources */,

@@ -7,8 +7,10 @@
 //
 
 #import "NTDetailViewController.h"
-#import "NTSchool.h"
 #import <MapKit/MapKit.h>
+#import "NTSchool.h"
+#import "NTTheme.h"
+
 
 static NSInteger const kTagAlertDirection = 1;
 static NSInteger const kTagAlertPhone = 2;
@@ -29,9 +31,16 @@ static NSInteger const kTagAlertWeb = 3;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self.view setBackgroundColor:[[NTTheme instance] detailViewBackgroundColor]];
+    
+    for (UIView *view in self.view.subviews) {
+        if ([view isKindOfClass:[UILabel class]]) {
+            
+        }
+    }
+    
     // set image view to aspect fit
     [ @[self.addressButton, self.webButton, self.phoneButton] setValue:@(UIViewContentModeScaleAspectFit) forKeyPath:@"imageView.contentMode"];
-
     
     if(self.school) {
         self.title = [self.school.name capitalizedString];
