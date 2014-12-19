@@ -23,11 +23,8 @@
 #import "NTSchoolGroupAnnotation.h"
 #import "NTMath.h"
 #import "NTPanGestureRecognizer.h"
-
-static const CGFloat min = 120;
-static const CGFloat max = 300;
-
-static const CGFloat leeway = 100;
+#import "NTPoleView.h"
+#import "NTTheme.h"
 
 static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.0, 1.0}};
 
@@ -39,10 +36,7 @@ static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.
 @property (nonatomic) BOOL rendered;
 @property (nonatomic) CGFloat zoomLevel;
 @property (nonatomic) NSArray *filterSchools;
-@property (weak, nonatomic) IBOutlet UIImageView *poleContainer;
-@property (nonatomic) UIView *poleView;
-@property (nonatomic) UIView *poleMiddleView;
-@property (nonatomic) CGPoint lastPosition;
+@property (weak, nonatomic) IBOutlet NTPoleView *poleView;
 
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
@@ -53,28 +47,16 @@ static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self setNeedsStatusBarAppearanceUpdate];
+    
     _schools = [NSMutableArray array];
     _network = [NTJSONLocalCollector sharedInstance];
-    _lastPosition = CGPointMake(CGFLOAT_MAX, CGFLOAT_MAX);
+//    _lastPosition = CGPointMake(CGFLOAT_MAX, CGFLOAT_MAX);
     
     // set location manager
     _locationManager = [NTLocationManager sharedInstance];
     [_locationManager setDelegate:self];
     
-    CGSize viewSize = self.view.frame.size;
-    
-    // create pole view
-    self.poleView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.poleContainer.frame.size.width, viewSize.height * 2.0f)];
-    UIColor *patternColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"wood_tile"]];
-    [self.poleView setBackgroundColor:patternColor];
-    [self.poleContainer addSubview:self.poleView];
-    [self.poleContainer setClipsToBounds:YES];
-    CGFloat poleWidth = self.view.frame.size.width * .9f;
-    CGRect middle = CGRectMake((viewSize.width - poleWidth) * .5, 0, poleWidth, self.poleContainer.frame.size.height);
-    UIView *poleMiddleView = [[UIView alloc] initWithFrame:middle];
-    [poleMiddleView setBackgroundColor:[UIColor whiteColor]];
-    _poleMiddleView = poleMiddleView;
-    [self.poleContainer addSubview:poleMiddleView];
     
     
     // add filter view controller
@@ -82,11 +64,6 @@ static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.
     [_filterVC setDelegate:self];
     [self addChildViewController:_filterVC];
     [self.view addSubview:_filterVC.view];
-    CGRect frame =  _filterVC.view.frame;
-    frame.origin.y = -frame.size.height + 200;
-    frame.size.width = poleWidth;
-    frame.origin.x = (viewSize.width - poleWidth) * .5;
-    _filterVC.view.frame = frame;
     
     // add current location button
 //    MKUserTrackingBarButtonItem *trackingItem = [[MKUserTrackingBarButtonItem alloc] initWithMapView:self.mapView];
@@ -391,8 +368,10 @@ static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.
 {
     NSLog(@"frame: %@", NSStringFromCGRect(rect));
     
-    CGRect frame = CGRectSetY(self.poleView.frame, rect.origin.y - self.poleView.frame.size.height/2);
-    [self.poleView setFrame:frame];
+//    CGRect frame = CGRectSetY(self.poleView.frame, rect.origin.y - self.poleView.frame.size.height/2);
+//    [self.poleView setFrame:frame];
+    
+    [self.poleView scrollToPosition:rect.origin];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
@@ -401,6 +380,11 @@ static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.
     
     CGPoint point = [touches.anyObject locationInView:self.view];
     NSLog(@"MAIN begin touch: %@", NSStringFromCGPoint(point));
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleDefault;
 }
 
 

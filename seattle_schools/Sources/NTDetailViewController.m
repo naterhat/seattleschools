@@ -76,6 +76,7 @@ static NSInteger const kTagAlertWeb = 3;
      setValue:[NSValue valueWithCGAffineTransform:scale]
      forKeyPath:@"transform"];
     
+    // scale and show the buttons with animation
     [UIView animateWithDuration:1.0f delay:0 usingSpringWithDamping:.3f initialSpringVelocity:0 options:0 animations:^{
         [self.addressButton setAlpha:1];
         [self.phoneButton setAlpha:1];

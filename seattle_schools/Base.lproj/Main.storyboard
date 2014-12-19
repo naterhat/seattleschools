@@ -9,9 +9,13 @@
         <scene sceneID="BFD-nk-gTN">
             <objects>
                 <navigationController id="Uwu-Zi-s9a" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="blg-LH-JHC">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="blg-LH-JHC" customClass="NTNavigationBar">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="CaviarDreams" family="Caviar Dreams" pointSize="30"/>
+                            <color key="textColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="z4Y-hU-3uj"/>
@@ -21,7 +25,7 @@
             </objects>
             <point key="canvasLocation" x="-222" y="492"/>
         </scene>
-        <!--Seattle Schools-->
+        <!--SEATTLE SCHOOLS-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="NTHomeViewController" sceneMemberID="viewController">
@@ -36,23 +40,24 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xZa-ZW-8Ya">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                             </mapView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WIq-R1-V6e">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ogl-la-MOY" customClass="NTPoleView">
                                 <rect key="frame" x="0.0" y="64" width="600" height="15"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="15" id="E4j-B7-n6O"/>
+                                    <constraint firstAttribute="height" constant="15" id="9OL-9I-riI"/>
                                 </constraints>
-                            </imageView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="WIq-R1-V6e" secondAttribute="trailing" constant="-16" id="1yo-b8-Rj9"/>
-                            <constraint firstItem="WIq-R1-V6e" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="KGT-yT-9BD"/>
+                            <constraint firstItem="ogl-la-MOY" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="LjQ-y2-J5h"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xZa-ZW-8Ya" secondAttribute="trailing" constant="-16" id="PKl-xn-4qf"/>
                             <constraint firstItem="xZa-ZW-8Ya" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="Po8-qx-R5F"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ogl-la-MOY" secondAttribute="trailing" constant="-16" id="Scs-qj-5qK"/>
                             <constraint firstItem="xZa-ZW-8Ya" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="bQ3-tE-eSO"/>
-                            <constraint firstItem="WIq-R1-V6e" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="cTD-Ml-zKt"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="xZa-ZW-8Ya" secondAttribute="bottom" id="cjx-6r-o6W"/>
                             <constraint firstItem="xZa-ZW-8Ya" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="dbT-uT-aQy"/>
+                            <constraint firstItem="ogl-la-MOY" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="i7Q-n0-xes"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -60,7 +65,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Seattle Schools" id="dqL-YX-4yW">
+                    <navigationItem key="navigationItem" title="SEATTLE SCHOOLS" id="dqL-YX-4yW">
                         <barButtonItem key="rightBarButtonItem" title="Current" id="zpx-jo-vZ6">
                             <connections>
                                 <action selector="selectCurrentLocation:" destination="vXZ-lx-hvc" id="19b-nW-4Pk"/>
@@ -69,7 +74,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="xZa-ZW-8Ya" id="naH-yi-elL"/>
-                        <outlet property="poleContainer" destination="WIq-R1-V6e" id="dwj-VS-kJh"/>
+                        <outlet property="poleView" destination="ogl-la-MOY" id="qbo-gG-vPc"/>
                         <segue destination="nRP-3F-i9W" kind="show" identifier="detail" id="Zbf-JL-G4r"/>
                     </connections>
                 </viewController>
@@ -85,12 +90,14 @@
                         <viewControllerLayoutGuide type="top" id="BOc-Jc-4KE"/>
                         <viewControllerLayoutGuide type="bottom" id="khR-hm-lpc"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="SEo-Dx-1Yk">
+                    <view key="view" contentMode="scaleToFill" id="SEo-Dx-1Yk" customClass="NTFilterView">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b3J-rB-JHb">
-                                <rect key="frame" x="204" y="540" width="56" height="34"/>
+                            <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b3J-rB-JHb" customClass="NTFlagButton">
+                                <rect key="frame" x="218" y="546" width="57" height="28"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                                 <state key="normal" title="Public">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -102,8 +109,10 @@
                                     <action selector="selectButton:" destination="cUO-s0-OQo" eventType="touchUpInside" id="Emv-k2-So5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rwe-l2-14W">
-                                <rect key="frame" x="340" y="540" width="56" height="34"/>
+                            <button opaque="NO" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rwe-l2-14W" customClass="NTFlagButton">
+                                <rect key="frame" x="325" y="546" width="57" height="28"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                                 <state key="normal" title="Private">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -115,8 +124,10 @@
                                     <action selector="selectButton:" destination="cUO-s0-OQo" eventType="touchUpInside" id="xGX-Z2-sLB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQx-rg-cg0">
-                                <rect key="frame" x="112" y="498" width="91" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQx-rg-cg0" customClass="NTFlagButton">
+                                <rect key="frame" x="156" y="503" width="86" height="28"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                                 <state key="normal" title="Elementary">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -128,8 +139,10 @@
                                     <action selector="selectButton:" destination="cUO-s0-OQo" eventType="touchUpInside" id="b2O-ff-dZU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QN4-XA-cZY">
-                                <rect key="frame" x="273" y="498" width="55" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QN4-XA-cZY" customClass="NTFlagButton">
+                                <rect key="frame" x="272" y="503" width="56" height="28"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                                 <state key="normal" title="Middle">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -151,8 +164,10 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6aN-Cv-VoP">
-                                <rect key="frame" x="398" y="498" width="38" height="34"/>
+                            <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6aN-Cv-VoP" customClass="NTFlagButton">
+                                <rect key="frame" x="358" y="503" width="42" height="28"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                                 <state key="normal" title="High">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -168,17 +183,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="b3J-rB-JHb" firstAttribute="centerY" secondItem="Rwe-l2-14W" secondAttribute="centerY" id="5k3-mU-GZq"/>
-                            <constraint firstItem="Rwe-l2-14W" firstAttribute="leading" secondItem="R6m-GD-oev" secondAttribute="trailing" constant="30" id="7Kg-IV-kFN"/>
-                            <constraint firstItem="QN4-XA-cZY" firstAttribute="leading" secondItem="RQx-rg-cg0" secondAttribute="trailing" constant="70" id="7uy-D2-m4T"/>
+                            <constraint firstItem="Rwe-l2-14W" firstAttribute="leading" secondItem="R6m-GD-oev" secondAttribute="trailing" constant="15" id="7Kg-IV-kFN"/>
+                            <constraint firstItem="QN4-XA-cZY" firstAttribute="leading" secondItem="RQx-rg-cg0" secondAttribute="trailing" constant="30" id="7uy-D2-m4T"/>
                             <constraint firstItem="b3J-rB-JHb" firstAttribute="width" secondItem="Rwe-l2-14W" secondAttribute="width" id="Di0-ef-MOg"/>
-                            <constraint firstItem="R6m-GD-oev" firstAttribute="leading" secondItem="b3J-rB-JHb" secondAttribute="trailing" constant="30" id="G8E-2A-CYf"/>
+                            <constraint firstItem="R6m-GD-oev" firstAttribute="leading" secondItem="b3J-rB-JHb" secondAttribute="trailing" constant="15" id="G8E-2A-CYf"/>
                             <constraint firstItem="QN4-XA-cZY" firstAttribute="centerY" secondItem="RQx-rg-cg0" secondAttribute="centerY" id="Jiw-Lz-wuA"/>
                             <constraint firstAttribute="bottomMargin" secondItem="R6m-GD-oev" secondAttribute="bottom" id="TIP-1m-rSN"/>
                             <constraint firstItem="khR-hm-lpc" firstAttribute="top" secondItem="b3J-rB-JHb" secondAttribute="bottom" constant="26" id="UJd-q7-EAh"/>
                             <constraint firstAttribute="centerX" secondItem="QN4-XA-cZY" secondAttribute="centerX" id="YKA-xW-fIK"/>
-                            <constraint firstItem="6aN-Cv-VoP" firstAttribute="leading" secondItem="QN4-XA-cZY" secondAttribute="trailing" constant="70" id="bwG-5p-d5Y"/>
+                            <constraint firstItem="6aN-Cv-VoP" firstAttribute="leading" secondItem="QN4-XA-cZY" secondAttribute="trailing" constant="30" id="bwG-5p-d5Y"/>
                             <constraint firstItem="QN4-XA-cZY" firstAttribute="centerY" secondItem="6aN-Cv-VoP" secondAttribute="centerY" id="cYF-IB-ceq"/>
-                            <constraint firstItem="b3J-rB-JHb" firstAttribute="top" secondItem="QN4-XA-cZY" secondAttribute="bottom" constant="8" id="cde-je-GnV"/>
+                            <constraint firstItem="b3J-rB-JHb" firstAttribute="top" secondItem="QN4-XA-cZY" secondAttribute="bottom" constant="15" id="cde-je-GnV"/>
                             <constraint firstAttribute="centerX" secondItem="R6m-GD-oev" secondAttribute="centerX" id="j0M-5k-Tij"/>
                         </constraints>
                     </view>

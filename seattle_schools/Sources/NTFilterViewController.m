@@ -7,16 +7,14 @@
 //
 
 #import "NTFilterViewController.h"
-#import "NTMath.h"
 #import <QuartzCore/QuartzCore.h>
+#import "NTMath.h"
+#import "NTTheme.h"
 
-//static const CGFloat min = 150;
-//static const CGFloat max = 300;
 
-static const CGFloat min = 130;
-static const CGFloat max = 250;
 
-static const CGFloat leeway = 100;
+static const CGFloat min = 100;
+static const CGFloat max = 200;
 
 @interface NTFilterViewController ()
 {
@@ -44,6 +42,16 @@ static const CGFloat leeway = 100;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+
+    // resize view
+    CGFloat flagWidth = self.view.frame.size.width * [[NTTheme instance] flagWidthScale];
+    CGRect frame = self.view.frame;
+    frame.size.height = frame.size.height * 2;
+    frame.origin.y = -frame.size.height + 200;
+    frame.origin.x = (frame.size.width - flagWidth) * .5;
+    frame.size.width = flagWidth;
+    [self.view setFrame:frame];
     
     _min = -self.view.frame.size.height * .5 + min;
     _max = -self.view.frame.size.height * .5 + max;
