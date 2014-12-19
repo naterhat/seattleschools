@@ -46,6 +46,45 @@
 		43A876F61A4483B200AD9CCD /* NTFlagButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A876F51A4483B200AD9CCD /* NTFlagButton.m */; };
 		43A876F91A4483C000AD9CCD /* NTButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A876F81A4483C000AD9CCD /* NTButton.m */; };
 		43A876FD1A448E7B00AD9CCD /* NTDetailLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A876FC1A448E7B00AD9CCD /* NTDetailLabel.m */; };
+		43A877001A44A3B400AD9CCD /* NTTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A876EC1A4472D600AD9CCD /* NTTheme.m */; };
+		43A877011A44A3B400AD9CCD /* NTJSONNetworkCollector+NTSeattle.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85E91A3E9B44003DA6E9 /* NTJSONNetworkCollector+NTSeattle.m */; };
+		43A877021A44A3B400AD9CCD /* NTDetailLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A876FC1A448E7B00AD9CCD /* NTDetailLabel.m */; };
+		43A877031A44A3B400AD9CCD /* NTFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A876EF1A447A0E00AD9CCD /* NTFilterView.m */; };
+		43A877041A44A3B400AD9CCD /* NTButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A876F81A4483C000AD9CCD /* NTButton.m */; };
+		43A877051A44A3B400AD9CCD /* UIActivityIndicatorView+NTShow.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85D81A3E977D003DA6E9 /* UIActivityIndicatorView+NTShow.m */; };
+		43A877061A44A3B400AD9CCD /* seattle_schools.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 431F85B01A3E9430003DA6E9 /* seattle_schools.xcdatamodeld */; };
+		43A877071A44A3B400AD9CCD /* NTFlagButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A876F51A4483B200AD9CCD /* NTFlagButton.m */; };
+		43A877081A44A3B400AD9CCD /* NTLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F86001A3EB738003DA6E9 /* NTLocationManager.m */; };
+		43A877091A44A3B400AD9CCD /* NTSchoolAnnotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F86061A3EDE1C003DA6E9 /* NTSchoolAnnotate.m */; };
+		43A8770A1A44A3B400AD9CCD /* NTHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85AB1A3E9405003DA6E9 /* NTHomeViewController.m */; };
+		43A8770B1A44A3B400AD9CCD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F857A1A3E911D003DA6E9 /* main.m */; };
+		43A8770C1A44A3B400AD9CCD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85A71A3E9405003DA6E9 /* AppDelegate.m */; };
+		43A8770D1A44A3B400AD9CCD /* NTJSONLocalCollector+NTSeattle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4336A1EB1A421B9C005BC764 /* NTJSONLocalCollector+NTSeattle.m */; };
+		43A8770E1A44A3B400AD9CCD /* NTNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A876E91A446B1F00AD9CCD /* NTNavigationBar.m */; };
+		43A8770F1A44A3B400AD9CCD /* NTDataCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85EC1A3E9E12003DA6E9 /* NTDataCollector.m */; };
+		43A877101A44A3B400AD9CCD /* NTSchool.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85E61A3E98B4003DA6E9 /* NTSchool.m */; };
+		43A877111A44A3B400AD9CCD /* UIImage+NTExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = 4336A1F11A429327005BC764 /* UIImage+NTExtra.m */; };
+		43A877121A44A3B400AD9CCD /* NTPoleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A876F21A447A9800AD9CCD /* NTPoleView.m */; };
+		43A877131A44A3B400AD9CCD /* NSDictionary+ConvertValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85D31A3E977D003DA6E9 /* NSDictionary+ConvertValue.m */; };
+		43A877141A44A3B400AD9CCD /* NTFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85EF1A3EA2A1003DA6E9 /* NTFilterViewController.m */; };
+		43A877151A44A3B400AD9CCD /* NSDictionary+Null.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85D51A3E977D003DA6E9 /* NSDictionary+Null.m */; };
+		43A877161A44A3B400AD9CCD /* NTJSONNetworkCollector+Google.m in Sources */ = {isa = PBXBuildFile; fileRef = 4336A1EE1A422642005BC764 /* NTJSONNetworkCollector+Google.m */; };
+		43A877171A44A3B400AD9CCD /* NTDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85A91A3E9405003DA6E9 /* NTDetailViewController.m */; };
+		43A877181A44A3B400AD9CCD /* NTSchoolFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F3A6A71A41809100F55C05 /* NTSchoolFilter.m */; };
+		43A877191A44A3B400AD9CCD /* NTSchoolAnnotateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85F21A3EA352003DA6E9 /* NTSchoolAnnotateView.m */; };
+		43A8771A1A44A3B400AD9CCD /* NTSchoolGroupAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4336A1F41A42A5F1005BC764 /* NTSchoolGroupAnnotation.m */; };
+		43A8771B1A44A3B400AD9CCD /* UIAlertView+NTShow.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85DA1A3E977D003DA6E9 /* UIAlertView+NTShow.m */; };
+		43A8771D1A44A3B400AD9CCD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 431F85FD1A3EA756003DA6E9 /* CoreLocation.framework */; };
+		43A8771E1A44A3B400AD9CCD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 431F85F41A3EA588003DA6E9 /* MapKit.framework */; };
+		43A877201A44A3B400AD9CCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431F85851A3E911D003DA6E9 /* Main.storyboard */; };
+		43A877211A44A3B400AD9CCD /* CaviarDreams_Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43A876E31A4469B900AD9CCD /* CaviarDreams_Italic.ttf */; };
+		43A877221A44A3B400AD9CCD /* private_schools.json in Resources */ = {isa = PBXBuildFile; fileRef = 435B713B1A420DBB00D39352 /* private_schools.json */; };
+		43A877231A44A3B400AD9CCD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43F57BD61A4017630081E4B0 /* Images.xcassets */; };
+		43A877241A44A3B400AD9CCD /* CaviarDreams.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43A876E11A4469B900AD9CCD /* CaviarDreams.ttf */; };
+		43A877251A44A3B400AD9CCD /* Caviar_Dreams_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43A876E01A4469B900AD9CCD /* Caviar_Dreams_Bold.ttf */; };
+		43A877261A44A3B400AD9CCD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 431F858A1A3E911D003DA6E9 /* LaunchScreen.xib */; };
+		43A877271A44A3B400AD9CCD /* public_schools.json in Resources */ = {isa = PBXBuildFile; fileRef = 435B713C1A420DBB00D39352 /* public_schools.json */; };
+		43A877281A44A3B400AD9CCD /* CaviarDreams_BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43A876E21A4469B900AD9CCD /* CaviarDreams_BoldItalic.ttf */; };
 		43F3A6A81A41809100F55C05 /* NTSchoolFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F3A6A71A41809100F55C05 /* NTSchoolFilter.m */; };
 		43F57BD71A4017630081E4B0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43F57BD61A4017630081E4B0 /* Images.xcassets */; };
 /* End PBXBuildFile section */
@@ -133,6 +172,7 @@
 		43A876F81A4483C000AD9CCD /* NTButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTButton.m; sourceTree = "<group>"; };
 		43A876FB1A448E7B00AD9CCD /* NTDetailLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTDetailLabel.h; sourceTree = "<group>"; };
 		43A876FC1A448E7B00AD9CCD /* NTDetailLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTDetailLabel.m; sourceTree = "<group>"; };
+		43A8772C1A44A3B400AD9CCD /* seattle_schools copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "seattle_schools copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43F3A6A61A41809100F55C05 /* NTSchoolFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTSchoolFilter.h; sourceTree = "<group>"; };
 		43F3A6A71A41809100F55C05 /* NTSchoolFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTSchoolFilter.m; sourceTree = "<group>"; };
 		43F57BD61A4017630081E4B0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -156,6 +196,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		43A8771C1A44A3B400AD9CCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43A8771D1A44A3B400AD9CCD /* CoreLocation.framework in Frameworks */,
+				43A8771E1A44A3B400AD9CCD /* MapKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -175,6 +224,7 @@
 			children = (
 				431F85751A3E911D003DA6E9 /* seattle_schools.app */,
 				431F85911A3E911E003DA6E9 /* seattle_schoolsTests.xctest */,
+				43A8772C1A44A3B400AD9CCD /* seattle_schools copy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -416,6 +466,23 @@
 			productReference = 431F85911A3E911E003DA6E9 /* seattle_schoolsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		43A876FE1A44A3B400AD9CCD /* seattle_schools_release */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43A877291A44A3B400AD9CCD /* Build configuration list for PBXNativeTarget "seattle_schools_release" */;
+			buildPhases = (
+				43A876FF1A44A3B400AD9CCD /* Sources */,
+				43A8771C1A44A3B400AD9CCD /* Frameworks */,
+				43A8771F1A44A3B400AD9CCD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = seattle_schools_release;
+			productName = seattle_schools;
+			productReference = 43A8772C1A44A3B400AD9CCD /* seattle_schools copy.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -451,6 +518,7 @@
 			targets = (
 				431F85741A3E911D003DA6E9 /* seattle_schools */,
 				431F85901A3E911E003DA6E9 /* seattle_schoolsTests */,
+				43A876FE1A44A3B400AD9CCD /* seattle_schools_release */,
 			);
 		};
 /* End PBXProject section */
@@ -476,6 +544,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43A8771F1A44A3B400AD9CCD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43A877201A44A3B400AD9CCD /* Main.storyboard in Resources */,
+				43A877211A44A3B400AD9CCD /* CaviarDreams_Italic.ttf in Resources */,
+				43A877221A44A3B400AD9CCD /* private_schools.json in Resources */,
+				43A877231A44A3B400AD9CCD /* Images.xcassets in Resources */,
+				43A877241A44A3B400AD9CCD /* CaviarDreams.ttf in Resources */,
+				43A877251A44A3B400AD9CCD /* Caviar_Dreams_Bold.ttf in Resources */,
+				43A877261A44A3B400AD9CCD /* LaunchScreen.xib in Resources */,
+				43A877271A44A3B400AD9CCD /* public_schools.json in Resources */,
+				43A877281A44A3B400AD9CCD /* CaviarDreams_BoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,6 +607,41 @@
 			files = (
 				431F85981A3E911E003DA6E9 /* seattle_schoolsTests.m in Sources */,
 				4336A1F71A42B29F005BC764 /* NTSchoolGradeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43A876FF1A44A3B400AD9CCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43A877001A44A3B400AD9CCD /* NTTheme.m in Sources */,
+				43A877011A44A3B400AD9CCD /* NTJSONNetworkCollector+NTSeattle.m in Sources */,
+				43A877021A44A3B400AD9CCD /* NTDetailLabel.m in Sources */,
+				43A877031A44A3B400AD9CCD /* NTFilterView.m in Sources */,
+				43A877041A44A3B400AD9CCD /* NTButton.m in Sources */,
+				43A877051A44A3B400AD9CCD /* UIActivityIndicatorView+NTShow.m in Sources */,
+				43A877061A44A3B400AD9CCD /* seattle_schools.xcdatamodeld in Sources */,
+				43A877071A44A3B400AD9CCD /* NTFlagButton.m in Sources */,
+				43A877081A44A3B400AD9CCD /* NTLocationManager.m in Sources */,
+				43A877091A44A3B400AD9CCD /* NTSchoolAnnotate.m in Sources */,
+				43A8770A1A44A3B400AD9CCD /* NTHomeViewController.m in Sources */,
+				43A8770B1A44A3B400AD9CCD /* main.m in Sources */,
+				43A8770C1A44A3B400AD9CCD /* AppDelegate.m in Sources */,
+				43A8770D1A44A3B400AD9CCD /* NTJSONLocalCollector+NTSeattle.m in Sources */,
+				43A8770E1A44A3B400AD9CCD /* NTNavigationBar.m in Sources */,
+				43A8770F1A44A3B400AD9CCD /* NTDataCollector.m in Sources */,
+				43A877101A44A3B400AD9CCD /* NTSchool.m in Sources */,
+				43A877111A44A3B400AD9CCD /* UIImage+NTExtra.m in Sources */,
+				43A877121A44A3B400AD9CCD /* NTPoleView.m in Sources */,
+				43A877131A44A3B400AD9CCD /* NSDictionary+ConvertValue.m in Sources */,
+				43A877141A44A3B400AD9CCD /* NTFilterViewController.m in Sources */,
+				43A877151A44A3B400AD9CCD /* NSDictionary+Null.m in Sources */,
+				43A877161A44A3B400AD9CCD /* NTJSONNetworkCollector+Google.m in Sources */,
+				43A877171A44A3B400AD9CCD /* NTDetailViewController.m in Sources */,
+				43A877181A44A3B400AD9CCD /* NTSchoolFilter.m in Sources */,
+				43A877191A44A3B400AD9CCD /* NTSchoolAnnotateView.m in Sources */,
+				43A8771A1A44A3B400AD9CCD /* NTSchoolGroupAnnotation.m in Sources */,
+				43A8771B1A44A3B400AD9CCD /* UIAlertView+NTShow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -692,6 +811,32 @@
 			};
 			name = Release;
 		};
+		43A8772A1A44A3B400AD9CCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = seattle_schools/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "seattle_schools copy";
+			};
+			name = Debug;
+		};
+		43A8772B1A44A3B400AD9CCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = seattle_schools/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "seattle_schools copy";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -718,6 +863,15 @@
 			buildConfigurations = (
 				431F859F1A3E911E003DA6E9 /* Debug */,
 				431F85A01A3E911E003DA6E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43A877291A44A3B400AD9CCD /* Build configuration list for PBXNativeTarget "seattle_schools_release" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43A8772A1A44A3B400AD9CCD /* Debug */,
+				43A8772B1A44A3B400AD9CCD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
