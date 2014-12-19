@@ -26,6 +26,8 @@
 
 - (NSPredicate *)predicate
 {
+    // create predicate for school type: PUBLIC OR PRIVATE.
+    //   If none is set, then both are selected. No need to create predicate.
     NSPredicate *compoundPredicate = nil;
     switch (_type) {
         case NTSchoolTypeAll:
@@ -41,6 +43,7 @@
             break;
     }
     
+    // Create a filter for school grade level.
     if (_grade != NTSchoolGradeAll) {
         NSPredicate *gradePred = nil;
         if(_grade & NTSchoolGradeElementary) {
@@ -61,6 +64,7 @@
             else gradePred = pred;
         }
         
+        // compound school type and school grade for filtering.
         if (compoundPredicate && gradePred) {
             compoundPredicate = [NSCompoundPredicate andPredicateWithSubpredicates:@[compoundPredicate, gradePred]];
         } else {

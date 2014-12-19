@@ -25,7 +25,6 @@
 		431F85F01A3EA2A1003DA6E9 /* NTFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85EF1A3EA2A1003DA6E9 /* NTFilterViewController.m */; };
 		431F85F31A3EA352003DA6E9 /* NTSchoolAnnotateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85F21A3EA352003DA6E9 /* NTSchoolAnnotateView.m */; };
 		431F85F51A3EA588003DA6E9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 431F85F41A3EA588003DA6E9 /* MapKit.framework */; };
-		431F85F81A3EA623003DA6E9 /* NTFilterInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85F71A3EA623003DA6E9 /* NTFilterInstance.m */; };
 		431F85FE1A3EA756003DA6E9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 431F85FD1A3EA756003DA6E9 /* CoreLocation.framework */; };
 		431F86011A3EB738003DA6E9 /* NTLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F86001A3EB738003DA6E9 /* NTLocationManager.m */; };
 		431F86071A3EDE1C003DA6E9 /* NTSchoolAnnotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F86061A3EDE1C003DA6E9 /* NTSchoolAnnotate.m */; };
@@ -97,8 +96,6 @@
 		431F85F11A3EA352003DA6E9 /* NTSchoolAnnotateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTSchoolAnnotateView.h; sourceTree = "<group>"; };
 		431F85F21A3EA352003DA6E9 /* NTSchoolAnnotateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTSchoolAnnotateView.m; sourceTree = "<group>"; };
 		431F85F41A3EA588003DA6E9 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		431F85F61A3EA623003DA6E9 /* NTFilterInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTFilterInstance.h; sourceTree = "<group>"; };
-		431F85F71A3EA623003DA6E9 /* NTFilterInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTFilterInstance.m; sourceTree = "<group>"; };
 		431F85FD1A3EA756003DA6E9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		431F85FF1A3EB738003DA6E9 /* NTLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTLocationManager.h; sourceTree = "<group>"; };
 		431F86001A3EB738003DA6E9 /* NTLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTLocationManager.m; sourceTree = "<group>"; };
@@ -357,8 +354,6 @@
 		43F57BDC1A40267D0081E4B0 /* Models & Others */ = {
 			isa = PBXGroup;
 			children = (
-				431F85F61A3EA623003DA6E9 /* NTFilterInstance.h */,
-				431F85F71A3EA623003DA6E9 /* NTFilterInstance.m */,
 				431F85FF1A3EB738003DA6E9 /* NTLocationManager.h */,
 				431F86001A3EB738003DA6E9 /* NTLocationManager.m */,
 				431F86021A3EDBB4003DA6E9 /* NTMapUtilities.h */,
@@ -498,7 +493,6 @@
 				431F85DD1A3E977D003DA6E9 /* UIActivityIndicatorView+NTShow.m in Sources */,
 				431F85B21A3E9430003DA6E9 /* seattle_schools.xcdatamodeld in Sources */,
 				43A876F61A4483B200AD9CCD /* NTFlagButton.m in Sources */,
-				431F85F81A3EA623003DA6E9 /* NTFilterInstance.m in Sources */,
 				431F86011A3EB738003DA6E9 /* NTLocationManager.m in Sources */,
 				431F86071A3EDE1C003DA6E9 /* NTSchoolAnnotate.m in Sources */,
 				431F85AE1A3E9405003DA6E9 /* NTHomeViewController.m in Sources */,

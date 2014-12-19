@@ -17,6 +17,7 @@ static NSInteger const kTagAlertPhone = 2;
 static NSInteger const kTagAlertWeb = 3;
 
 @interface NTDetailViewController ()<UIAlertViewDelegate>
+@property (weak, nonatomic) IBOutlet UILabel *gradeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *addressLabel;
 @property (weak, nonatomic) IBOutlet UILabel *phoneLabel;
 @property (weak, nonatomic) IBOutlet UILabel *websiteLabel;
@@ -31,19 +32,19 @@ static NSInteger const kTagAlertWeb = 3;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // set background color
     [self.view setBackgroundColor:[[NTTheme instance] detailViewBackgroundColor]];
-    
-    for (UIView *view in self.view.subviews) {
-        if ([view isKindOfClass:[UILabel class]]) {
-            
-        }
-    }
     
     // set image view to aspect fit
     [ @[self.addressButton, self.webButton, self.phoneButton] setValue:@(UIViewContentModeScaleAspectFit) forKeyPath:@"imageView.contentMode"];
     
+    // set label info from school object
     if(self.school) {
+        
+        // set title
         self.title = [self.school.name capitalizedString];
+        
+        [self.gradeLabel setText:self.school.grade];
         [self.addressLabel setText:self.school.address];
         [self.phoneLabel setText:self.school.phone];
         [self.websiteLabel setText:self.school.website];

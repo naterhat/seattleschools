@@ -235,31 +235,31 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grade" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Mn-06-ppI" customClass="NTDetailLabel">
-                                <rect key="frame" x="16" y="207" width="48" height="21"/>
+                                <rect key="frame" x="16" y="210" width="48" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7PU-ic-Vla" customClass="NTDetailLabel">
-                                <rect key="frame" x="16" y="240" width="64" height="21"/>
+                                <rect key="frame" x="16" y="246" width="64" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mhy-i9-FLV" customClass="NTDetailLabel">
-                                <rect key="frame" x="16" y="272" width="50" height="21"/>
+                                <rect key="frame" x="16" y="281" width="50" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Website" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wx0-gb-K69" customClass="NTDetailLabel">
-                                <rect key="frame" x="16" y="305" width="483" height="21"/>
+                                <rect key="frame" x="16" y="317" width="483" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQ2-IB-2lt">
-                                <rect key="frame" x="554" y="235" width="30" height="30"/>
+                                <rect key="frame" x="554" y="241" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="4hF-46-KPF"/>
                                     <constraint firstAttribute="height" constant="30" id="DsC-dR-V00"/>
@@ -272,7 +272,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7oD-b3-fQa">
-                                <rect key="frame" x="554" y="267" width="30" height="30"/>
+                                <rect key="frame" x="554" y="276" width="30" height="30"/>
                                 <state key="normal" image="phone16">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -281,7 +281,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nZc-gm-vXK">
-                                <rect key="frame" x="554" y="301" width="30" height="30"/>
+                                <rect key="frame" x="554" y="313" width="30" height="30"/>
                                 <state key="normal" image="safari5">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -290,22 +290,28 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="01U-5v-bc7" customClass="NTDetailLabel">
-                                <rect key="frame" x="504" y="239" width="42" height="21"/>
+                                <rect key="frame" x="504" y="245" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nba-bA-1X0" customClass="NTDetailLabel">
-                                <rect key="frame" x="504" y="272" width="42" height="21"/>
+                                <rect key="frame" x="504" y="281" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="woT-j2-QU2" customClass="NTDetailLabel">
-                                <rect key="frame" x="504" y="305" width="42" height="21"/>
+                                <rect key="frame" x="504" y="317" width="42" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" priority="750" constant="1" id="WFb-bP-TKv"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdb-Nw-Mjc" customClass="NTDetailLabel">
+                                <rect key="frame" x="504" y="210" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -318,16 +324,18 @@
                             <constraint firstItem="7oD-b3-fQa" firstAttribute="height" secondItem="nZc-gm-vXK" secondAttribute="height" id="6Ug-Po-6Va"/>
                             <constraint firstItem="iQ2-IB-2lt" firstAttribute="centerY" secondItem="7PU-ic-Vla" secondAttribute="centerY" id="6cw-Tf-j51"/>
                             <constraint firstItem="01U-5v-bc7" firstAttribute="trailing" secondItem="Nba-bA-1X0" secondAttribute="trailing" id="Hw9-0p-Q26"/>
-                            <constraint firstItem="wx0-gb-K69" firstAttribute="top" secondItem="Mhy-i9-FLV" secondAttribute="bottom" constant="12" id="I8F-kD-dDZ"/>
-                            <constraint firstItem="Mhy-i9-FLV" firstAttribute="top" secondItem="7PU-ic-Vla" secondAttribute="bottom" constant="12" id="JW5-7W-kz9"/>
+                            <constraint firstItem="wx0-gb-K69" firstAttribute="top" secondItem="Mhy-i9-FLV" secondAttribute="bottom" constant="15" id="I8F-kD-dDZ"/>
+                            <constraint firstItem="Mhy-i9-FLV" firstAttribute="top" secondItem="7PU-ic-Vla" secondAttribute="bottom" constant="15" id="JW5-7W-kz9"/>
                             <constraint firstItem="iQ2-IB-2lt" firstAttribute="height" secondItem="7oD-b3-fQa" secondAttribute="height" id="Ke6-eT-OpY"/>
                             <constraint firstItem="7oD-b3-fQa" firstAttribute="trailing" secondItem="nZc-gm-vXK" secondAttribute="trailing" id="LoI-lw-PTr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kMi-4Y-Sz8" secondAttribute="trailing" constant="-16" id="NoD-or-5xl"/>
                             <constraint firstItem="3Mn-06-ppI" firstAttribute="leading" secondItem="KHu-KO-hg9" secondAttribute="leadingMargin" id="PAR-Be-ydQ"/>
                             <constraint firstItem="7PU-ic-Vla" firstAttribute="leading" secondItem="3Mn-06-ppI" secondAttribute="leading" id="Qh8-T3-d1m"/>
-                            <constraint firstItem="7PU-ic-Vla" firstAttribute="top" secondItem="3Mn-06-ppI" secondAttribute="bottom" constant="12" id="RKG-H2-vF8"/>
+                            <constraint firstItem="7PU-ic-Vla" firstAttribute="top" secondItem="3Mn-06-ppI" secondAttribute="bottom" constant="15" id="RKG-H2-vF8"/>
+                            <constraint firstItem="tdb-Nw-Mjc" firstAttribute="centerY" secondItem="3Mn-06-ppI" secondAttribute="centerY" id="Rmi-Wy-6Df"/>
                             <constraint firstItem="Nba-bA-1X0" firstAttribute="trailing" secondItem="woT-j2-QU2" secondAttribute="trailing" id="VMf-jo-0ba"/>
                             <constraint firstItem="7oD-b3-fQa" firstAttribute="centerY" secondItem="Nba-bA-1X0" secondAttribute="centerY" id="X0w-WS-4Oe"/>
+                            <constraint firstItem="tdb-Nw-Mjc" firstAttribute="trailing" secondItem="01U-5v-bc7" secondAttribute="trailing" id="e5a-LK-GIU"/>
                             <constraint firstItem="Mhy-i9-FLV" firstAttribute="leading" secondItem="wx0-gb-K69" secondAttribute="leading" id="eLQ-iZ-ybo"/>
                             <constraint firstItem="kMi-4Y-Sz8" firstAttribute="top" secondItem="dR7-EX-ZCb" secondAttribute="bottom" constant="12" id="gim-BT-XTa"/>
                             <constraint firstItem="01U-5v-bc7" firstAttribute="centerY" secondItem="iQ2-IB-2lt" secondAttribute="centerY" id="gk6-RF-bjZ"/>
@@ -338,7 +346,7 @@
                             <constraint firstItem="wx0-gb-K69" firstAttribute="centerY" secondItem="nZc-gm-vXK" secondAttribute="centerY" id="kTX-UR-VyW"/>
                             <constraint firstItem="iQ2-IB-2lt" firstAttribute="trailing" secondItem="7oD-b3-fQa" secondAttribute="trailing" id="r6k-lL-m15"/>
                             <constraint firstItem="7oD-b3-fQa" firstAttribute="width" secondItem="nZc-gm-vXK" secondAttribute="width" id="rCt-hF-qef"/>
-                            <constraint firstItem="3Mn-06-ppI" firstAttribute="top" secondItem="kMi-4Y-Sz8" secondAttribute="bottom" constant="12" id="tn7-Lq-7Cg"/>
+                            <constraint firstItem="3Mn-06-ppI" firstAttribute="top" secondItem="kMi-4Y-Sz8" secondAttribute="bottom" constant="15" id="tn7-Lq-7Cg"/>
                             <constraint firstItem="kMi-4Y-Sz8" firstAttribute="leading" secondItem="KHu-KO-hg9" secondAttribute="leadingMargin" constant="-16" id="xXl-sj-6Og"/>
                             <constraint firstItem="Mhy-i9-FLV" firstAttribute="leading" secondItem="7PU-ic-Vla" secondAttribute="leading" id="zHP-Nz-geI"/>
                         </constraints>
@@ -347,6 +355,7 @@
                     <connections>
                         <outlet property="addressButton" destination="iQ2-IB-2lt" id="2qq-aQ-Dkq"/>
                         <outlet property="addressLabel" destination="01U-5v-bc7" id="MfH-Dc-MrQ"/>
+                        <outlet property="gradeLabel" destination="tdb-Nw-Mjc" id="rGf-pE-7oB"/>
                         <outlet property="imageView" destination="kMi-4Y-Sz8" id="eVM-KZ-7cO"/>
                         <outlet property="phoneButton" destination="7oD-b3-fQa" id="OIj-DE-epm"/>
                         <outlet property="phoneLabel" destination="Nba-bA-1X0" id="Rzn-yG-nDW"/>

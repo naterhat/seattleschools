@@ -14,6 +14,7 @@
 
 - (void)retrieveImageWithHandler:(NTNetworkRetrieveImage)handler withKeyword:(NSString *)keyword;
 {
+    // validate keyword. return if none.
     if(!keyword) {
         handler(nil, nil);
         return;
@@ -21,6 +22,8 @@
     
     __weak typeof (self) weakself = self;
     __block NSString *path = [NSString stringWithFormat:@"https://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=%@", keyword];
+    
+    // request image data from google search
     [self retrieveDictionaryWithHandler:^(NSDictionary *dict, NSError *error) {
         if (error) {
             handler(nil, error);
@@ -48,6 +51,8 @@
         if (firstResult) {
             NSLog(@"%@", firstResult);
             NSString *urlPath = firstResult[@"tbUrl"];
+            
+            // After retrieving a result, request that image from result.
             [weakself retrieveImageFromURLWithHandler:^(UIImage *image, NSError *error) {
                 handler(image, error);
             } atPath:urlPath];

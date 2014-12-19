@@ -10,6 +10,9 @@
 
 @interface NTJSONLocalCollector (NTSeattle)
 
+/**
+ *  This will retrieve data from local storage
+ */
 - (void)retrieveSchoolsWithHandler:(NTNetworkRetrieveCollection)handler;
 
 @end

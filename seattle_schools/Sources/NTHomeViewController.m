@@ -50,13 +50,10 @@ static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.
     
     _schools = [NSMutableArray array];
     _network = [NTJSONLocalCollector sharedInstance];
-//    _lastPosition = CGPointMake(CGFLOAT_MAX, CGFLOAT_MAX);
     
     // set location manager
     _locationManager = [NTLocationManager sharedInstance];
     [_locationManager setDelegate:self];
-    
-    
     
     // add filter view controller
     _filterVC = [self.storyboard instantiateViewControllerWithIdentifier:@"filterViewController"];
@@ -80,7 +77,7 @@ static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.
     id<MKAnnotation> annotation = self.mapView.selectedAnnotations.lastObject;
     if ([annotation isKindOfClass:[NTSchoolGroupAnnotation class]]) {
         NTDetailViewController *vc = segue.destinationViewController;
-        [vc setSchool:[(id)annotation school]];
+        [vc setSchool:[(id)annotation firstObject]];
     }
 }
 
@@ -151,6 +148,7 @@ static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.
 {
     NSLog(@"REFRESH ANNOTATIONS");
     
+    // set parameters to convert annotation coordinate to screen space.
     CGFloat annotationWidth = 40;
     CGFloat annotationHeight = 40;
     
@@ -177,6 +175,9 @@ static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.
             if (![annotation isKindOfClass:[NTSchoolGroupAnnotation class]]) continue;
             
             CLLocationCoordinate2D coord = annotation.coordinate;
+            
+            // If coordinate is inside the annotation, then add object to annotation
+            //   collection and refresh view.
             if(fabs(coord.latitude-latitude) < latDelta &&
                fabs(coord.longitude-longitude) < longDelta ){
                 found=YES;
@@ -274,6 +275,7 @@ static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.
     static NSString *schoolIdentifier = @"school";
     static NSString *current = @"current";
     
+    // get school identifier depending on type of annotations.
     NSString *identifier;
     if ( [annotation isKindOfClass:[NTSchoolGroupAnnotation class]] ) {
         identifier = schoolIdentifier;
@@ -333,6 +335,7 @@ static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.
             [iv setImage:school.image];
         } else {
             
+#warning "Working Progress to retrieve image from google api"
             // there is no school image, grab image from network
 //            [[NTJSONNetworkCollector sharedInstance] retrieveImageWithHandler:^(UIImage *image, NSError *error) {
 //                [school setImage:image];
@@ -365,11 +368,7 @@ static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.
 
 - (void)filterViewControllerUpdateFrame:(CGRect)rect
 {
-    NSLog(@"frame: %@", NSStringFromCGRect(rect));
-    
-//    CGRect frame = CGRectSetY(self.poleView.frame, rect.origin.y - self.poleView.frame.size.height/2);
-//    [self.poleView setFrame:frame];
-    
+    // animate the scrolling of the pole.
     [self.poleView scrollToPosition:rect.origin];
 }
 

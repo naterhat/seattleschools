@@ -53,6 +53,7 @@ static const CGFloat max = 200;
     frame.size.width = flagWidth;
     [self.view setFrame:frame];
     
+    // Used for panning the view and stopping at a certain point.
     _min = -self.view.frame.size.height * .5 + min;
     _max = -self.view.frame.size.height * .5 + max;
     _mid = (_min + _max) * .5;
@@ -111,6 +112,9 @@ static const CGFloat max = 200;
 {
     [button setSelected:!button.selected];
     
+    // change selection for Public and Private buttons.
+    //  Can't have both selection because selecting none will
+    //   automatically include both public and private schools.
     if(button.selected) {
         if (button == self.typePrivateButton)
             [self.typePublicButton setSelected:NO];

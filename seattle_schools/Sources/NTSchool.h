@@ -5,6 +5,22 @@
 //  Created by Nate on 12/14/14.
 //  Copyright (c) 2014 ifcantel. All rights reserved.
 //
+//zip: "98107",
+//phone: "(206) 252-1300",
+//school: "Adams",
+//website: "http://adamses.seattleschools.org/",
+//address: "6110 28th Ave NW",
+//name: "Adams",
+//grade: "K - 5",
+//shape: {
+//needs_recoding: false,
+//longitude: "-122.39151959399999",
+//latitude: "47.67363214300008"
+//},
+//type: "Elementary",
+//objectid: "1",
+//city: "Seattle"
+
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIImage.h>
@@ -23,24 +39,6 @@ typedef NS_ENUM(NSUInteger, NTSchoolGrade) {
 };
 
 extern NSString *NSStringFromSchoolGrade(NTSchoolGrade grade);
-
-//zip: "98107",
-//phone: "(206) 252-1300",
-//school: "Adams",
-//website: "http://adamses.seattleschools.org/",
-//address: "6110 28th Ave NW",
-//name: "Adams",
-//grade: "K - 5",
-//shape: {
-//needs_recoding: false,
-//longitude: "-122.39151959399999",
-//latitude: "47.67363214300008"
-//},
-//type: "Elementary",
-//objectid: "1",
-//city: "Seattle"
-
-// TEST TEST TEST
 
 @interface NTSchool : NSObject
 

@@ -28,8 +28,10 @@
 
 - (UIImage *)image
 {
+    // if count more than 1, show number annotation.
+    //  Otherwise, display public or private image
+    //   depends on the first school object from collection.
     if (self.count > 1) {
-//        return [UIImage imageOfCombineSchool];
         return [UIImage imageOfNumber:@(self.count)];
     } else {
         if ([self.firstObject isPublic])
@@ -46,14 +48,6 @@
 - (CLLocationCoordinate2D)coordinate
 {
     return _coordinate;
-    
-//    if(!self.isEmpty) {
-//        NTSchool *school = self.collection.firstObject;
-//        return CLLocationCoordinate2DMake(school.latitude.doubleValue, school.longitude.doubleValue);
-//        
-//    } else {
-//        return CLLocationCoordinate2DMake(0, 0);
-//    }
 }
 
 - (NSString *)subtitle
