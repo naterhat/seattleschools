@@ -24,6 +24,9 @@
         [self.layer setBorderColor:[UIColor clearColor].CGColor];
         
         [self.titleLabel setFont:[[NTTheme instance] generalFont]];
+        
+        [self.titleLabel setMinimumScaleFactor:.5f];
+        [self.titleLabel setAdjustsFontSizeToFitWidth:YES];
     } return self;
 }
 

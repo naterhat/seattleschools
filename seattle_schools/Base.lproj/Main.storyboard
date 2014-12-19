@@ -95,7 +95,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b3J-rB-JHb" customClass="NTFlagButton">
-                                <rect key="frame" x="218" y="546" width="57" height="28"/>
+                                <rect key="frame" x="200" y="546" width="80" height="28"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                                 <state key="normal" title="Public">
@@ -110,7 +110,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rwe-l2-14W" customClass="NTFlagButton">
-                                <rect key="frame" x="325" y="546" width="57" height="28"/>
+                                <rect key="frame" x="320" y="546" width="80" height="28"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                                 <state key="normal" title="Private">
@@ -124,8 +124,11 @@
                                     <action selector="selectButton:" destination="cUO-s0-OQo" eventType="touchUpInside" id="xGX-Z2-sLB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQx-rg-cg0" customClass="NTFlagButton">
-                                <rect key="frame" x="156" y="503" width="86" height="28"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQx-rg-cg0" customClass="NTFlagButton">
+                                <rect key="frame" x="171" y="503" width="80" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="CYE-32-sPM"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                                 <state key="normal" title="Elementary">
@@ -139,8 +142,8 @@
                                     <action selector="selectButton:" destination="cUO-s0-OQo" eventType="touchUpInside" id="b2O-ff-dZU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QN4-XA-cZY" customClass="NTFlagButton">
-                                <rect key="frame" x="272" y="503" width="56" height="28"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QN4-XA-cZY" customClass="NTFlagButton">
+                                <rect key="frame" x="261" y="503" width="80" height="28"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                                 <state key="normal" title="Middle">
@@ -164,8 +167,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6aN-Cv-VoP" customClass="NTFlagButton">
-                                <rect key="frame" x="358" y="503" width="42" height="28"/>
+                            <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6aN-Cv-VoP" customClass="NTFlagButton">
+                                <rect key="frame" x="351" y="503" width="80" height="28"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                                 <state key="normal" title="High">
@@ -183,18 +186,22 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="b3J-rB-JHb" firstAttribute="centerY" secondItem="Rwe-l2-14W" secondAttribute="centerY" id="5k3-mU-GZq"/>
-                            <constraint firstItem="Rwe-l2-14W" firstAttribute="leading" secondItem="R6m-GD-oev" secondAttribute="trailing" constant="15" id="7Kg-IV-kFN"/>
-                            <constraint firstItem="QN4-XA-cZY" firstAttribute="leading" secondItem="RQx-rg-cg0" secondAttribute="trailing" constant="30" id="7uy-D2-m4T"/>
+                            <constraint firstItem="Rwe-l2-14W" firstAttribute="leading" secondItem="R6m-GD-oev" secondAttribute="trailing" constant="10" id="7Kg-IV-kFN"/>
+                            <constraint firstItem="6aN-Cv-VoP" firstAttribute="leading" secondItem="QN4-XA-cZY" secondAttribute="trailing" constant="10" id="AMd-wF-vU6"/>
                             <constraint firstItem="b3J-rB-JHb" firstAttribute="width" secondItem="Rwe-l2-14W" secondAttribute="width" id="Di0-ef-MOg"/>
-                            <constraint firstItem="R6m-GD-oev" firstAttribute="leading" secondItem="b3J-rB-JHb" secondAttribute="trailing" constant="15" id="G8E-2A-CYf"/>
+                            <constraint firstItem="R6m-GD-oev" firstAttribute="leading" secondItem="b3J-rB-JHb" secondAttribute="trailing" constant="10" id="G8E-2A-CYf"/>
+                            <constraint firstItem="Rwe-l2-14W" firstAttribute="width" secondItem="RQx-rg-cg0" secondAttribute="width" id="JeY-hf-sU8"/>
                             <constraint firstItem="QN4-XA-cZY" firstAttribute="centerY" secondItem="RQx-rg-cg0" secondAttribute="centerY" id="Jiw-Lz-wuA"/>
+                            <constraint firstItem="b3J-rB-JHb" firstAttribute="width" secondItem="RQx-rg-cg0" secondAttribute="width" id="P4C-ir-foy"/>
                             <constraint firstAttribute="bottomMargin" secondItem="R6m-GD-oev" secondAttribute="bottom" id="TIP-1m-rSN"/>
                             <constraint firstItem="khR-hm-lpc" firstAttribute="top" secondItem="b3J-rB-JHb" secondAttribute="bottom" constant="26" id="UJd-q7-EAh"/>
                             <constraint firstAttribute="centerX" secondItem="QN4-XA-cZY" secondAttribute="centerX" id="YKA-xW-fIK"/>
-                            <constraint firstItem="6aN-Cv-VoP" firstAttribute="leading" secondItem="QN4-XA-cZY" secondAttribute="trailing" constant="30" id="bwG-5p-d5Y"/>
+                            <constraint firstItem="6aN-Cv-VoP" firstAttribute="width" secondItem="QN4-XA-cZY" secondAttribute="width" id="Z2z-st-Fl1"/>
+                            <constraint firstItem="QN4-XA-cZY" firstAttribute="width" secondItem="RQx-rg-cg0" secondAttribute="width" id="ZAy-1C-4wY"/>
                             <constraint firstItem="QN4-XA-cZY" firstAttribute="centerY" secondItem="6aN-Cv-VoP" secondAttribute="centerY" id="cYF-IB-ceq"/>
                             <constraint firstItem="b3J-rB-JHb" firstAttribute="top" secondItem="QN4-XA-cZY" secondAttribute="bottom" constant="15" id="cde-je-GnV"/>
                             <constraint firstAttribute="centerX" secondItem="R6m-GD-oev" secondAttribute="centerX" id="j0M-5k-Tij"/>
+                            <constraint firstItem="QN4-XA-cZY" firstAttribute="leading" secondItem="RQx-rg-cg0" secondAttribute="trailing" priority="750" constant="10" id="zPI-My-bFZ"/>
                         </constraints>
                     </view>
                     <connections>
