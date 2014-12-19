@@ -28,7 +28,7 @@
 static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.0, 1.0}};
 
 @interface NTHomeViewController ()<MKMapViewDelegate, NTLocationManagerDelegate, NTFilterViewControllerDelegate>
-@property (nonatomic) NTJSONLocalCollector *network;
+@property (nonatomic) NTJSONNetworkCollector *network;
 @property (nonatomic) NSMutableArray *schools;
 @property (nonatomic) NTFilterViewController *filterVC;
 @property (nonatomic) NTLocationManager *locationManager;
@@ -49,7 +49,7 @@ static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.
     [self setNeedsStatusBarAppearanceUpdate];
     
     _schools = [NSMutableArray array];
-    _network = [NTJSONLocalCollector sharedInstance];
+    _network = [NTJSONNetworkCollector sharedInstance];
     
     // set location manager
     _locationManager = [NTLocationManager sharedInstance];
@@ -337,10 +337,10 @@ static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.
             
 #warning "Working Progress to retrieve image from google api"
             // there is no school image, grab image from network
-//            [[NTJSONNetworkCollector sharedInstance] retrieveImageWithHandler:^(UIImage *image, NSError *error) {
-//                [school setImage:image];
-//                [iv setImage:image];
-//            } withKeyword:school.website];
+            [[NTJSONNetworkCollector sharedInstance] retrieveImageWithHandler:^(UIImage *image, NSError *error) {
+                [school setImage:image];
+                [iv setImage:image];
+            } withKeyword:school.website];
         }
     }
 }
