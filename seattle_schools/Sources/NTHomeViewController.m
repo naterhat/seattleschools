@@ -17,11 +17,17 @@
 #import "NTFilterViewController.h"
 #import "NTLocationManager.h"
 #import "NTMapUtilities.h"
-//#import "NTSchoolAnnotate.h"
 #import "NTDetailViewController.h"
 #import "NTSchoolFilter.h"
 #import "UIImage+NTExtra.h"
 #import "NTSchoolGroupAnnotation.h"
+#import "NTMath.h"
+#import "NTPanGestureRecognizer.h"
+
+static const CGFloat min = 120;
+static const CGFloat max = 300;
+
+static const CGFloat leeway = 100;
 
 static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.0, 1.0}};
 
@@ -30,11 +36,16 @@ static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.
 @property (nonatomic) NSMutableArray *schools;
 @property (nonatomic) NTFilterViewController *filterVC;
 @property (nonatomic) NTLocationManager *locationManager;
-@property (nonatomic) BOOL modifyingMap;
 @property (nonatomic) BOOL rendered;
-@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (nonatomic) CGFloat zoomLevel;
 @property (nonatomic) NSArray *filterSchools;
+@property (weak, nonatomic) IBOutlet UIImageView *poleContainer;
+@property (nonatomic) UIView *poleView;
+@property (nonatomic) UIView *poleMiddleView;
+@property (nonatomic) CGPoint lastPosition;
+
+
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @end
 
 @implementation NTHomeViewController
@@ -44,10 +55,26 @@ static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.
     
     _schools = [NSMutableArray array];
     _network = [NTJSONLocalCollector sharedInstance];
+    _lastPosition = CGPointMake(CGFLOAT_MAX, CGFLOAT_MAX);
     
     // set location manager
     _locationManager = [NTLocationManager sharedInstance];
     [_locationManager setDelegate:self];
+    
+    CGSize viewSize = self.view.frame.size;
+    
+    // create pole view
+    self.poleView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.poleContainer.frame.size.width, viewSize.height * 2.0f)];
+    UIColor *patternColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"wood_tile"]];
+    [self.poleView setBackgroundColor:patternColor];
+    [self.poleContainer addSubview:self.poleView];
+    [self.poleContainer setClipsToBounds:YES];
+    CGFloat poleWidth = self.view.frame.size.width * .9f;
+    CGRect middle = CGRectMake((viewSize.width - poleWidth) * .5, 0, poleWidth, self.poleContainer.frame.size.height);
+    UIView *poleMiddleView = [[UIView alloc] initWithFrame:middle];
+    [poleMiddleView setBackgroundColor:[UIColor whiteColor]];
+    _poleMiddleView = poleMiddleView;
+    [self.poleContainer addSubview:poleMiddleView];
     
     
     // add filter view controller
@@ -57,12 +84,14 @@ static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.
     [self.view addSubview:_filterVC.view];
     CGRect frame =  _filterVC.view.frame;
     frame.origin.y = -frame.size.height + 200;
+    frame.size.width = poleWidth;
+    frame.origin.x = (viewSize.width - poleWidth) * .5;
     _filterVC.view.frame = frame;
     
     // add current location button
-    MKUserTrackingBarButtonItem *trackingItem = [[MKUserTrackingBarButtonItem alloc] initWithMapView:self.mapView];
-    [self.navigationItem setLeftBarButtonItem:trackingItem];
-    
+//    MKUserTrackingBarButtonItem *trackingItem = [[MKUserTrackingBarButtonItem alloc] initWithMapView:self.mapView];
+//    [self.navigationItem setLeftBarButtonItem:trackingItem];
+
     // set mapview
     [self.mapView setDelegate:self];
 
@@ -111,6 +140,7 @@ static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.
 
 - (void)addSchools:(NSArray *)schools
 {
+    // remove school name duplications
     NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
     NSMutableArray *tempArray = [NSMutableArray arrayWithArray:[schools sortedArrayUsingDescriptors:@[ sort ]]];
     for (int i = 0; i < tempArray.count-1; i++) {
@@ -119,159 +149,27 @@ static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.
         }
     }
     
-//    NSPredicate *template = [NSPredicate predicateWithFormat:@"name = $name"];
-//    for (NTSchool *school in schools) {
-//        NSDictionary *dict = @{@"name": school.name};
-//        NSPredicate *pred = [template predicateWithSubstitutionVariables:dict];
-//        if ([[self.schools filteredArrayUsingPredicate:pred] firstObject] == nil) {
-//            [self.schools addObjectsFromArray:schools];
-//        }
-//    }
-    
     self.schools = tempArray;
     self.filterSchools = tempArray;
-    [self addSchoolAnnotationsWithSchools:self.filterSchools];
 }
 
 - (void)filterWithPredicate:(NSPredicate *)predicate
 {
-    NSInteger oldFilterCount = self.filterSchools.count;
-    
     if(predicate) {
-        NSLog(@"predicate: %@", predicate.description);
-//        [self.mapView removeAnnotations:self.mapView.annotations];
-        
-        NSMutableArray *added = [NSMutableArray array];
-        NSMutableArray *removed = [NSMutableArray array];
-        
-        [self filterSchoolsWithPredicate:predicate addedItems:added removedItems:removed];
-        
-        NSLog(@"Old: %i. New: %i. { +%i, -%i}",  (int32_t)oldFilterCount, (int32_t)self.filterSchools.count, (int32_t)added.count, (int32_t)removed.count);
-        
-//        [self addSchoolAnnotationsWithSchools:added];
-//        [self removeSchoolAnnotationsWithSchools:removed];
-        
+        // Filter schools
+        NSLog(@"Filter schools by %@", predicate.description);
+        self.filterSchools = [NSMutableArray arrayWithArray: [self.schools filteredArrayUsingPredicate:predicate]];
         [self refreshAnnotationsWithSchoolFilter:self.filterSchools];
-        
-//        self.filterSchools = keptSchools;
-//        [self addSchoolAnnotationsWithSchools:self.filterSchools];
+
     } else {
         // show all schools
-        
         NSLog(@"Show all schools");
-//        [self.mapView removeAnnotations:self.mapView.annotations];
-//        self.filterSchools = self.schools;
-//        [self addSchoolAnnotationsWithSchools:self.filterSchools];
-        
-        NSMutableArray *added = [NSMutableArray array];
-        NSMutableArray *removed = [NSMutableArray array];
-        
-        [self filterSchoolsWithPredicate:nil addedItems:added removedItems:removed];
-        
-        NSLog(@"Old: %i. New: %i. { +%i, -%i}",  (int32_t)oldFilterCount, (int32_t)self.filterSchools.count, (int32_t)added.count, (int32_t)removed.count);
-        
-//        [self addSchoolAnnotationsWithSchools:added];
-//        [self removeSchoolAnnotationsWithSchools:removed];
-        
+        self.filterSchools = self.schools;
         [self refreshAnnotationsWithSchoolFilter:self.filterSchools];
     }
-}
-
-- (void)filterSchoolsWithPredicate:(NSPredicate *)predicate addedItems:(NSMutableArray *)added removedItems:(NSMutableArray *)removed
-{
-    NSMutableArray *oldArray, *newArray;
-    
-    oldArray = [NSMutableArray arrayWithArray:self.filterSchools];
-    if(predicate)
-        newArray = [NSMutableArray arrayWithArray: [self.schools filteredArrayUsingPredicate:predicate]];
-    else
-        newArray = self.schools;
-    
-    NSSortDescriptor *sortName = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
-    NSSortDescriptor *sortPublic = [NSSortDescriptor sortDescriptorWithKey:@"public" ascending:YES];
-    [oldArray sortUsingDescriptors:@[sortName, sortPublic]];
-    [newArray sortUsingDescriptors:@[sortName, sortPublic]];
-    
-    NTSchool *oldSchool, *newSchool;
-    int oldIndex = 0;
-    int newIndex = 0;
-    while (oldIndex < oldArray.count && newIndex < newArray.count) {
-        oldSchool = oldArray[oldIndex];
-        newSchool = newArray[newIndex];
-        
-        NSComparisonResult result = [oldSchool.name compare:newSchool.name options:NSLiteralSearch];
-        
-        if (result == NSOrderedAscending) {
-            // removed
-            [removed addObject:oldSchool];
-            oldIndex++;
-        } else if (result == NSOrderedDescending) {
-            // added
-            [added addObject:newSchool];
-            newIndex++;
-        } else {
-            newIndex++; oldIndex++;
-        }
-    }
-    
-    // remove
-    while (oldIndex < oldArray.count) {
-        // removed
-        [removed addObject:oldArray[oldIndex]];
-        oldIndex++;
-    }
-    
-    // add
-    while (newIndex < newArray.count) {
-        [added addObject:newArray[newIndex]];
-        newIndex++;
-    }
-    
-    // set filter
-    self.filterSchools = newArray;
 }
 
 #pragma mark - Annotations
-
-- (void)refresh
-{
-    NSLog(@"REFRESH");
-    
-//    [self.mapView removeAnnotations:self.mapView.annotations];
-//    
-//    CGFloat annotationWidth = 32;
-//    CGFloat annotationHeight = 29;
-//    
-//    CGFloat iphoneScaleFactorLatitude = self.view.frame.size.width / annotationWidth;
-//    CGFloat iphoneScaleFactorLongitude = self.view.frame.size.height / annotationHeight;
-//    
-//    float latDelta=self.mapView.region.span.latitudeDelta/iphoneScaleFactorLatitude;
-//    float longDelta=self.mapView.region.span.longitudeDelta/iphoneScaleFactorLongitude;
-//    
-//    for (int i=0; i<[self.filterSchools count]; i++) {
-//        NTSchool *school = self.filterSchools[i];
-//        CLLocationDegrees latitude = school.latitude.doubleValue;
-//        CLLocationDegrees longitude = school.longitude.doubleValue;
-//        bool found=FALSE;
-//        for (NTSchoolGroupAnnotation *annotation in self.mapView.annotations) {
-//            
-//            if (![annotation isKindOfClass:[NTSchoolGroupAnnotation class]]) continue;
-//            
-//            CLLocationCoordinate2D coord = annotation.coordinate;
-//            if(fabs(coord.latitude-latitude) < latDelta &&
-//               fabs(coord.longitude-longitude) < longDelta ){
-//                found=TRUE;
-//                [annotation addObject:school];
-//                break;
-//            }
-//        }
-//        if (!found) {
-//            // Create Group Annotation
-//            NTSchoolGroupAnnotation *group = [[NTSchoolGroupAnnotation alloc] initWithSchool:school];
-//            [self.mapView addAnnotation:group];
-//        }
-//    }
-}
 
 - (void)refreshAnnotationsWithSchoolFilter:(NSArray *)filter
 {
@@ -297,7 +195,7 @@ static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.
         NTSchool *school = filter[i];
         CLLocationDegrees latitude = school.latitude.doubleValue;
         CLLocationDegrees longitude = school.longitude.doubleValue;
-        bool found=FALSE;
+        BOOL found=NO;
         for (NTSchoolGroupAnnotation *annotation in self.mapView.annotations) {
             
             if (![annotation isKindOfClass:[NTSchoolGroupAnnotation class]]) continue;
@@ -305,11 +203,14 @@ static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.
             CLLocationCoordinate2D coord = annotation.coordinate;
             if(fabs(coord.latitude-latitude) < latDelta &&
                fabs(coord.longitude-longitude) < longDelta ){
-                found=TRUE;
+                found=YES;
                 [annotation addObject:school];
                 
+                // set annotation image
+                // AND enable and disable call out
                 MKAnnotationView *view = [self.mapView viewForAnnotation:annotation];
                 [view setImage:annotation.image];
+                [view setEnabled:annotation.count == 1];
                 break;
             }
         }
@@ -320,135 +221,30 @@ static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.
         }
     }
     
-    // clear all annotation that are empty
+    // clear/remove all annotation that are empty
     for (int i = (int)self.mapView.annotations.count-1; i >= 0; i--) {
         NTSchoolGroupAnnotation *annotation = self.mapView.annotations[i];
         if ([annotation isKindOfClass:[NTSchoolGroupAnnotation class]]) {
-            if(annotation.isEmpty) {
+            if (annotation.isEmpty) {
                 [self.mapView removeAnnotation:annotation];
-            } else {
             }
         }
     }
     
     
+    // DEBUG PURPOSES
+    // ==============
     int viewCounts = 0;
     int annCount = 0;
     for (NTSchoolGroupAnnotation *annotation in self.mapView.annotations) {
-        if([annotation isKindOfClass:[NTSchoolGroupAnnotation class]]) {
+        if ([annotation isKindOfClass:[NTSchoolGroupAnnotation class]]) {
             viewCounts += annotation.count;
             annCount++;
         }
     }
-    
     NSLog(@"Annotations: %i, Filter: %i, Ann Collection Total: %i", (int32_t)annCount, (int32_t)self.filterSchools.count, (int32_t)viewCounts);
+    // ==============
 }
-
-- (void)addSchoolAnnotationsWithSchools:(NSArray *)schools{
-    NSLog(@"ADD ANNOTATIONS");
-    
-//    CGFloat annotationWidth = 32;
-//    CGFloat annotationHeight = 29;
-//    
-//    CGFloat iphoneScaleFactorLatitude = self.view.frame.size.width / annotationWidth;
-//    CGFloat iphoneScaleFactorLongitude = self.view.frame.size.height / annotationHeight;
-//    
-//    float latDelta=self.mapView.region.span.latitudeDelta/iphoneScaleFactorLatitude;
-//    float longDelta=self.mapView.region.span.longitudeDelta/iphoneScaleFactorLongitude;
-//    
-//    for (int i=0; i<[schools count]; i++) {
-//        NTSchool *school = schools[i];
-//        CLLocationDegrees latitude = school.latitude.doubleValue;
-//        CLLocationDegrees longitude = school.longitude.doubleValue;
-//        bool found=FALSE;
-//        for (NTSchoolGroupAnnotation *annotation in self.mapView.annotations) {
-//            
-//            if (![annotation isKindOfClass:[NTSchoolGroupAnnotation class]]) continue;
-//            
-//            CLLocationCoordinate2D coord = annotation.coordinate;
-//            if(fabs(coord.latitude-latitude) < latDelta &&
-//               fabs(coord.longitude-longitude) < longDelta ){
-//                found=TRUE;
-//                [annotation addObject:school];
-//                break;
-//            }
-//        }
-//        if (!found) {
-//            // Create Group Annotation
-//            NTSchoolGroupAnnotation *group = [[NTSchoolGroupAnnotation alloc] initWithSchool:school];
-//            [self.mapView addAnnotation:group];
-//        }
-//    }
-//    
-//    int total = 0;
-//    for (NTSchoolGroupAnnotation *annotation in self.mapView.annotations) {
-//        if([annotation isKindOfClass:[NTSchoolGroupAnnotation class]]) {
-//            total += annotation.count;
-//        }
-//    }
-//    
-//    NSLog(@"Filter: %i, Views: %i", (int32_t)self.filterSchools.count, (int32_t)total);
-    
-}
-
-- (void)removeSchoolAnnotationsWithSchools:(NSArray *)schools{
-    NSLog(@"REMOVE ANNOTATIONS");
-    
-//    for (NTSchool *school in schools) {
-//        for(int i = (int)self.mapView.annotations.count-1; i>= 0;i--) {
-//            NTSchoolGroupAnnotation *annotation =  self.mapView.annotations[i];
-//            
-//            if (![annotation isKindOfClass:[NTSchoolGroupAnnotation class]]) continue;
-//            
-//            NSUInteger index = [annotation indexOfObject:school];
-//            if(index != NSNotFound) {
-//                [annotation removeObjectAtIndex:index];
-//                if (annotation.isEmpty) {
-//                    [self.mapView removeAnnotation:annotation];
-//                } else {
-//                    // this does nothing, but refresh the annotation view
-////                    [annotation setCoordinate:CLLocationCoordinate2DMake(0, 0)];
-//                    [self.mapView viewForAnnotation:annotation];
-//                    
-//                    MKAnnotationView *view = [self.mapView viewForAnnotation:annotation];
-//                    [view setImage:annotation.image];
-//                }
-//                break;
-//            }
-//        }
-//    }
-//    
-//    
-//    int total = 0;
-//    for (NTSchoolGroupAnnotation *annotation in self.mapView.annotations) {
-//        if([annotation isKindOfClass:[NTSchoolGroupAnnotation class]]) {
-//            total += annotation.count;
-//        }
-//    }
-//    
-//    NSLog(@"Filter: %i, Views: %i", (int32_t)self.filterSchools.count, (int32_t)total);
-}
-
-
-//- (void)addSchoolAnnotationsWithSchools:(NSArray *)schools
-//{
-//    NSMutableArray *annotations = [NSMutableArray array];
-//    for (NTSchool *school in schools) {
-//        [annotations addObject:[[NTSchoolGroupAnnotation alloc] initWithSchool:school]];
-//    }
-//    [self.mapView addAnnotations:annotations];
-//}
-
-//- (void)removeSchoolAnnotationsWithSchools:(NSArray *)schools
-//{
-//    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"annotation = $school"];
-//    NSMutableArray *annotations = [NSMutableArray array];
-//    for (NTSchool *school in schools) {
-//        predicate
-//        [annotations addObject:[[NTGroupAnnotation alloc] initWithSchool:school]];
-//    }
-//    [self.mapView addAnnotations:annotations];
-//}
 
 #pragma mark - Actions
 
@@ -482,9 +278,6 @@ static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.
     
     
     if (self.zoomLevel!=mapView.region.span.longitudeDelta) {
-        [self refresh];
-//        [self filterAnnotations:self.filterSchools];
-//        [self refreshAnnotations];
         [self refreshAnnotationsWithSchoolFilter:self.filterSchools];
         self.zoomLevel=mapView.region.span.longitudeDelta;
     }
@@ -536,30 +329,16 @@ static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.
         [view setAnnotation:annotation];
     }
     
-    
-    
     // validate if NTGroupAnnotation class. MKUserLocation annotate might come through.
     if ( [annotation isKindOfClass:[NTSchoolGroupAnnotation class]] ) {
+        
         // set pin image
         __block NTSchool *school = [((NTSchoolGroupAnnotation *)annotation) firstObject];
-        
         [view setImage:[(NTSchoolGroupAnnotation*)annotation image]];
-        
         
         // set tag for button
         NSUInteger index = [self.schools containsObject:school];
         [view.rightCalloutAccessoryView setTag:index];
-        
-//        // set image for callout
-//        __block UIImageView *iv = (id)view.leftCalloutAccessoryView;
-//        if(school.image) {
-//            [iv setImage:school.image];
-//        } else {
-//            [self.network retrieveImageWithHandler:^(UIImage *image, NSError *error) {
-//                [school setImage:image];
-//                [iv setImage:image];
-//            } withKeyword:school.website];
-//        }
     }
     
     return view;
@@ -577,77 +356,12 @@ static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.
         if(school.image) {
             [iv setImage:school.image];
         } else {
-//            [self.network retrieveImageWithHandler:^(UIImage *image, NSError *error) {
+            
+            // there is no school image, grab image from network
+//            [[NTJSONNetworkCollector sharedInstance] retrieveImageWithHandler:^(UIImage *image, NSError *error) {
 //                [school setImage:image];
 //                [iv setImage:image];
 //            } withKeyword:school.website];
-        }
-    }
-}
-
-
-//-(void)filterAnnotations:(NSArray *)placesToFilter{
-//    [self.mapView removeAnnotations:self.mapView.annotations];
-//    
-//    CGFloat annotationWidth = 32;
-//    CGFloat annotationHeight = 29;
-//    
-//    CGFloat iphoneScaleFactorLatitude = self.view.frame.size.width / annotationWidth;
-//    CGFloat iphoneScaleFactorLongitude = self.view.frame.size.height / annotationHeight;
-//    
-//    float latDelta=self.mapView.region.span.latitudeDelta/iphoneScaleFactorLatitude;
-//    float longDelta=self.mapView.region.span.longitudeDelta/iphoneScaleFactorLongitude;
-//    NSMutableArray *displayAnnotations=[[NSMutableArray alloc] initWithCapacity:0];
-//    
-//    for (int i=0; i<[placesToFilter count]; i++) {
-//        NTSchool *checkingLocation = (id)placesToFilter[i];
-//        CLLocationDegrees latitude = checkingLocation.latitude.doubleValue;
-//        CLLocationDegrees longitude = checkingLocation.longitude.doubleValue;
-//        bool found=FALSE;
-//        for (NTSchool *school in displayAnnotations) {
-//            if(fabs(school.latitude.doubleValue-latitude) < latDelta &&
-//               fabs(school.longitude.doubleValue-longitude) < longDelta ){
-//                found=TRUE;
-//                break;
-//            }
-//        }
-//        if (!found) {
-//            [displayAnnotations addObject:checkingLocation];
-//            [self addSchoolAnnotationsWithSchools:@[checkingLocation]];
-//            
-////            [displayAnnotations addObject:checkingLocation];
-////            [self.mapView addAnnotation:checkingLocation];
-//        }
-//    }
-//}
-
--(void)filterAnnotations:(NSArray *)placesToFilter{
-    CGFloat annotationWidth = 32;
-    CGFloat annotationHeight = 29;
-    
-    CGFloat iphoneScaleFactorLatitude = self.view.frame.size.width / annotationWidth;
-    CGFloat iphoneScaleFactorLongitude = self.view.frame.size.height / annotationHeight;
-
-    float latDelta=self.mapView.region.span.latitudeDelta/iphoneScaleFactorLatitude;
-    float longDelta=self.mapView.region.span.longitudeDelta/iphoneScaleFactorLongitude;
-    NSMutableArray *displayAnnotations=[[NSMutableArray alloc] initWithCapacity:0];
-    
-    for (int i=0; i<[placesToFilter count]; i++) {
-        id<MKAnnotation> checkingLocation = (id)placesToFilter[i];
-        CLLocationDegrees latitude = [checkingLocation coordinate].latitude;
-        CLLocationDegrees longitude = [checkingLocation coordinate].longitude;
-        bool found=FALSE;
-        for (id<MKAnnotation> temp in displayAnnotations) {
-            if(fabs([temp coordinate].latitude-latitude) < latDelta &&
-               fabs([temp coordinate].longitude-longitude) < longDelta ){
-                [self.mapView removeAnnotation:checkingLocation];
-                found=TRUE;
-                break;
-            }
-        }
-        if (!found) {
-            [displayAnnotations addObject:checkingLocation];
-            [self.mapView addAnnotation:checkingLocation];
         }
     }
 }
@@ -671,6 +385,22 @@ static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.
 {
     NSPredicate *predicate = [filter predicate];
     [self filterWithPredicate:predicate];
+}
+
+- (void)filterViewControllerUpdateFrame:(CGRect)rect
+{
+    NSLog(@"frame: %@", NSStringFromCGRect(rect));
+    
+    CGRect frame = CGRectSetY(self.poleView.frame, rect.origin.y - self.poleView.frame.size.height/2);
+    [self.poleView setFrame:frame];
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [super touchesBegan:touches withEvent:event];
+    
+    CGPoint point = [touches.anyObject locationInView:self.view];
+    NSLog(@"MAIN begin touch: %@", NSStringFromCGPoint(point));
 }
 
 

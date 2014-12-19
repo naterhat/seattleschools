@@ -18,4 +18,5 @@
 
 @protocol NTFilterViewControllerDelegate <NSObject>
 - (void)filterViewControllerDidChangePredicate:(id<NTFilterProvider>)filter;
+- (void)filterViewControllerUpdateFrame:(CGRect)rect;
 @end

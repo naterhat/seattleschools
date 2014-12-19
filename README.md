@@ -20,3 +20,6 @@ x Filter Grades
 - Tap on Seattle Title - Go Center of Seattle
 
 - BUG - some annotation are not being removed, Stuck at a location. It has no interaction.
+- BUG - call for image from google wit NTJSONNetworkCollector
+- BUG - fixed current location annotation
+- CRASH - when add new annotation. To get there, by zooming out and in.

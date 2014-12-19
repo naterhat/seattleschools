@@ -36,6 +36,7 @@
 		4336A1F71A42B29F005BC764 /* NTSchoolGradeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4336A1F61A42B29F005BC764 /* NTSchoolGradeTests.m */; };
 		435B713D1A420DBB00D39352 /* private_schools.json in Resources */ = {isa = PBXBuildFile; fileRef = 435B713B1A420DBB00D39352 /* private_schools.json */; };
 		435B713E1A420DBB00D39352 /* public_schools.json in Resources */ = {isa = PBXBuildFile; fileRef = 435B713C1A420DBB00D39352 /* public_schools.json */; };
+		43A876DE1A4400D900AD9CCD /* NTPanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A876DD1A4400D900AD9CCD /* NTPanGestureRecognizer.m */; };
 		43F3A6A81A41809100F55C05 /* NTSchoolFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F3A6A71A41809100F55C05 /* NTSchoolFilter.m */; };
 		43F57BD71A4017630081E4B0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43F57BD61A4017630081E4B0 /* Images.xcassets */; };
 /* End PBXBuildFile section */
@@ -107,6 +108,8 @@
 		435B713B1A420DBB00D39352 /* private_schools.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = private_schools.json; sourceTree = "<group>"; };
 		435B713C1A420DBB00D39352 /* public_schools.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = public_schools.json; sourceTree = "<group>"; };
 		435B713F1A420F3C00D39352 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		43A876DC1A4400D900AD9CCD /* NTPanGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTPanGestureRecognizer.h; sourceTree = "<group>"; };
+		43A876DD1A4400D900AD9CCD /* NTPanGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTPanGestureRecognizer.m; sourceTree = "<group>"; };
 		43F3A6A61A41809100F55C05 /* NTSchoolFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTSchoolFilter.h; sourceTree = "<group>"; };
 		43F3A6A71A41809100F55C05 /* NTSchoolFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTSchoolFilter.m; sourceTree = "<group>"; };
 		43F57BD61A4017630081E4B0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -241,6 +244,8 @@
 				4336A1F11A429327005BC764 /* UIImage+NTExtra.m */,
 				4336A1F31A42A5F1005BC764 /* NTSchoolGroupAnnotation.h */,
 				4336A1F41A42A5F1005BC764 /* NTSchoolGroupAnnotation.m */,
+				43A876DC1A4400D900AD9CCD /* NTPanGestureRecognizer.h */,
+				43A876DD1A4400D900AD9CCD /* NTPanGestureRecognizer.m */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -428,6 +433,7 @@
 				431F85B21A3E9430003DA6E9 /* seattle_schools.xcdatamodeld in Sources */,
 				431F85F81A3EA623003DA6E9 /* NTFilterInstance.m in Sources */,
 				431F86011A3EB738003DA6E9 /* NTLocationManager.m in Sources */,
+				43A876DE1A4400D900AD9CCD /* NTPanGestureRecognizer.m in Sources */,
 				431F86071A3EDE1C003DA6E9 /* NTSchoolAnnotate.m in Sources */,
 				431F85AE1A3E9405003DA6E9 /* NTHomeViewController.m in Sources */,
 				431F857B1A3E911D003DA6E9 /* main.m in Sources */,

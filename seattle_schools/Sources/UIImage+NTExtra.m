@@ -65,50 +65,47 @@
     
     UIImage *image = [dict objectForKey:number];
     if (!image) {
-        image = [UIImage imageOfCutThroughNumber:number];
+        image = [UIImage imageOfASeeThroughNumber:number outerColor:kGlobalCombineColor];
         [dict setObject:image forKey:number];
     }
     
     return [image copy];
 }
 
-+ (UIImage *)imageOfCutThroughNumber:(NSNumber *)number
++ (UIImage *)imageOfASeeThroughNumber:(NSNumber *)number outerColor:(UIColor *)outerColor
 {
     
     CGRect bounds = CGRectMake(0, 0, 40, 40);
     CGFloat fontSize = 20;
     NSString *fontName = @"TrebuchetMS-Bold";
+    CGContextRef ctx;
+    
+    // ==========================================
+    // Draw White Font Image
     
     UIGraphicsBeginImageContext(bounds.size);
     
-    CGContextRef ctx = UIGraphicsGetCurrentContext();
-    
-    // set correct transform
-//    CGContextTranslateCTM(ctx, 0, bounds.size.height);
-//    CGContextScaleCTM(ctx, 1, -1);
+    ctx = UIGraphicsGetCurrentContext();
     
     CGContextSetTextMatrix(ctx, CGAffineTransformIdentity);
     
-    // setup mask first
+    // Draw black rect
     [[UIColor blackColor] setFill];
     CGContextFillRect(ctx, bounds);
     
-//    CFStringRef textString = (__bridge CFStringRef)number.stringValue;
-    
+    // Draw Font
     NSDictionary *attr = @{NSFontAttributeName:[UIFont fontWithName:fontName size:fontSize], NSForegroundColorAttributeName: [UIColor whiteColor]};
     CGSize size = [number.stringValue sizeWithAttributes:attr];
     CGRect fontBounds = CGRectMake(bounds.size.width/2 - size.width/2, bounds.size.height/2 - size.height/2, size.width, size.height);
     [number.stringValue drawInRect:fontBounds withAttributes:attr];
     
-//    CGRect innerBounds = CGRectInset(bounds, 30, 30);
-//    [[UIColor colorWithWhite:1 alpha:1] setFill];
-//    CGContextFillRect(ctx, innerBounds);
-    
-    UIImage *boundsImage = UIGraphicsGetImageFromCurrentImageContext();
+    // get image
+    UIImage *maskImage = UIGraphicsGetImageFromCurrentImageContext();
     
     UIGraphicsEndImageContext();
     
     // ==========================================
+    // Draw Circle Image
     
     UIGraphicsBeginImageContext(bounds.size);
     
@@ -117,24 +114,20 @@
     // set correct transform
     CGContextScaleCTM(ctx, 1, -1);
     CGContextTranslateCTM(ctx, 0, -bounds.size.height);
-    
-    // Clipping
-//    CGContextSaveGState(ctx);
-    
-//    CGContextClipToMask(ctx, bounds, boundsImage.CGImage);
-    
-//    CGContextRestoreGState(ctx);
     
     // draw a circle
     CGRect circleBounds = CGRectInset(bounds, 5, 5);
-    [kGlobalCombineColor setFill];
+    [outerColor setFill];
     CGContextFillEllipseInRect(ctx, circleBounds);
     
-    UIImage *circleImage = UIGraphicsGetImageFromCurrentImageContext();
+    // get image
+    UIImage *cropImage = UIGraphicsGetImageFromCurrentImageContext();
     
     UIGraphicsEndImageContext();
     
     // ==========================================
+    // Crop Circle Image with Font Image.
+    //   See through the circle with a number
     
     UIGraphicsBeginImageContext(bounds.size);
     
@@ -144,8 +137,8 @@
     CGContextScaleCTM(ctx, 1, -1);
     CGContextTranslateCTM(ctx, 0, -bounds.size.height);
     
-    CGImageRef imgRef = [circleImage CGImage];
-    CGImageRef maskRef = [boundsImage CGImage];
+    CGImageRef imgRef = [cropImage CGImage];
+    CGImageRef maskRef = [maskImage CGImage];
     CGImageRef actualMask = CGImageMaskCreate(CGImageGetWidth(maskRef),
                                               CGImageGetHeight(maskRef),
                                               CGImageGetBitsPerComponent(maskRef),
@@ -153,38 +146,22 @@
                                               CGImageGetBytesPerRow(maskRef),
                                               CGImageGetDataProvider(maskRef), NULL, false);
     
+    // clip the mask
     CGContextClipToMask(ctx, bounds, actualMask);
     
+    // draw image around the mask
     CGContextDrawImage(ctx, bounds, imgRef);
     
+    // get image
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
     
     UIGraphicsEndImageContext();
     
+    CGImageRelease(actualMask);
+    
+    // ==========================================
+    
     return newImage;
-    
-//    UIGraphicsBeginImageContext(bounds.size);
-//
-//    ctx = UIGraphicsGetCurrentContext();
-//    
-//    // set correct transform
-//    CGContextScaleCTM(ctx, 1, -1);
-//    CGContextTranslateCTM(ctx, 0, -bounds.size.height);
-//    
-//    // Clipping
-//    CGContextSaveGState(ctx);
-//    
-//    CGContextClipToMask(ctx, bounds, boundsImage.CGImage);
-//    
-//    CGContextDrawImage(ctx, bounds, circleImage.CGImage);
-//    
-//    CGContextRestoreGState(ctx);
-//    
-//    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-//    
-//    UIGraphicsEndImageContext();
-    
-//    return newImage;
 }
 
 

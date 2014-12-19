@@ -36,12 +36,21 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xZa-ZW-8Ya">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                             </mapView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WIq-R1-V6e">
+                                <rect key="frame" x="0.0" y="64" width="600" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="E4j-B7-n6O"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="WIq-R1-V6e" secondAttribute="trailing" constant="-16" id="1yo-b8-Rj9"/>
+                            <constraint firstItem="WIq-R1-V6e" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="KGT-yT-9BD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xZa-ZW-8Ya" secondAttribute="trailing" constant="-16" id="PKl-xn-4qf"/>
                             <constraint firstItem="xZa-ZW-8Ya" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="Po8-qx-R5F"/>
                             <constraint firstItem="xZa-ZW-8Ya" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="bQ3-tE-eSO"/>
+                            <constraint firstItem="WIq-R1-V6e" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="cTD-Ml-zKt"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="xZa-ZW-8Ya" secondAttribute="bottom" id="cjx-6r-o6W"/>
                             <constraint firstItem="xZa-ZW-8Ya" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="dbT-uT-aQy"/>
                         </constraints>
@@ -60,6 +69,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="xZa-ZW-8Ya" id="naH-yi-elL"/>
+                        <outlet property="poleContainer" destination="WIq-R1-V6e" id="dwj-VS-kJh"/>
                         <segue destination="nRP-3F-i9W" kind="show" identifier="detail" id="Zbf-JL-G4r"/>
                     </connections>
                 </viewController>
@@ -79,7 +89,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b3J-rB-JHb">
+                            <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b3J-rB-JHb">
                                 <rect key="frame" x="204" y="540" width="56" height="34"/>
                                 <state key="normal" title="Public">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -92,7 +102,7 @@
                                     <action selector="selectButton:" destination="cUO-s0-OQo" eventType="touchUpInside" id="Emv-k2-So5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rwe-l2-14W">
+                            <button opaque="NO" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rwe-l2-14W">
                                 <rect key="frame" x="340" y="540" width="56" height="34"/>
                                 <state key="normal" title="Private">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -141,7 +151,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6aN-Cv-VoP">
+                            <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6aN-Cv-VoP">
                                 <rect key="frame" x="398" y="498" width="38" height="34"/>
                                 <state key="normal" title="High">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
