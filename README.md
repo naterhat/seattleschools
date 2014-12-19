@@ -1,6 +1,9 @@
 # Seattle Schools
 This application helps parents to see the schools around Seattle. The app features filtering to cut down the schools to display of only their interest.
 
+## Screenshots
+![screenshot](https://raw.githubusercontent.com/naterhat/seattleschools/master/screenshots/screenshot1.PNG)
+
 ## Todos
 x Dependencies injection for local storage
 x Retrieve image from url
