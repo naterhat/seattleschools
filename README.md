@@ -4,6 +4,9 @@ This application helps parents to see the schools around Seattle. The app featur
 ## Screenshots
 ![screenshot](https://raw.githubusercontent.com/naterhat/seattleschools/master/screenshots/screenshot1.PNG)
 
+## Notes
+For Core Data, the code is there, but it's not being used yet. The app manage the data in memory, for now.
+
 ## Todos
 x Dependencies injection for local storage
 x Retrieve image from url

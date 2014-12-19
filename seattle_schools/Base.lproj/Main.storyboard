@@ -124,8 +124,8 @@
                                     <action selector="selectButton:" destination="cUO-s0-OQo" eventType="touchUpInside" id="xGX-Z2-sLB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQx-rg-cg0" customClass="NTFlagButton">
-                                <rect key="frame" x="171" y="503" width="80" height="28"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RQx-rg-cg0" customClass="NTFlagButton">
+                                <rect key="frame" x="170" y="503" width="80" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="CYE-32-sPM"/>
                                 </constraints>
@@ -142,8 +142,8 @@
                                     <action selector="selectButton:" destination="cUO-s0-OQo" eventType="touchUpInside" id="b2O-ff-dZU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QN4-XA-cZY" customClass="NTFlagButton">
-                                <rect key="frame" x="261" y="503" width="80" height="28"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QN4-XA-cZY" customClass="NTFlagButton">
+                                <rect key="frame" x="260" y="503" width="80" height="28"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                                 <state key="normal" title="Middle">
@@ -167,8 +167,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6aN-Cv-VoP" customClass="NTFlagButton">
-                                <rect key="frame" x="351" y="503" width="80" height="28"/>
+                            <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6aN-Cv-VoP" customClass="NTFlagButton">
+                                <rect key="frame" x="350" y="503" width="80" height="28"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                                 <state key="normal" title="High">
