@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Uwu-Zi-s9a">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -192,6 +193,7 @@
                             <constraint firstItem="R6m-GD-oev" firstAttribute="leading" secondItem="b3J-rB-JHb" secondAttribute="trailing" constant="10" id="G8E-2A-CYf"/>
                             <constraint firstItem="Rwe-l2-14W" firstAttribute="width" secondItem="RQx-rg-cg0" secondAttribute="width" id="JeY-hf-sU8"/>
                             <constraint firstItem="QN4-XA-cZY" firstAttribute="centerY" secondItem="RQx-rg-cg0" secondAttribute="centerY" id="Jiw-Lz-wuA"/>
+                            <constraint firstItem="6aN-Cv-VoP" firstAttribute="width" secondItem="RQx-rg-cg0" secondAttribute="width" id="KVQ-WG-tNN"/>
                             <constraint firstItem="b3J-rB-JHb" firstAttribute="width" secondItem="RQx-rg-cg0" secondAttribute="width" id="P4C-ir-foy"/>
                             <constraint firstAttribute="bottomMargin" secondItem="R6m-GD-oev" secondAttribute="bottom" id="TIP-1m-rSN"/>
                             <constraint firstItem="khR-hm-lpc" firstAttribute="top" secondItem="b3J-rB-JHb" secondAttribute="bottom" constant="26" id="UJd-q7-EAh"/>
@@ -203,6 +205,12 @@
                             <constraint firstAttribute="centerX" secondItem="R6m-GD-oev" secondAttribute="centerX" id="j0M-5k-Tij"/>
                             <constraint firstItem="QN4-XA-cZY" firstAttribute="leading" secondItem="RQx-rg-cg0" secondAttribute="trailing" priority="750" constant="10" id="zPI-My-bFZ"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Di0-ef-MOg"/>
+                                <exclude reference="Z2z-st-Fl1"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="gradeElementaryButton" destination="RQx-rg-cg0" id="aQb-32-MHF"/>

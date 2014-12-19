@@ -23,6 +23,7 @@ x Filter Grades
 - Disable web if no website.
 - When tap current, check if out of area and display error.
 - Tap on Seattle Title - Go Center of Seattle
+- Scale to fit for annotation call out image view.
 
 - BUG - some annotation are not being removed, Stuck at a location. It has no interaction.
 - BUG - call for image from google wit NTJSONNetworkCollector

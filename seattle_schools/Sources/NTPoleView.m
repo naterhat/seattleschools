@@ -27,7 +27,7 @@ static CGFloat const kViewMaxHeight = 2200;
         
         // create scroll view
         self.scrollView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, size.width, kViewMaxHeight)];
-        UIColor *patternColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"wood_tile"]];
+        UIColor *patternColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"wood_tile.jpg"]];
         [self.scrollView setBackgroundColor:patternColor];
         [self addSubview:self.scrollView];
         
