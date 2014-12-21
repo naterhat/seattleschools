@@ -10,6 +10,8 @@
 #import <QuartzCore/QuartzCore.h>
 #import "NTMath.h"
 #import "NTTheme.h"
+#import "NTFilterTransformView.h"
+#import "NTFilterView.h"
 
 
 
@@ -35,6 +37,7 @@ static const CGFloat max = 200;
 @property (nonatomic) UIDynamicBehavior *dynamicBehavior;
 @property (nonatomic) CGPoint startPoint;
 @property (nonatomic) CGPoint restPoint;
+@property (nonatomic) NTFilterView *filterView;
 @end
 
 @implementation NTFilterViewController
@@ -42,6 +45,16 @@ static const CGFloat max = 200;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    NTFilterView *view = [[[NSBundle mainBundle] loadNibNamed:@"FilterView" owner:self options:nil] lastObject];
+    [view setFrame:self.view.bounds];
+    [[((NTFilterTransformView *)self.view) contentView] addSubview:view];
+    _filterView = view;
+    for (UIView *view in  @[self.gradeHighButton, self.gradeMiddleButton, self.gradeElementaryButton, self.typePrivateButton, self.typePublicButton]) {
+        [view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapButton:)]];
+    }
+    
+    
     
 
     // resize view
@@ -79,6 +92,18 @@ static const CGFloat max = 200;
     [self.view addGestureRecognizer:pan];
 }
 
+- (void)tapButton:(UITapGestureRecognizer *)tap
+{
+    [self selectButton:(id)tap.view];
+}
+
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    
+    [self.filterView setFrame:self.view.bounds];
+}
+
 - (void)addSnap
 {
     self.snapBehavior = [[UISnapBehavior alloc] initWithItem:self.view snapToPoint:_restPoint];
@@ -105,22 +130,26 @@ static const CGFloat max = 200;
     [self.filter setGrade:grade];
 }
 
-
 #pragma mark - Action
 
 - (IBAction)selectButton:(UIButton *)button
 {
-    [button setSelected:!button.selected];
-    
-    // change selection for Public and Private buttons.
-    //  Can't have both selection because selecting none will
-    //   automatically include both public and private schools.
-    if(button.selected) {
-        if (button == self.typePrivateButton)
-            [self.typePublicButton setSelected:NO];
-        else if (button == self.typePublicButton)
-            [self.typePrivateButton setSelected:NO];
-    }
+    // since touch is in background, get main queue when need to
+    //   rerender the button selection
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        [button setSelected:!button.selected];
+        
+        // change selection for Public and Private buttons.
+        //  Can't have both selection because selecting none will
+        //   automatically include both public and private schools.
+        if(button.selected) {
+            if (button == self.typePrivateButton)
+                [self.typePublicButton setSelected:NO];
+            else if (button == self.typePublicButton)
+                [self.typePrivateButton setSelected:NO];
+        }
+    });
     
     [self refreshFilter];
     

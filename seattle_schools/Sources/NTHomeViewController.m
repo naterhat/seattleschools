@@ -24,6 +24,7 @@
 #import "NTMath.h"
 #import "NTPoleView.h"
 #import "NTTheme.h"
+#import "NTFilterTransformView.h"
 
 static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.0, 1.0}};
 
@@ -36,7 +37,6 @@ static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.
 @property (nonatomic) CGFloat zoomLevel;
 @property (nonatomic) NSArray *filterSchools;
 @property (weak, nonatomic) IBOutlet NTPoleView *poleView;
-
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @end

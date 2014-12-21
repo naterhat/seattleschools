@@ -35,6 +35,20 @@
 		4336A1F71A42B29F005BC764 /* NTSchoolGradeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4336A1F61A42B29F005BC764 /* NTSchoolGradeTests.m */; };
 		435B713D1A420DBB00D39352 /* private_schools.json in Resources */ = {isa = PBXBuildFile; fileRef = 435B713B1A420DBB00D39352 /* private_schools.json */; };
 		435B713E1A420DBB00D39352 /* public_schools.json in Resources */ = {isa = PBXBuildFile; fileRef = 435B713C1A420DBB00D39352 /* public_schools.json */; };
+		4367F2CD1A46F3FD00B4E0D3 /* BCMeshBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4367F2B81A46F3FD00B4E0D3 /* BCMeshBuffer.m */; };
+		4367F2CE1A46F3FD00B4E0D3 /* BCMeshContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4367F2BA1A46F3FD00B4E0D3 /* BCMeshContentView.m */; };
+		4367F2CF1A46F3FD00B4E0D3 /* BCMeshShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 4367F2BB1A46F3FD00B4E0D3 /* BCMeshShader.fsh */; };
+		4367F2D01A46F3FD00B4E0D3 /* BCMeshShader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4367F2BD1A46F3FD00B4E0D3 /* BCMeshShader.m */; };
+		4367F2D11A46F3FD00B4E0D3 /* BCMeshShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 4367F2BE1A46F3FD00B4E0D3 /* BCMeshShader.vsh */; };
+		4367F2D21A46F3FD00B4E0D3 /* BCMeshTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 4367F2C01A46F3FD00B4E0D3 /* BCMeshTexture.m */; };
+		4367F2D31A46F3FD00B4E0D3 /* BCMeshTransform+DemoTransforms.m in Sources */ = {isa = PBXBuildFile; fileRef = 4367F2C21A46F3FD00B4E0D3 /* BCMeshTransform+DemoTransforms.m */; };
+		4367F2D41A46F3FD00B4E0D3 /* BCMeshTransform+Interpolation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4367F2C41A46F3FD00B4E0D3 /* BCMeshTransform+Interpolation.m */; };
+		4367F2D51A46F3FD00B4E0D3 /* BCMeshTransform.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4367F2C61A46F3FD00B4E0D3 /* BCMeshTransform.mm */; };
+		4367F2D61A46F3FD00B4E0D3 /* BCMeshTransformAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4367F2C81A46F3FD00B4E0D3 /* BCMeshTransformAnimation.m */; };
+		4367F2D71A46F3FD00B4E0D3 /* BCMeshTransformView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4367F2CA1A46F3FD00B4E0D3 /* BCMeshTransformView.m */; };
+		4367F2D81A46F3FD00B4E0D3 /* BCMutableMeshTransform+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 4367F2CC1A46F3FD00B4E0D3 /* BCMutableMeshTransform+Convenience.m */; };
+		4367F2DB1A46F51E00B4E0D3 /* NTFilterTransformView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4367F2DA1A46F51E00B4E0D3 /* NTFilterTransformView.m */; };
+		4367F2DE1A46F9B700B4E0D3 /* FilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4367F2DD1A46F9B700B4E0D3 /* FilterView.xib */; };
 		43A876E41A4469B900AD9CCD /* Caviar_Dreams_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43A876E01A4469B900AD9CCD /* Caviar_Dreams_Bold.ttf */; };
 		43A876E51A4469B900AD9CCD /* CaviarDreams.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43A876E11A4469B900AD9CCD /* CaviarDreams.ttf */; };
 		43A876E61A4469B900AD9CCD /* CaviarDreams_BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43A876E21A4469B900AD9CCD /* CaviarDreams_BoldItalic.ttf */; };
@@ -117,6 +131,31 @@
 		435B713B1A420DBB00D39352 /* private_schools.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = private_schools.json; sourceTree = "<group>"; };
 		435B713C1A420DBB00D39352 /* public_schools.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = public_schools.json; sourceTree = "<group>"; };
 		435B713F1A420F3C00D39352 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		4367F2B71A46F3FD00B4E0D3 /* BCMeshBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCMeshBuffer.h; sourceTree = "<group>"; };
+		4367F2B81A46F3FD00B4E0D3 /* BCMeshBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCMeshBuffer.m; sourceTree = "<group>"; };
+		4367F2B91A46F3FD00B4E0D3 /* BCMeshContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCMeshContentView.h; sourceTree = "<group>"; };
+		4367F2BA1A46F3FD00B4E0D3 /* BCMeshContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCMeshContentView.m; sourceTree = "<group>"; };
+		4367F2BB1A46F3FD00B4E0D3 /* BCMeshShader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = BCMeshShader.fsh; sourceTree = "<group>"; };
+		4367F2BC1A46F3FD00B4E0D3 /* BCMeshShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCMeshShader.h; sourceTree = "<group>"; };
+		4367F2BD1A46F3FD00B4E0D3 /* BCMeshShader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCMeshShader.m; sourceTree = "<group>"; };
+		4367F2BE1A46F3FD00B4E0D3 /* BCMeshShader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = BCMeshShader.vsh; sourceTree = "<group>"; };
+		4367F2BF1A46F3FD00B4E0D3 /* BCMeshTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCMeshTexture.h; sourceTree = "<group>"; };
+		4367F2C01A46F3FD00B4E0D3 /* BCMeshTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCMeshTexture.m; sourceTree = "<group>"; };
+		4367F2C11A46F3FD00B4E0D3 /* BCMeshTransform+DemoTransforms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BCMeshTransform+DemoTransforms.h"; sourceTree = "<group>"; };
+		4367F2C21A46F3FD00B4E0D3 /* BCMeshTransform+DemoTransforms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BCMeshTransform+DemoTransforms.m"; sourceTree = "<group>"; };
+		4367F2C31A46F3FD00B4E0D3 /* BCMeshTransform+Interpolation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BCMeshTransform+Interpolation.h"; sourceTree = "<group>"; };
+		4367F2C41A46F3FD00B4E0D3 /* BCMeshTransform+Interpolation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BCMeshTransform+Interpolation.m"; sourceTree = "<group>"; };
+		4367F2C51A46F3FD00B4E0D3 /* BCMeshTransform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCMeshTransform.h; sourceTree = "<group>"; };
+		4367F2C61A46F3FD00B4E0D3 /* BCMeshTransform.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BCMeshTransform.mm; sourceTree = "<group>"; };
+		4367F2C71A46F3FD00B4E0D3 /* BCMeshTransformAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCMeshTransformAnimation.h; sourceTree = "<group>"; };
+		4367F2C81A46F3FD00B4E0D3 /* BCMeshTransformAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCMeshTransformAnimation.m; sourceTree = "<group>"; };
+		4367F2C91A46F3FD00B4E0D3 /* BCMeshTransformView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCMeshTransformView.h; sourceTree = "<group>"; };
+		4367F2CA1A46F3FD00B4E0D3 /* BCMeshTransformView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCMeshTransformView.m; sourceTree = "<group>"; };
+		4367F2CB1A46F3FD00B4E0D3 /* BCMutableMeshTransform+Convenience.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BCMutableMeshTransform+Convenience.h"; sourceTree = "<group>"; };
+		4367F2CC1A46F3FD00B4E0D3 /* BCMutableMeshTransform+Convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BCMutableMeshTransform+Convenience.m"; sourceTree = "<group>"; };
+		4367F2D91A46F51E00B4E0D3 /* NTFilterTransformView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTFilterTransformView.h; sourceTree = "<group>"; };
+		4367F2DA1A46F51E00B4E0D3 /* NTFilterTransformView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTFilterTransformView.m; sourceTree = "<group>"; };
+		4367F2DD1A46F9B700B4E0D3 /* FilterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterView.xib; sourceTree = "<group>"; };
 		43A876E01A4469B900AD9CCD /* Caviar_Dreams_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Caviar_Dreams_Bold.ttf; sourceTree = "<group>"; };
 		43A876E11A4469B900AD9CCD /* CaviarDreams.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams.ttf; sourceTree = "<group>"; };
 		43A876E21A4469B900AD9CCD /* CaviarDreams_BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams_BoldItalic.ttf; sourceTree = "<group>"; };
@@ -228,6 +267,7 @@
 		431F85A41A3E9405003DA6E9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4367F2DC1A46F9A200B4E0D3 /* Xibs */,
 				43A876DF1A4469B900AD9CCD /* Fonts */,
 				431F86081A3EE05A003DA6E9 /* Images */,
 				431F85F91A3EA694003DA6E9 /* Json */,
@@ -239,6 +279,7 @@
 		431F85A51A3E9405003DA6E9 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				4367F2B61A46F3FD00B4E0D3 /* BCMeshTransformView */,
 				43A876FA1A448D9800AD9CCD /* Views & Themes */,
 				43F57BDC1A40267D0081E4B0 /* Models & Others */,
 				43F57BDB1A4026750081E4B0 /* View Controllers */,
@@ -312,6 +353,43 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		4367F2B61A46F3FD00B4E0D3 /* BCMeshTransformView */ = {
+			isa = PBXGroup;
+			children = (
+				4367F2B71A46F3FD00B4E0D3 /* BCMeshBuffer.h */,
+				4367F2B81A46F3FD00B4E0D3 /* BCMeshBuffer.m */,
+				4367F2B91A46F3FD00B4E0D3 /* BCMeshContentView.h */,
+				4367F2BA1A46F3FD00B4E0D3 /* BCMeshContentView.m */,
+				4367F2BB1A46F3FD00B4E0D3 /* BCMeshShader.fsh */,
+				4367F2BC1A46F3FD00B4E0D3 /* BCMeshShader.h */,
+				4367F2BD1A46F3FD00B4E0D3 /* BCMeshShader.m */,
+				4367F2BE1A46F3FD00B4E0D3 /* BCMeshShader.vsh */,
+				4367F2BF1A46F3FD00B4E0D3 /* BCMeshTexture.h */,
+				4367F2C01A46F3FD00B4E0D3 /* BCMeshTexture.m */,
+				4367F2C11A46F3FD00B4E0D3 /* BCMeshTransform+DemoTransforms.h */,
+				4367F2C21A46F3FD00B4E0D3 /* BCMeshTransform+DemoTransforms.m */,
+				4367F2C31A46F3FD00B4E0D3 /* BCMeshTransform+Interpolation.h */,
+				4367F2C41A46F3FD00B4E0D3 /* BCMeshTransform+Interpolation.m */,
+				4367F2C51A46F3FD00B4E0D3 /* BCMeshTransform.h */,
+				4367F2C61A46F3FD00B4E0D3 /* BCMeshTransform.mm */,
+				4367F2C71A46F3FD00B4E0D3 /* BCMeshTransformAnimation.h */,
+				4367F2C81A46F3FD00B4E0D3 /* BCMeshTransformAnimation.m */,
+				4367F2C91A46F3FD00B4E0D3 /* BCMeshTransformView.h */,
+				4367F2CA1A46F3FD00B4E0D3 /* BCMeshTransformView.m */,
+				4367F2CB1A46F3FD00B4E0D3 /* BCMutableMeshTransform+Convenience.h */,
+				4367F2CC1A46F3FD00B4E0D3 /* BCMutableMeshTransform+Convenience.m */,
+			);
+			path = BCMeshTransformView;
+			sourceTree = "<group>";
+		};
+		4367F2DC1A46F9A200B4E0D3 /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				4367F2DD1A46F9B700B4E0D3 /* FilterView.xib */,
+			);
+			path = Xibs;
+			sourceTree = "<group>";
+		};
 		43A876DF1A4469B900AD9CCD /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -342,6 +420,8 @@
 				431F85F21A3EA352003DA6E9 /* NTSchoolAnnotateView.m */,
 				43A876FB1A448E7B00AD9CCD /* NTDetailLabel.h */,
 				43A876FC1A448E7B00AD9CCD /* NTDetailLabel.m */,
+				4367F2D91A46F51E00B4E0D3 /* NTFilterTransformView.h */,
+				4367F2DA1A46F51E00B4E0D3 /* NTFilterTransformView.m */,
 			);
 			name = "Views & Themes";
 			sourceTree = "<group>";
@@ -476,6 +556,9 @@
 				43A876E41A4469B900AD9CCD /* Caviar_Dreams_Bold.ttf in Resources */,
 				431F858C1A3E911D003DA6E9 /* LaunchScreen.xib in Resources */,
 				435B713E1A420DBB00D39352 /* public_schools.json in Resources */,
+				4367F2DE1A46F9B700B4E0D3 /* FilterView.xib in Resources */,
+				4367F2D11A46F3FD00B4E0D3 /* BCMeshShader.vsh in Resources */,
+				4367F2CF1A46F3FD00B4E0D3 /* BCMeshShader.fsh in Resources */,
 				43A876E61A4469B900AD9CCD /* CaviarDreams_BoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,20 +580,30 @@
 				43A876ED1A4472D600AD9CCD /* NTTheme.m in Sources */,
 				431F85EA1A3E9B44003DA6E9 /* NTJSONNetworkCollector+NTSeattle.m in Sources */,
 				43A876FD1A448E7B00AD9CCD /* NTDetailLabel.m in Sources */,
+				4367F2D31A46F3FD00B4E0D3 /* BCMeshTransform+DemoTransforms.m in Sources */,
 				43A876F01A447A0E00AD9CCD /* NTFilterView.m in Sources */,
+				4367F2D41A46F3FD00B4E0D3 /* BCMeshTransform+Interpolation.m in Sources */,
 				43A876F91A4483C000AD9CCD /* NTButton.m in Sources */,
 				431F85DD1A3E977D003DA6E9 /* UIActivityIndicatorView+NTShow.m in Sources */,
+				4367F2D01A46F3FD00B4E0D3 /* BCMeshShader.m in Sources */,
 				431F85B21A3E9430003DA6E9 /* seattle_schools.xcdatamodeld in Sources */,
 				43A876F61A4483B200AD9CCD /* NTFlagButton.m in Sources */,
 				431F86011A3EB738003DA6E9 /* NTLocationManager.m in Sources */,
+				4367F2DB1A46F51E00B4E0D3 /* NTFilterTransformView.m in Sources */,
+				4367F2D71A46F3FD00B4E0D3 /* BCMeshTransformView.m in Sources */,
 				431F86071A3EDE1C003DA6E9 /* NTSchoolAnnotate.m in Sources */,
 				431F85AE1A3E9405003DA6E9 /* NTHomeViewController.m in Sources */,
+				4367F2D51A46F3FD00B4E0D3 /* BCMeshTransform.mm in Sources */,
+				4367F2D61A46F3FD00B4E0D3 /* BCMeshTransformAnimation.m in Sources */,
 				431F857B1A3E911D003DA6E9 /* main.m in Sources */,
+				4367F2D21A46F3FD00B4E0D3 /* BCMeshTexture.m in Sources */,
 				431F85AC1A3E9405003DA6E9 /* AppDelegate.m in Sources */,
 				4336A1EC1A421B9C005BC764 /* NTJSONLocalCollector+NTSeattle.m in Sources */,
 				43A876EA1A446B1F00AD9CCD /* NTNavigationBar.m in Sources */,
+				4367F2CD1A46F3FD00B4E0D3 /* BCMeshBuffer.m in Sources */,
 				431F85ED1A3E9E12003DA6E9 /* NTDataCollector.m in Sources */,
 				431F85E71A3E98B4003DA6E9 /* NTSchool.m in Sources */,
+				4367F2D81A46F3FD00B4E0D3 /* BCMutableMeshTransform+Convenience.m in Sources */,
 				4336A1F21A429327005BC764 /* UIImage+NTExtra.m in Sources */,
 				43A876F31A447A9800AD9CCD /* NTPoleView.m in Sources */,
 				431F85DB1A3E977D003DA6E9 /* NSDictionary+ConvertValue.m in Sources */,
@@ -521,6 +614,7 @@
 				43F3A6A81A41809100F55C05 /* NTSchoolFilter.m in Sources */,
 				431F85F31A3EA352003DA6E9 /* NTSchoolAnnotateView.m in Sources */,
 				4336A1F51A42A5F2005BC764 /* NTSchoolGroupAnnotation.m in Sources */,
+				4367F2CE1A46F3FD00B4E0D3 /* BCMeshContentView.m in Sources */,
 				431F85DE1A3E977D003DA6E9 /* UIAlertView+NTShow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

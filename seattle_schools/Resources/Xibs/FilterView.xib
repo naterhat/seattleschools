@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NTFilterViewController">
+            <connections>
+                <outlet property="gradeElementaryButton" destination="aPs-9Y-OZ3" id="903-Pg-hIY"/>
+                <outlet property="gradeHighButton" destination="rKU-dR-YBl" id="IeC-YA-H0r"/>
+                <outlet property="gradeMiddleButton" destination="vMW-RG-72i" id="TQN-xI-y5N"/>
+                <outlet property="typePrivateButton" destination="ZPY-Aq-6qQ" id="j6K-jA-G6T"/>
+                <outlet property="typePublicButton" destination="afM-xS-spw" id="jxX-wI-r78"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="yGh-Rv-Iuk" customClass="NTFilterView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afM-xS-spw" customClass="NTFlagButton">
+                    <rect key="frame" x="200" y="546" width="80" height="28"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                    <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                    <state key="normal" title="Public">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected">
+                        <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZPY-Aq-6qQ" customClass="NTFlagButton">
+                    <rect key="frame" x="320" y="546" width="80" height="28"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                    <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                    <state key="normal" title="Private">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected">
+                        <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPs-9Y-OZ3" customClass="NTFlagButton">
+                    <rect key="frame" x="170" y="503" width="80" height="28"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="GoZ-cq-M1b"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                    <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                    <state key="normal" title="Elementary">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected">
+                        <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vMW-RG-72i" customClass="NTFlagButton">
+                    <rect key="frame" x="260" y="503" width="80" height="28"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                    <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                    <state key="normal" title="Middle">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected">
+                        <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hES-G8-wVY">
+                    <rect key="frame" x="290" y="572" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="3RU-CV-DW1"/>
+                        <constraint firstAttribute="width" constant="20" id="YVa-fA-j5D"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKU-dR-YBl" customClass="NTFlagButton">
+                    <rect key="frame" x="350" y="503" width="80" height="28"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                    <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                    <state key="normal" title="High">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected">
+                        <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="afM-xS-spw" firstAttribute="width" secondItem="aPs-9Y-OZ3" secondAttribute="width" id="2jI-bS-skM"/>
+                <constraint firstItem="rKU-dR-YBl" firstAttribute="width" secondItem="aPs-9Y-OZ3" secondAttribute="width" id="6Mf-HH-j8K"/>
+                <constraint firstItem="vMW-RG-72i" firstAttribute="centerY" secondItem="aPs-9Y-OZ3" secondAttribute="centerY" id="Duy-KZ-nmS"/>
+                <constraint firstItem="hES-G8-wVY" firstAttribute="leading" secondItem="afM-xS-spw" secondAttribute="trailing" constant="10" id="HSv-Vt-NuS"/>
+                <constraint firstAttribute="centerX" secondItem="hES-G8-wVY" secondAttribute="centerX" id="KUe-wb-fh8"/>
+                <constraint firstItem="ZPY-Aq-6qQ" firstAttribute="width" secondItem="aPs-9Y-OZ3" secondAttribute="width" id="OGS-2C-FQu"/>
+                <constraint firstItem="rKU-dR-YBl" firstAttribute="width" secondItem="vMW-RG-72i" secondAttribute="width" id="RTp-8S-Vf9"/>
+                <constraint firstItem="ZPY-Aq-6qQ" firstAttribute="leading" secondItem="hES-G8-wVY" secondAttribute="trailing" constant="10" id="Vie-qP-Ajw"/>
+                <constraint firstAttribute="centerX" secondItem="vMW-RG-72i" secondAttribute="centerX" id="ZVW-S4-N9S"/>
+                <constraint firstItem="vMW-RG-72i" firstAttribute="leading" secondItem="aPs-9Y-OZ3" secondAttribute="trailing" priority="750" constant="10" id="af1-KS-xSs"/>
+                <constraint firstItem="rKU-dR-YBl" firstAttribute="leading" secondItem="vMW-RG-72i" secondAttribute="trailing" constant="10" id="b86-F7-fPl"/>
+                <constraint firstItem="hES-G8-wVY" firstAttribute="top" secondItem="afM-xS-spw" secondAttribute="bottom" constant="-2" id="eeI-8o-KLS"/>
+                <constraint firstItem="afM-xS-spw" firstAttribute="centerY" secondItem="ZPY-Aq-6qQ" secondAttribute="centerY" id="gyd-eR-u7b"/>
+                <constraint firstAttribute="bottomMargin" secondItem="hES-G8-wVY" secondAttribute="bottom" id="lKK-Eh-RKh"/>
+                <constraint firstItem="afM-xS-spw" firstAttribute="width" secondItem="ZPY-Aq-6qQ" secondAttribute="width" id="qhf-H1-2vL"/>
+                <constraint firstItem="vMW-RG-72i" firstAttribute="centerY" secondItem="rKU-dR-YBl" secondAttribute="centerY" id="t4s-fG-3ih"/>
+                <constraint firstItem="vMW-RG-72i" firstAttribute="width" secondItem="aPs-9Y-OZ3" secondAttribute="width" id="tJx-B7-xFe"/>
+                <constraint firstItem="afM-xS-spw" firstAttribute="top" secondItem="vMW-RG-72i" secondAttribute="bottom" constant="15" id="xnB-mD-Acm"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="qhf-H1-2vL"/>
+                    <exclude reference="RTp-8S-Vf9"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>
