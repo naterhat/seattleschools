@@ -24,7 +24,13 @@ x Filter Grades
 - When tap current, check if out of area and display error.
 - Tap on Seattle Title - Go Center of Seattle
 - Scale to fit for annotation call out image view.
+- animate annotations when seperate and when pull back together.
+- animate a wave for the flag
+- add UIMotionEffect
+- create pressure point when drag the flag
 
+
+- BUG - when pull down flag to the further point, able to see beyond the wood texture.
 - BUG - some annotation are not being removed, Stuck at a location. It has no interaction.
 - BUG - call for image from google wit NTJSONNetworkCollector
 - BUG - fixed current location annotation

@@ -48,6 +48,8 @@
 		43A876FD1A448E7B00AD9CCD /* NTDetailLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A876FC1A448E7B00AD9CCD /* NTDetailLabel.m */; };
 		43F3A6A81A41809100F55C05 /* NTSchoolFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F3A6A71A41809100F55C05 /* NTSchoolFilter.m */; };
 		43F57BD71A4017630081E4B0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43F57BD61A4017630081E4B0 /* Images.xcassets */; };
+		43F6016D1A45E85F0041B9C9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43F6016C1A45E85F0041B9C9 /* QuartzCore.framework */; };
+		43F6016F1A45E8640041B9C9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43F6016E1A45E8640041B9C9 /* CoreGraphics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +139,8 @@
 		43F3A6A71A41809100F55C05 /* NTSchoolFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTSchoolFilter.m; sourceTree = "<group>"; };
 		43F57BD61A4017630081E4B0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		43F57BD81A401BFD0081E4B0 /* NTMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTMath.h; sourceTree = "<group>"; };
+		43F6016C1A45E85F0041B9C9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		43F6016E1A45E8640041B9C9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +148,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43F6016F1A45E8640041B9C9 /* CoreGraphics.framework in Frameworks */,
+				43F6016D1A45E85F0041B9C9 /* QuartzCore.framework in Frameworks */,
 				431F85FE1A3EA756003DA6E9 /* CoreLocation.framework in Frameworks */,
 				431F85F51A3EA588003DA6E9 /* MapKit.framework in Frameworks */,
 			);
@@ -291,6 +297,8 @@
 		431F85FC1A3EA749003DA6E9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				43F6016E1A45E8640041B9C9 /* CoreGraphics.framework */,
+				43F6016C1A45E85F0041B9C9 /* QuartzCore.framework */,
 				431F85FD1A3EA756003DA6E9 /* CoreLocation.framework */,
 				431F85F41A3EA588003DA6E9 /* MapKit.framework */,
 			);
