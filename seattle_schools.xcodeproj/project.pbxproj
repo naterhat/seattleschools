@@ -7,6 +7,64 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4319BA721A47EA2900A4FEA8 /* MiddlePoleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4319BA711A47EA2900A4FEA8 /* MiddlePoleView.swift */; };
+		4319BA751A47F55600A4FEA8 /* NTTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A876EC1A4472D600AD9CCD /* NTTheme.m */; };
+		4319BA761A47F55600A4FEA8 /* NTJSONNetworkCollector+NTSeattle.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85E91A3E9B44003DA6E9 /* NTJSONNetworkCollector+NTSeattle.m */; };
+		4319BA771A47F55600A4FEA8 /* NTDetailLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A876FC1A448E7B00AD9CCD /* NTDetailLabel.m */; };
+		4319BA781A47F55600A4FEA8 /* BCMeshTransform+DemoTransforms.m in Sources */ = {isa = PBXBuildFile; fileRef = 4367F2C21A46F3FD00B4E0D3 /* BCMeshTransform+DemoTransforms.m */; };
+		4319BA791A47F55600A4FEA8 /* BCMeshTransform+Interpolation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4367F2C41A46F3FD00B4E0D3 /* BCMeshTransform+Interpolation.m */; };
+		4319BA7A1A47F55600A4FEA8 /* NTButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A876F81A4483C000AD9CCD /* NTButton.m */; };
+		4319BA7B1A47F55600A4FEA8 /* UIActivityIndicatorView+NTShow.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85D81A3E977D003DA6E9 /* UIActivityIndicatorView+NTShow.m */; };
+		4319BA7C1A47F55600A4FEA8 /* BCMeshShader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4367F2BD1A46F3FD00B4E0D3 /* BCMeshShader.m */; };
+		4319BA7D1A47F55600A4FEA8 /* seattle_schools.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 431F85B01A3E9430003DA6E9 /* seattle_schools.xcdatamodeld */; };
+		4319BA7E1A47F55600A4FEA8 /* NTFlagButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A876F51A4483B200AD9CCD /* NTFlagButton.m */; };
+		4319BA7F1A47F55600A4FEA8 /* NTLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F86001A3EB738003DA6E9 /* NTLocationManager.m */; };
+		4319BA801A47F55600A4FEA8 /* NTFilterTransformView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4367F2DA1A46F51E00B4E0D3 /* NTFilterTransformView.m */; };
+		4319BA811A47F55600A4FEA8 /* BCMeshTransformView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4367F2CA1A46F3FD00B4E0D3 /* BCMeshTransformView.m */; };
+		4319BA821A47F55600A4FEA8 /* CGRect+NTExtend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4395BF041A47A8A2005E8CA2 /* CGRect+NTExtend.swift */; };
+		4319BA831A47F55600A4FEA8 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4367F2E01A470B7C00B4E0D3 /* FilterView.swift */; };
+		4319BA841A47F55600A4FEA8 /* NTSchoolAnnotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F86061A3EDE1C003DA6E9 /* NTSchoolAnnotate.m */; };
+		4319BA851A47F55600A4FEA8 /* NTHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85AB1A3E9405003DA6E9 /* NTHomeViewController.m */; };
+		4319BA861A47F55600A4FEA8 /* BCMeshTransform.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4367F2C61A46F3FD00B4E0D3 /* BCMeshTransform.mm */; };
+		4319BA871A47F55600A4FEA8 /* BCMeshTransformAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4367F2C81A46F3FD00B4E0D3 /* BCMeshTransformAnimation.m */; };
+		4319BA881A47F55600A4FEA8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F857A1A3E911D003DA6E9 /* main.m */; };
+		4319BA891A47F55600A4FEA8 /* BCMeshTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 4367F2C01A46F3FD00B4E0D3 /* BCMeshTexture.m */; };
+		4319BA8A1A47F55600A4FEA8 /* MiddlePoleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4319BA711A47EA2900A4FEA8 /* MiddlePoleView.swift */; };
+		4319BA8B1A47F55600A4FEA8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85A71A3E9405003DA6E9 /* AppDelegate.m */; };
+		4319BA8C1A47F55600A4FEA8 /* NTJSONLocalCollector+NTSeattle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4336A1EB1A421B9C005BC764 /* NTJSONLocalCollector+NTSeattle.m */; };
+		4319BA8D1A47F55600A4FEA8 /* NTNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A876E91A446B1F00AD9CCD /* NTNavigationBar.m */; };
+		4319BA8E1A47F55600A4FEA8 /* BCMeshBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4367F2B81A46F3FD00B4E0D3 /* BCMeshBuffer.m */; };
+		4319BA8F1A47F55600A4FEA8 /* NTDataCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85EC1A3E9E12003DA6E9 /* NTDataCollector.m */; };
+		4319BA901A47F55600A4FEA8 /* NTSchool.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85E61A3E98B4003DA6E9 /* NTSchool.m */; };
+		4319BA911A47F55600A4FEA8 /* BCMutableMeshTransform+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 4367F2CC1A46F3FD00B4E0D3 /* BCMutableMeshTransform+Convenience.m */; };
+		4319BA921A47F55600A4FEA8 /* UIImage+NTExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = 4336A1F11A429327005BC764 /* UIImage+NTExtra.m */; };
+		4319BA931A47F55600A4FEA8 /* NTPoleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A876F21A447A9800AD9CCD /* NTPoleView.m */; };
+		4319BA941A47F55600A4FEA8 /* NSDictionary+ConvertValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85D31A3E977D003DA6E9 /* NSDictionary+ConvertValue.m */; };
+		4319BA951A47F55600A4FEA8 /* NTFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85EF1A3EA2A1003DA6E9 /* NTFilterViewController.m */; };
+		4319BA961A47F55600A4FEA8 /* NSDictionary+Null.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85D51A3E977D003DA6E9 /* NSDictionary+Null.m */; };
+		4319BA971A47F55600A4FEA8 /* NTJSONNetworkCollector+Google.m in Sources */ = {isa = PBXBuildFile; fileRef = 4336A1EE1A422642005BC764 /* NTJSONNetworkCollector+Google.m */; };
+		4319BA981A47F55600A4FEA8 /* NTDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85A91A3E9405003DA6E9 /* NTDetailViewController.m */; };
+		4319BA991A47F55600A4FEA8 /* NTSchoolFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F3A6A71A41809100F55C05 /* NTSchoolFilter.m */; };
+		4319BA9A1A47F55600A4FEA8 /* NTSchoolAnnotateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85F21A3EA352003DA6E9 /* NTSchoolAnnotateView.m */; };
+		4319BA9B1A47F55600A4FEA8 /* NTSchoolGroupAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4336A1F41A42A5F1005BC764 /* NTSchoolGroupAnnotation.m */; };
+		4319BA9C1A47F55600A4FEA8 /* BCMeshContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4367F2BA1A46F3FD00B4E0D3 /* BCMeshContentView.m */; };
+		4319BA9D1A47F55600A4FEA8 /* UIAlertView+NTShow.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85DA1A3E977D003DA6E9 /* UIAlertView+NTShow.m */; };
+		4319BA9F1A47F55600A4FEA8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43F6016E1A45E8640041B9C9 /* CoreGraphics.framework */; };
+		4319BAA01A47F55600A4FEA8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43F6016C1A45E85F0041B9C9 /* QuartzCore.framework */; };
+		4319BAA11A47F55600A4FEA8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 431F85FD1A3EA756003DA6E9 /* CoreLocation.framework */; };
+		4319BAA21A47F55600A4FEA8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 431F85F41A3EA588003DA6E9 /* MapKit.framework */; };
+		4319BAA41A47F55600A4FEA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431F85851A3E911D003DA6E9 /* Main.storyboard */; };
+		4319BAA51A47F55600A4FEA8 /* CaviarDreams_Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43A876E31A4469B900AD9CCD /* CaviarDreams_Italic.ttf */; };
+		4319BAA61A47F55600A4FEA8 /* private_schools.json in Resources */ = {isa = PBXBuildFile; fileRef = 435B713B1A420DBB00D39352 /* private_schools.json */; };
+		4319BAA71A47F55600A4FEA8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43F57BD61A4017630081E4B0 /* Images.xcassets */; };
+		4319BAA81A47F55600A4FEA8 /* CaviarDreams.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43A876E11A4469B900AD9CCD /* CaviarDreams.ttf */; };
+		4319BAA91A47F55600A4FEA8 /* Caviar_Dreams_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43A876E01A4469B900AD9CCD /* Caviar_Dreams_Bold.ttf */; };
+		4319BAAA1A47F55600A4FEA8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 431F858A1A3E911D003DA6E9 /* LaunchScreen.xib */; };
+		4319BAAB1A47F55600A4FEA8 /* public_schools.json in Resources */ = {isa = PBXBuildFile; fileRef = 435B713C1A420DBB00D39352 /* public_schools.json */; };
+		4319BAAC1A47F55600A4FEA8 /* FilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4367F2DD1A46F9B700B4E0D3 /* FilterView.xib */; };
+		4319BAAD1A47F55600A4FEA8 /* BCMeshShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 4367F2BE1A46F3FD00B4E0D3 /* BCMeshShader.vsh */; };
+		4319BAAE1A47F55600A4FEA8 /* BCMeshShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 4367F2BB1A46F3FD00B4E0D3 /* BCMeshShader.fsh */; };
+		4319BAAF1A47F55600A4FEA8 /* CaviarDreams_BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43A876E21A4469B900AD9CCD /* CaviarDreams_BoldItalic.ttf */; };
 		431F857B1A3E911D003DA6E9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F857A1A3E911D003DA6E9 /* main.m */; };
 		431F85871A3E911D003DA6E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 431F85851A3E911D003DA6E9 /* Main.storyboard */; };
 		431F858C1A3E911D003DA6E9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 431F858A1A3E911D003DA6E9 /* LaunchScreen.xib */; };
@@ -78,6 +136,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4319BA711A47EA2900A4FEA8 /* MiddlePoleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiddlePoleView.swift; sourceTree = "<group>"; };
+		4319BAB31A47F55600A4FEA8 /* seattle_schools copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "seattle_schools copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		431F85751A3E911D003DA6E9 /* seattle_schools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = seattle_schools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		431F85791A3E911D003DA6E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		431F857A1A3E911D003DA6E9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -185,6 +245,17 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4319BA9E1A47F55600A4FEA8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4319BA9F1A47F55600A4FEA8 /* CoreGraphics.framework in Frameworks */,
+				4319BAA01A47F55600A4FEA8 /* QuartzCore.framework in Frameworks */,
+				4319BAA11A47F55600A4FEA8 /* CoreLocation.framework in Frameworks */,
+				4319BAA21A47F55600A4FEA8 /* MapKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		431F85721A3E911D003DA6E9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -222,6 +293,7 @@
 			children = (
 				431F85751A3E911D003DA6E9 /* seattle_schools.app */,
 				431F85911A3E911E003DA6E9 /* seattle_schoolsTests.xctest */,
+				4319BAB31A47F55600A4FEA8 /* seattle_schools copy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -251,9 +323,9 @@
 		431F85941A3E911E003DA6E9 /* seattle_schoolsTests */ = {
 			isa = PBXGroup;
 			children = (
+				4336A1F61A42B29F005BC764 /* NTSchoolGradeTests.m */,
 				431F85971A3E911E003DA6E9 /* seattle_schoolsTests.m */,
 				431F85951A3E911E003DA6E9 /* Supporting Files */,
-				4336A1F61A42B29F005BC764 /* NTSchoolGradeTests.m */,
 			);
 			path = seattle_schoolsTests;
 			sourceTree = "<group>";
@@ -423,6 +495,7 @@
 				4367F2D91A46F51E00B4E0D3 /* NTFilterTransformView.h */,
 				4367F2DA1A46F51E00B4E0D3 /* NTFilterTransformView.m */,
 				4367F2E01A470B7C00B4E0D3 /* FilterView.swift */,
+				4319BA711A47EA2900A4FEA8 /* MiddlePoleView.swift */,
 				4367F2DF1A470B7B00B4E0D3 /* seattle_schools-Bridging-Header.h */,
 				4395BF041A47A8A2005E8CA2 /* CGRect+NTExtend.swift */,
 			);
@@ -472,6 +545,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4319BA731A47F55600A4FEA8 /* seattle_schools-release */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4319BAB01A47F55600A4FEA8 /* Build configuration list for PBXNativeTarget "seattle_schools-release" */;
+			buildPhases = (
+				4319BA741A47F55600A4FEA8 /* Sources */,
+				4319BA9E1A47F55600A4FEA8 /* Frameworks */,
+				4319BAA31A47F55600A4FEA8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "seattle_schools-release";
+			productName = seattle_schools;
+			productReference = 4319BAB31A47F55600A4FEA8 /* seattle_schools copy.app */;
+			productType = "com.apple.product-type.application";
+		};
 		431F85741A3E911D003DA6E9 /* seattle_schools */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 431F859B1A3E911E003DA6E9 /* Build configuration list for PBXNativeTarget "seattle_schools" */;
@@ -541,12 +631,32 @@
 			projectRoot = "";
 			targets = (
 				431F85741A3E911D003DA6E9 /* seattle_schools */,
+				4319BA731A47F55600A4FEA8 /* seattle_schools-release */,
 				431F85901A3E911E003DA6E9 /* seattle_schoolsTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4319BAA31A47F55600A4FEA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4319BAA41A47F55600A4FEA8 /* Main.storyboard in Resources */,
+				4319BAA51A47F55600A4FEA8 /* CaviarDreams_Italic.ttf in Resources */,
+				4319BAA61A47F55600A4FEA8 /* private_schools.json in Resources */,
+				4319BAA71A47F55600A4FEA8 /* Images.xcassets in Resources */,
+				4319BAA81A47F55600A4FEA8 /* CaviarDreams.ttf in Resources */,
+				4319BAA91A47F55600A4FEA8 /* Caviar_Dreams_Bold.ttf in Resources */,
+				4319BAAA1A47F55600A4FEA8 /* LaunchScreen.xib in Resources */,
+				4319BAAB1A47F55600A4FEA8 /* public_schools.json in Resources */,
+				4319BAAC1A47F55600A4FEA8 /* FilterView.xib in Resources */,
+				4319BAAD1A47F55600A4FEA8 /* BCMeshShader.vsh in Resources */,
+				4319BAAE1A47F55600A4FEA8 /* BCMeshShader.fsh in Resources */,
+				4319BAAF1A47F55600A4FEA8 /* CaviarDreams_BoldItalic.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		431F85731A3E911D003DA6E9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -576,6 +686,54 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4319BA741A47F55600A4FEA8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4319BA751A47F55600A4FEA8 /* NTTheme.m in Sources */,
+				4319BA761A47F55600A4FEA8 /* NTJSONNetworkCollector+NTSeattle.m in Sources */,
+				4319BA771A47F55600A4FEA8 /* NTDetailLabel.m in Sources */,
+				4319BA781A47F55600A4FEA8 /* BCMeshTransform+DemoTransforms.m in Sources */,
+				4319BA791A47F55600A4FEA8 /* BCMeshTransform+Interpolation.m in Sources */,
+				4319BA7A1A47F55600A4FEA8 /* NTButton.m in Sources */,
+				4319BA7B1A47F55600A4FEA8 /* UIActivityIndicatorView+NTShow.m in Sources */,
+				4319BA7C1A47F55600A4FEA8 /* BCMeshShader.m in Sources */,
+				4319BA7D1A47F55600A4FEA8 /* seattle_schools.xcdatamodeld in Sources */,
+				4319BA7E1A47F55600A4FEA8 /* NTFlagButton.m in Sources */,
+				4319BA7F1A47F55600A4FEA8 /* NTLocationManager.m in Sources */,
+				4319BA801A47F55600A4FEA8 /* NTFilterTransformView.m in Sources */,
+				4319BA811A47F55600A4FEA8 /* BCMeshTransformView.m in Sources */,
+				4319BA821A47F55600A4FEA8 /* CGRect+NTExtend.swift in Sources */,
+				4319BA831A47F55600A4FEA8 /* FilterView.swift in Sources */,
+				4319BA841A47F55600A4FEA8 /* NTSchoolAnnotate.m in Sources */,
+				4319BA851A47F55600A4FEA8 /* NTHomeViewController.m in Sources */,
+				4319BA861A47F55600A4FEA8 /* BCMeshTransform.mm in Sources */,
+				4319BA871A47F55600A4FEA8 /* BCMeshTransformAnimation.m in Sources */,
+				4319BA881A47F55600A4FEA8 /* main.m in Sources */,
+				4319BA891A47F55600A4FEA8 /* BCMeshTexture.m in Sources */,
+				4319BA8A1A47F55600A4FEA8 /* MiddlePoleView.swift in Sources */,
+				4319BA8B1A47F55600A4FEA8 /* AppDelegate.m in Sources */,
+				4319BA8C1A47F55600A4FEA8 /* NTJSONLocalCollector+NTSeattle.m in Sources */,
+				4319BA8D1A47F55600A4FEA8 /* NTNavigationBar.m in Sources */,
+				4319BA8E1A47F55600A4FEA8 /* BCMeshBuffer.m in Sources */,
+				4319BA8F1A47F55600A4FEA8 /* NTDataCollector.m in Sources */,
+				4319BA901A47F55600A4FEA8 /* NTSchool.m in Sources */,
+				4319BA911A47F55600A4FEA8 /* BCMutableMeshTransform+Convenience.m in Sources */,
+				4319BA921A47F55600A4FEA8 /* UIImage+NTExtra.m in Sources */,
+				4319BA931A47F55600A4FEA8 /* NTPoleView.m in Sources */,
+				4319BA941A47F55600A4FEA8 /* NSDictionary+ConvertValue.m in Sources */,
+				4319BA951A47F55600A4FEA8 /* NTFilterViewController.m in Sources */,
+				4319BA961A47F55600A4FEA8 /* NSDictionary+Null.m in Sources */,
+				4319BA971A47F55600A4FEA8 /* NTJSONNetworkCollector+Google.m in Sources */,
+				4319BA981A47F55600A4FEA8 /* NTDetailViewController.m in Sources */,
+				4319BA991A47F55600A4FEA8 /* NTSchoolFilter.m in Sources */,
+				4319BA9A1A47F55600A4FEA8 /* NTSchoolAnnotateView.m in Sources */,
+				4319BA9B1A47F55600A4FEA8 /* NTSchoolGroupAnnotation.m in Sources */,
+				4319BA9C1A47F55600A4FEA8 /* BCMeshContentView.m in Sources */,
+				4319BA9D1A47F55600A4FEA8 /* UIAlertView+NTShow.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		431F85711A3E911D003DA6E9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -601,6 +759,7 @@
 				4367F2D61A46F3FD00B4E0D3 /* BCMeshTransformAnimation.m in Sources */,
 				431F857B1A3E911D003DA6E9 /* main.m in Sources */,
 				4367F2D21A46F3FD00B4E0D3 /* BCMeshTexture.m in Sources */,
+				4319BA721A47EA2900A4FEA8 /* MiddlePoleView.swift in Sources */,
 				431F85AC1A3E9405003DA6E9 /* AppDelegate.m in Sources */,
 				4336A1EC1A421B9C005BC764 /* NTJSONLocalCollector+NTSeattle.m in Sources */,
 				43A876EA1A446B1F00AD9CCD /* NTNavigationBar.m in Sources */,
@@ -662,6 +821,41 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4319BAB11A47F55600A4FEA8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Naythan Ramirez (6YT7SBM827)";
+				INFOPLIST_FILE = seattle_schools/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "seattle_schools copy";
+				PROVISIONING_PROFILE = "aad076ed-282e-4c1a-8c83-d47547114fc1";
+				SWIFT_OBJC_BRIDGING_HEADER = "seattle_schools/Sources/seattle_schools-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		4319BAB21A47F55600A4FEA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Naythan Ramirez (6YT7SBM827)";
+				INFOPLIST_FILE = seattle_schools/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "seattle_schools copy";
+				PROVISIONING_PROFILE = "aad076ed-282e-4c1a-8c83-d47547114fc1";
+				SWIFT_OBJC_BRIDGING_HEADER = "seattle_schools/Sources/seattle_schools-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 		431F85991A3E911E003DA6E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -746,11 +940,12 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = seattle_schools/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "seattle_schools/Sources/seattle_schools-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -762,10 +957,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = seattle_schools/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "seattle_schools/Sources/seattle_schools-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -806,6 +1002,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4319BAB01A47F55600A4FEA8 /* Build configuration list for PBXNativeTarget "seattle_schools-release" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4319BAB11A47F55600A4FEA8 /* Debug */,
+				4319BAB21A47F55600A4FEA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		431F85701A3E911D003DA6E9 /* Build configuration list for PBXProject "seattle_schools" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

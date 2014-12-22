@@ -9,6 +9,7 @@
 #import "NTPoleView.h"
 #import "NTTheme.h"
 #import "NTMath.h"
+#import "seattle_schools-Swift.h"
 
 static CGFloat const kViewMaxHeight = 2200;
 
@@ -25,6 +26,8 @@ static CGFloat const kViewMaxHeight = 2200;
     if (self = [super initWithCoder:aDecoder]) {
         CGSize size = self.frame.size;
         
+        
+        
         // create scroll view
         self.scrollView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, size.width, kViewMaxHeight)];
         UIColor *patternColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"wood_tile.jpg"]];
@@ -32,7 +35,7 @@ static CGFloat const kViewMaxHeight = 2200;
         [self addSubview:self.scrollView];
         
         // create middle view
-        UIView *poleMiddleView = [[UIView alloc] init];
+        UIView *poleMiddleView = [[MiddlePoleView alloc] init];
         [poleMiddleView setBackgroundColor:[[NTTheme instance] flagBackgroundColor]];
         [self addSubview:poleMiddleView];
         _middleView = poleMiddleView;
@@ -54,7 +57,7 @@ static CGFloat const kViewMaxHeight = 2200;
     
     // middle
     CGSize size = self.frame.size;
-    CGFloat flagWidth = size.width * [[NTTheme instance] flagWidthScale];
+    CGFloat flagWidth = size.width * [[NTTheme instance] flagWidthScale] * .9f;
     CGRect middleRect = CGRectMake((size.width - flagWidth) * 0.5, 0, flagWidth, size.height);
     [self.middleView setFrame:middleRect];
     

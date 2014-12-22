@@ -28,6 +28,7 @@ x Filter Grades
 - animate a wave for the flag
 - add UIMotionEffect
 - create pressure point when drag the flag
+- iPhone 6 and greater, the pole texture image is not shown because the height is smaller.
 
 
 - BUG - when pull down flag to the further point, able to see beyond the wood texture.

@@ -39,27 +39,7 @@ class FilterView: UIView {
     }
 
     override func drawRect(rect: CGRect) {
-//        let ctx = UIGraphicsGetCurrentContext()
-//        let bottomHeight : CGFloat = 30
-//        let shadowHeight : CGFloat = 10;
-//        let backgroundColor = NTTheme.instance().flagBackgroundColor()
-//        
-//        let topRect = CGRect(x: 0, y: 0, width: rect.width, height: rect.height-bottomHeight-shadowHeight)
-//        var bottomRect = CGRect(x: 0, y: rect.height-bottomHeight-shadowHeight, width: rect.width, height: bottomHeight-shadowHeight)
-//        
-//        backgroundColor.setFill()
-//        CGContextFillRect(ctx, topRect)
-//        
-////        UIColor.blueColor().setFill()
-////        CGContextFillRect(ctx, bottomRect)
-//        
-//        let backPath = trianglePath(bottomRect, true)
-//        
-//        backgroundColor.setFill()
-//        CGContextSetShadowWithColor(ctx, CGSize(width: 2, height: 2), 3.5, NTTheme.instance().flagShadowColor().CGColor)
-//        CGContextAddPath(ctx, backPath)
-//        CGContextFillPath(ctx)
-
+        
         let ctx = UIGraphicsGetCurrentContext()
         let bottomHeight : CGFloat = 40
         let lineWidth :CGFloat = 2.0
