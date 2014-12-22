@@ -76,8 +76,13 @@
 }
 
 - (UIFont *)generalFont {
-    return [UIFont fontWithName:@"Caviar Dreams" size:15];
+    return [UIFont fontWithName:[self generalFontName] size:15];
 }
+
+- (NSString *)generalFontName {
+    return @"Caviar Dreams";
+}
+
 
 
 @end

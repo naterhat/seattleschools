@@ -27,8 +27,7 @@
 - (UIColor *)generalTextColor;
 - (UIFont *)generalFont;
 
-
-
+- (NSString *)generalFontName;
 
 @end
 

@@ -11,11 +11,9 @@
 #import "NTMath.h"
 #import "NTTheme.h"
 #import "NTFilterTransformView.h"
-#import "NTFilterView.h"
+#import "seattle_schools-Swift.h"
 
-
-
-static const CGFloat min = 130;
+static const CGFloat min = 100;
 static const CGFloat max = 200;
 
 @interface NTFilterViewController ()
@@ -37,7 +35,7 @@ static const CGFloat max = 200;
 @property (nonatomic) UIDynamicBehavior *dynamicBehavior;
 @property (nonatomic) CGPoint startPoint;
 @property (nonatomic) CGPoint restPoint;
-@property (nonatomic) NTFilterView *filterView;
+@property (nonatomic) FilterView *filterView;
 @end
 
 @implementation NTFilterViewController
@@ -46,16 +44,13 @@ static const CGFloat max = 200;
 {
     [super viewDidLoad];
     
-    NTFilterView *view = [[[NSBundle mainBundle] loadNibNamed:@"FilterView" owner:self options:nil] lastObject];
+    FilterView *view = [[[NSBundle mainBundle] loadNibNamed:@"FilterView" owner:self options:nil] lastObject];
     [view setFrame:self.view.bounds];
     [[((NTFilterTransformView *)self.view) contentView] addSubview:view];
     _filterView = view;
     for (UIView *view in  @[self.gradeHighButton, self.gradeMiddleButton, self.gradeElementaryButton, self.typePrivateButton, self.typePublicButton]) {
         [view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapButton:)]];
     }
-    
-    
-    
 
     // resize view
     CGFloat flagWidth = self.view.frame.size.width * [[NTTheme instance] flagWidthScale];
@@ -75,7 +70,7 @@ static const CGFloat max = 200;
     _filter = [NTSchoolFilter new];
     
     // create snap behavior
-    [self addSnap];
+    [self createSnap];
     
     // create dynamic behavior
     UIDynamicItemBehavior *dBehavior = [[UIDynamicItemBehavior alloc] initWithItems:@[self.view]];
@@ -102,9 +97,13 @@ static const CGFloat max = 200;
     [super viewDidLayoutSubviews];
     
     [self.filterView setFrame:self.view.bounds];
+    
+    
+    CGRect rect = CGRectMake(0, 3-self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height);
+    UIBezierPath *aPath = [UIBezierPath bezierPathWithRect:rect];
 }
 
-- (void)addSnap
+- (void)createSnap
 {
     self.snapBehavior = [[UISnapBehavior alloc] initWithItem:self.view snapToPoint:_restPoint];
     __weak typeof(self) weakself = self;
@@ -128,6 +127,16 @@ static const CGFloat max = 200;
     
     [self.filter setType:type];
     [self.filter setGrade:grade];
+}
+
+- (void)updateFrame
+{
+    
+}
+
+- (UIView *)contentView
+{
+    return [((NTFilterTransformView *)self.view) contentView];
 }
 
 #pragma mark - Action
@@ -195,9 +204,10 @@ static const CGFloat max = 200;
                 _restPoint.y = _max;
             }
             
-            [self addSnap];
+            [self createSnap];
             
             self.view.transform = CGAffineTransformIdentity;
+            
             [self.animator addBehavior:_snapBehavior];
             [self.animator addBehavior:_dynamicBehavior];
             break;

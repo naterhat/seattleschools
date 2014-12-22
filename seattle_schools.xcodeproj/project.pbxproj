@@ -61,7 +61,6 @@
 		4319BAA91A47F55600A4FEA8 /* Caviar_Dreams_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43A876E01A4469B900AD9CCD /* Caviar_Dreams_Bold.ttf */; };
 		4319BAAA1A47F55600A4FEA8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 431F858A1A3E911D003DA6E9 /* LaunchScreen.xib */; };
 		4319BAAB1A47F55600A4FEA8 /* public_schools.json in Resources */ = {isa = PBXBuildFile; fileRef = 435B713C1A420DBB00D39352 /* public_schools.json */; };
-		4319BAAC1A47F55600A4FEA8 /* FilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4367F2DD1A46F9B700B4E0D3 /* FilterView.xib */; };
 		4319BAAD1A47F55600A4FEA8 /* BCMeshShader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 4367F2BE1A46F3FD00B4E0D3 /* BCMeshShader.vsh */; };
 		4319BAAE1A47F55600A4FEA8 /* BCMeshShader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 4367F2BB1A46F3FD00B4E0D3 /* BCMeshShader.fsh */; };
 		4319BAAF1A47F55600A4FEA8 /* CaviarDreams_BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43A876E21A4469B900AD9CCD /* CaviarDreams_BoldItalic.ttf */; };
@@ -106,7 +105,6 @@
 		4367F2D71A46F3FD00B4E0D3 /* BCMeshTransformView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4367F2CA1A46F3FD00B4E0D3 /* BCMeshTransformView.m */; };
 		4367F2D81A46F3FD00B4E0D3 /* BCMutableMeshTransform+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 4367F2CC1A46F3FD00B4E0D3 /* BCMutableMeshTransform+Convenience.m */; };
 		4367F2DB1A46F51E00B4E0D3 /* NTFilterTransformView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4367F2DA1A46F51E00B4E0D3 /* NTFilterTransformView.m */; };
-		4367F2DE1A46F9B700B4E0D3 /* FilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4367F2DD1A46F9B700B4E0D3 /* FilterView.xib */; };
 		4367F2E11A470B7C00B4E0D3 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4367F2E01A470B7C00B4E0D3 /* FilterView.swift */; };
 		4395BF051A47A8A2005E8CA2 /* CGRect+NTExtend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4395BF041A47A8A2005E8CA2 /* CGRect+NTExtend.swift */; };
 		43A876E41A4469B900AD9CCD /* Caviar_Dreams_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43A876E01A4469B900AD9CCD /* Caviar_Dreams_Bold.ttf */; };
@@ -119,6 +117,10 @@
 		43A876F61A4483B200AD9CCD /* NTFlagButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A876F51A4483B200AD9CCD /* NTFlagButton.m */; };
 		43A876F91A4483C000AD9CCD /* NTButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A876F81A4483C000AD9CCD /* NTButton.m */; };
 		43A876FD1A448E7B00AD9CCD /* NTDetailLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A876FC1A448E7B00AD9CCD /* NTDetailLabel.m */; };
+		43E327F31A480D4700E63E28 /* FilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43E327F21A480D4700E63E28 /* FilterView.xib */; };
+		43E327F61A48133100E63E28 /* NTCopyrightLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E327F51A48133100E63E28 /* NTCopyrightLabel.m */; };
+		43E327F71A48133500E63E28 /* NTCopyrightLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E327F51A48133100E63E28 /* NTCopyrightLabel.m */; };
+		43E327FA1A481E7100E63E28 /* NTFilterContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E327F91A481E7100E63E28 /* NTFilterContainer.m */; };
 		43F3A6A81A41809100F55C05 /* NTSchoolFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F3A6A71A41809100F55C05 /* NTSchoolFilter.m */; };
 		43F57BD71A4017630081E4B0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43F57BD61A4017630081E4B0 /* Images.xcassets */; };
 		43F6016D1A45E85F0041B9C9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43F6016C1A45E85F0041B9C9 /* QuartzCore.framework */; };
@@ -216,7 +218,6 @@
 		4367F2CC1A46F3FD00B4E0D3 /* BCMutableMeshTransform+Convenience.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BCMutableMeshTransform+Convenience.m"; sourceTree = "<group>"; };
 		4367F2D91A46F51E00B4E0D3 /* NTFilterTransformView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTFilterTransformView.h; sourceTree = "<group>"; };
 		4367F2DA1A46F51E00B4E0D3 /* NTFilterTransformView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTFilterTransformView.m; sourceTree = "<group>"; };
-		4367F2DD1A46F9B700B4E0D3 /* FilterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterView.xib; sourceTree = "<group>"; };
 		4367F2DF1A470B7B00B4E0D3 /* seattle_schools-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "seattle_schools-Bridging-Header.h"; sourceTree = "<group>"; };
 		4367F2E01A470B7C00B4E0D3 /* FilterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
 		4395BF041A47A8A2005E8CA2 /* CGRect+NTExtend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+NTExtend.swift"; sourceTree = "<group>"; };
@@ -236,6 +237,11 @@
 		43A876F81A4483C000AD9CCD /* NTButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTButton.m; sourceTree = "<group>"; };
 		43A876FB1A448E7B00AD9CCD /* NTDetailLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTDetailLabel.h; sourceTree = "<group>"; };
 		43A876FC1A448E7B00AD9CCD /* NTDetailLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTDetailLabel.m; sourceTree = "<group>"; };
+		43E327F21A480D4700E63E28 /* FilterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterView.xib; sourceTree = "<group>"; };
+		43E327F41A48133100E63E28 /* NTCopyrightLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTCopyrightLabel.h; sourceTree = "<group>"; };
+		43E327F51A48133100E63E28 /* NTCopyrightLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTCopyrightLabel.m; sourceTree = "<group>"; };
+		43E327F81A481E7100E63E28 /* NTFilterContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTFilterContainer.h; sourceTree = "<group>"; };
+		43E327F91A481E7100E63E28 /* NTFilterContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTFilterContainer.m; sourceTree = "<group>"; };
 		43F3A6A61A41809100F55C05 /* NTSchoolFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTSchoolFilter.h; sourceTree = "<group>"; };
 		43F3A6A71A41809100F55C05 /* NTSchoolFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTSchoolFilter.m; sourceTree = "<group>"; };
 		43F57BD61A4017630081E4B0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -459,7 +465,7 @@
 		4367F2DC1A46F9A200B4E0D3 /* Xibs */ = {
 			isa = PBXGroup;
 			children = (
-				4367F2DD1A46F9B700B4E0D3 /* FilterView.xib */,
+				43E327F21A480D4700E63E28 /* FilterView.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -498,6 +504,10 @@
 				4319BA711A47EA2900A4FEA8 /* MiddlePoleView.swift */,
 				4367F2DF1A470B7B00B4E0D3 /* seattle_schools-Bridging-Header.h */,
 				4395BF041A47A8A2005E8CA2 /* CGRect+NTExtend.swift */,
+				43E327F41A48133100E63E28 /* NTCopyrightLabel.h */,
+				43E327F51A48133100E63E28 /* NTCopyrightLabel.m */,
+				43E327F81A481E7100E63E28 /* NTFilterContainer.h */,
+				43E327F91A481E7100E63E28 /* NTFilterContainer.m */,
 			);
 			name = "Views & Themes";
 			sourceTree = "<group>";
@@ -650,7 +660,6 @@
 				4319BAA91A47F55600A4FEA8 /* Caviar_Dreams_Bold.ttf in Resources */,
 				4319BAAA1A47F55600A4FEA8 /* LaunchScreen.xib in Resources */,
 				4319BAAB1A47F55600A4FEA8 /* public_schools.json in Resources */,
-				4319BAAC1A47F55600A4FEA8 /* FilterView.xib in Resources */,
 				4319BAAD1A47F55600A4FEA8 /* BCMeshShader.vsh in Resources */,
 				4319BAAE1A47F55600A4FEA8 /* BCMeshShader.fsh in Resources */,
 				4319BAAF1A47F55600A4FEA8 /* CaviarDreams_BoldItalic.ttf in Resources */,
@@ -662,6 +671,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				431F85871A3E911D003DA6E9 /* Main.storyboard in Resources */,
+				43E327F31A480D4700E63E28 /* FilterView.xib in Resources */,
 				43A876E71A4469B900AD9CCD /* CaviarDreams_Italic.ttf in Resources */,
 				435B713D1A420DBB00D39352 /* private_schools.json in Resources */,
 				43F57BD71A4017630081E4B0 /* Images.xcassets in Resources */,
@@ -669,7 +679,6 @@
 				43A876E41A4469B900AD9CCD /* Caviar_Dreams_Bold.ttf in Resources */,
 				431F858C1A3E911D003DA6E9 /* LaunchScreen.xib in Resources */,
 				435B713E1A420DBB00D39352 /* public_schools.json in Resources */,
-				4367F2DE1A46F9B700B4E0D3 /* FilterView.xib in Resources */,
 				4367F2D11A46F3FD00B4E0D3 /* BCMeshShader.vsh in Resources */,
 				4367F2CF1A46F3FD00B4E0D3 /* BCMeshShader.fsh in Resources */,
 				43A876E61A4469B900AD9CCD /* CaviarDreams_BoldItalic.ttf in Resources */,
@@ -720,6 +729,7 @@
 				4319BA901A47F55600A4FEA8 /* NTSchool.m in Sources */,
 				4319BA911A47F55600A4FEA8 /* BCMutableMeshTransform+Convenience.m in Sources */,
 				4319BA921A47F55600A4FEA8 /* UIImage+NTExtra.m in Sources */,
+				43E327F71A48133500E63E28 /* NTCopyrightLabel.m in Sources */,
 				4319BA931A47F55600A4FEA8 /* NTPoleView.m in Sources */,
 				4319BA941A47F55600A4FEA8 /* NSDictionary+ConvertValue.m in Sources */,
 				4319BA951A47F55600A4FEA8 /* NTFilterViewController.m in Sources */,
@@ -767,7 +777,9 @@
 				431F85ED1A3E9E12003DA6E9 /* NTDataCollector.m in Sources */,
 				431F85E71A3E98B4003DA6E9 /* NTSchool.m in Sources */,
 				4367F2D81A46F3FD00B4E0D3 /* BCMutableMeshTransform+Convenience.m in Sources */,
+				43E327FA1A481E7100E63E28 /* NTFilterContainer.m in Sources */,
 				4336A1F21A429327005BC764 /* UIImage+NTExtra.m in Sources */,
+				43E327F61A48133100E63E28 /* NTCopyrightLabel.m in Sources */,
 				43A876F31A447A9800AD9CCD /* NTPoleView.m in Sources */,
 				431F85DB1A3E977D003DA6E9 /* NSDictionary+ConvertValue.m in Sources */,
 				431F85F01A3EA2A1003DA6E9 /* NTFilterViewController.m in Sources */,

@@ -13,10 +13,13 @@ x Retrieve image from url
 x Create actions links to phone, web, and address
 x For group of annotations, show number count
 x Filter Grades
+x add copyright
+x animate a wave for the flag
+x Change Color of Annotation by Public or Private
+x BUG - fixed current location annotation
 
 - If its group of annotations, disable call out.
 - Fix annotation refresh
-- Change Color of Annotation by Public or Private
 - Deal with address nil
 - Deal with website nil
 - Disable call button if no phone
@@ -25,14 +28,16 @@ x Filter Grades
 - Tap on Seattle Title - Go Center of Seattle
 - Scale to fit for annotation call out image view.
 - animate annotations when seperate and when pull back together.
-- animate a wave for the flag
 - add UIMotionEffect
 - create pressure point when drag the flag
 - iPhone 6 and greater, the pole texture image is not shown because the height is smaller.
-
+- add credits
+- add cut off above the flag
+- separate HomeViewController with MapViewController
+- check internet connection
+- check if already  downloaded schools 
 
 - BUG - when pull down flag to the further point, able to see beyond the wood texture.
 - BUG - some annotation are not being removed, Stuck at a location. It has no interaction.
 - BUG - call for image from google wit NTJSONNetworkCollector
-- BUG - fixed current location annotation
 - CRASH - when add new annotation. To get there, by zooming out and in.

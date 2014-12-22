@@ -25,6 +25,7 @@
 #import "NTPoleView.h"
 #import "NTTheme.h"
 #import "NTFilterTransformView.h"
+#import "NTFilterContainer.h"
 
 static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.0, 1.0}};
 
@@ -36,6 +37,7 @@ static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.
 @property (nonatomic) BOOL rendered;
 @property (nonatomic) CGFloat zoomLevel;
 @property (nonatomic) NSArray *filterSchools;
+@property (nonatomic) UIView *filterContainer;
 @property (weak, nonatomic) IBOutlet NTPoleView *poleView;
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
@@ -55,11 +57,23 @@ static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.
     _locationManager = [NTLocationManager sharedInstance];
     [_locationManager setDelegate:self];
     
+    CGRect bounds = self.view.bounds;
+    bounds.origin.y = 3;
+    _filterContainer = [[NTFilterContainer alloc] initWithFrame:bounds];
+    [_filterContainer setClipsToBounds:YES];
+    [self.view addSubview:_filterContainer];
+    
     // add filter view controller
     _filterVC = [self.storyboard instantiateViewControllerWithIdentifier:@"filterViewController"];
     [_filterVC setDelegate:self];
     [self addChildViewController:_filterVC];
-    [self.view addSubview:_filterVC.view];
+    [_filterContainer addSubview:_filterVC.view];
+    
+    // add light on top of pole
+    UIView *top = [[UIView alloc] initWithFrame:CGRectMake(0, 3, self.view.frame.size.width, 3)];
+    [top setBackgroundColor:[UIColor colorWithWhite:1 alpha:.15]];
+    [self.view addSubview:top];
+    
     
     // add current location button
 //    MKUserTrackingBarButtonItem *trackingItem = [[MKUserTrackingBarButtonItem alloc] initWithMapView:self.mapView];
@@ -273,51 +287,39 @@ static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
 {
     static NSString *schoolIdentifier = @"school";
-    static NSString *current = @"current";
     
-    // get school identifier depending on type of annotations.
-    NSString *identifier;
-    if ( [annotation isKindOfClass:[NTSchoolGroupAnnotation class]] ) {
-        identifier = schoolIdentifier;
-    } else {
-        identifier = current;
+    // if user current location annotation, return nil
+    if (! [annotation isKindOfClass:[NTSchoolGroupAnnotation class]] ) {
+        return nil;
     }
     
     MKAnnotationView *view = [mapView dequeueReusableAnnotationViewWithIdentifier:schoolIdentifier];
     if (!view) {
-        if ( [annotation isKindOfClass:[NTSchoolGroupAnnotation class]] ) {
-            view = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
-            [view setEnabled:YES];
-            [view setCanShowCallout:YES];
-            
-            // create accessory button to view more detail about school.
-            UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-            [rightButton addTarget:self action:@selector(selectCallOutButton:) forControlEvents:UIControlEventTouchUpInside];
-            view.rightCalloutAccessoryView = rightButton;
-            
-            // create left accessory image
-            UIImageView *iv = [[UIImageView alloc] initWithImage: [UIImage imageNamed:@"school47"]];
-            view.leftCalloutAccessoryView = iv;
-        } else {
-            view = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
-            [(MKPinAnnotationView *)view setPinColor:MKPinAnnotationColorGreen];
-        }
+        view = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:schoolIdentifier];
+        [view setEnabled:YES];
+        [view setCanShowCallout:YES];
+        
+        // create accessory button to view more detail about school.
+        UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+        [rightButton addTarget:self action:@selector(selectCallOutButton:) forControlEvents:UIControlEventTouchUpInside];
+        view.rightCalloutAccessoryView = rightButton;
+        
+        // create left accessory image
+        UIImageView *iv = [[UIImageView alloc] initWithImage: [UIImage imageNamed:@"school47"]];
+        [iv setContentMode:UIViewContentModeScaleAspectFit];
+        view.leftCalloutAccessoryView = iv;
     } else {
         
         [view setAnnotation:annotation];
     }
     
-    // validate if NTGroupAnnotation class. MKUserLocation annotate might come through.
-    if ( [annotation isKindOfClass:[NTSchoolGroupAnnotation class]] ) {
-        
-        // set pin image
-        __block NTSchool *school = [((NTSchoolGroupAnnotation *)annotation) firstObject];
-        [view setImage:[(NTSchoolGroupAnnotation*)annotation image]];
-        
-        // set tag for button
-        NSUInteger index = [self.schools containsObject:school];
-        [view.rightCalloutAccessoryView setTag:index];
-    }
+    // set pin image
+    __block NTSchool *school = [((NTSchoolGroupAnnotation *)annotation) firstObject];
+    [view setImage:[(NTSchoolGroupAnnotation*)annotation image]];
+    
+    // set tag for button
+    NSUInteger index = [self.schools containsObject:school];
+    [view.rightCalloutAccessoryView setTag:index];
     
     return view;
 }

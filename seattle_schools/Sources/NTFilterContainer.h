@@ -1,13 +1,13 @@
 //
-//  NTFilterView.h
+//  NTFilterContainer.h
 //  seattle_schools
 //
-//  Created by Nate on 12/19/14.
+//  Created by Nate on 12/22/14.
 //  Copyright (c) 2014 ifcantel. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface NTFilterView : UIView
+@interface NTFilterContainer : UIView
 
 @end
