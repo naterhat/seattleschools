@@ -15,7 +15,7 @@
 
 
 
-static const CGFloat min = 100;
+static const CGFloat min = 130;
 static const CGFloat max = 200;
 
 @interface NTFilterViewController ()

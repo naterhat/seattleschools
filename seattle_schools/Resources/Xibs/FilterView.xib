@@ -16,12 +16,12 @@
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="yGh-Rv-Iuk" customClass="NTFilterView">
+        <view contentMode="scaleToFill" id="yGh-Rv-Iuk" customClass="FilterView" customModule="seattle_schools" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afM-xS-spw" customClass="NTFlagButton">
-                    <rect key="frame" x="200" y="546" width="80" height="28"/>
+                    <rect key="frame" x="205" y="514" width="75" height="28"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                     <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                     <state key="normal" title="Public">
@@ -33,7 +33,7 @@
                     </state>
                 </button>
                 <button opaque="NO" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZPY-Aq-6qQ" customClass="NTFlagButton">
-                    <rect key="frame" x="320" y="546" width="80" height="28"/>
+                    <rect key="frame" x="320" y="514" width="75" height="28"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                     <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                     <state key="normal" title="Private">
@@ -45,9 +45,9 @@
                     </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPs-9Y-OZ3" customClass="NTFlagButton">
-                    <rect key="frame" x="170" y="503" width="80" height="28"/>
+                    <rect key="frame" x="178" y="466" width="75" height="28"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="80" id="GoZ-cq-M1b"/>
+                        <constraint firstAttribute="width" constant="75" id="GoZ-cq-M1b"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                     <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
@@ -60,7 +60,7 @@
                     </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vMW-RG-72i" customClass="NTFlagButton">
-                    <rect key="frame" x="260" y="503" width="80" height="28"/>
+                    <rect key="frame" x="263" y="466" width="75" height="28"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                     <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                     <state key="normal" title="Middle">
@@ -82,7 +82,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKU-dR-YBl" customClass="NTFlagButton">
-                    <rect key="frame" x="350" y="503" width="80" height="28"/>
+                    <rect key="frame" x="348" y="466" width="75" height="28"/>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                     <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
                     <state key="normal" title="High">
@@ -107,13 +107,13 @@
                 <constraint firstAttribute="centerX" secondItem="vMW-RG-72i" secondAttribute="centerX" id="ZVW-S4-N9S"/>
                 <constraint firstItem="vMW-RG-72i" firstAttribute="leading" secondItem="aPs-9Y-OZ3" secondAttribute="trailing" priority="750" constant="10" id="af1-KS-xSs"/>
                 <constraint firstItem="rKU-dR-YBl" firstAttribute="leading" secondItem="vMW-RG-72i" secondAttribute="trailing" constant="10" id="b86-F7-fPl"/>
-                <constraint firstItem="hES-G8-wVY" firstAttribute="top" secondItem="afM-xS-spw" secondAttribute="bottom" constant="-2" id="eeI-8o-KLS"/>
+                <constraint firstItem="hES-G8-wVY" firstAttribute="top" secondItem="afM-xS-spw" secondAttribute="bottom" constant="30" id="eeI-8o-KLS"/>
                 <constraint firstItem="afM-xS-spw" firstAttribute="centerY" secondItem="ZPY-Aq-6qQ" secondAttribute="centerY" id="gyd-eR-u7b"/>
                 <constraint firstAttribute="bottomMargin" secondItem="hES-G8-wVY" secondAttribute="bottom" id="lKK-Eh-RKh"/>
                 <constraint firstItem="afM-xS-spw" firstAttribute="width" secondItem="ZPY-Aq-6qQ" secondAttribute="width" id="qhf-H1-2vL"/>
                 <constraint firstItem="vMW-RG-72i" firstAttribute="centerY" secondItem="rKU-dR-YBl" secondAttribute="centerY" id="t4s-fG-3ih"/>
                 <constraint firstItem="vMW-RG-72i" firstAttribute="width" secondItem="aPs-9Y-OZ3" secondAttribute="width" id="tJx-B7-xFe"/>
-                <constraint firstItem="afM-xS-spw" firstAttribute="top" secondItem="vMW-RG-72i" secondAttribute="bottom" constant="15" id="xnB-mD-Acm"/>
+                <constraint firstItem="afM-xS-spw" firstAttribute="top" secondItem="vMW-RG-72i" secondAttribute="bottom" constant="20" id="xnB-mD-Acm"/>
             </constraints>
             <variation key="default">
                 <mask key="constraints">

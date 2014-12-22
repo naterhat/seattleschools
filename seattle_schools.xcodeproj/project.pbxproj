@@ -49,13 +49,14 @@
 		4367F2D81A46F3FD00B4E0D3 /* BCMutableMeshTransform+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 4367F2CC1A46F3FD00B4E0D3 /* BCMutableMeshTransform+Convenience.m */; };
 		4367F2DB1A46F51E00B4E0D3 /* NTFilterTransformView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4367F2DA1A46F51E00B4E0D3 /* NTFilterTransformView.m */; };
 		4367F2DE1A46F9B700B4E0D3 /* FilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4367F2DD1A46F9B700B4E0D3 /* FilterView.xib */; };
+		4367F2E11A470B7C00B4E0D3 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4367F2E01A470B7C00B4E0D3 /* FilterView.swift */; };
+		4395BF051A47A8A2005E8CA2 /* CGRect+NTExtend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4395BF041A47A8A2005E8CA2 /* CGRect+NTExtend.swift */; };
 		43A876E41A4469B900AD9CCD /* Caviar_Dreams_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43A876E01A4469B900AD9CCD /* Caviar_Dreams_Bold.ttf */; };
 		43A876E51A4469B900AD9CCD /* CaviarDreams.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43A876E11A4469B900AD9CCD /* CaviarDreams.ttf */; };
 		43A876E61A4469B900AD9CCD /* CaviarDreams_BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43A876E21A4469B900AD9CCD /* CaviarDreams_BoldItalic.ttf */; };
 		43A876E71A4469B900AD9CCD /* CaviarDreams_Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43A876E31A4469B900AD9CCD /* CaviarDreams_Italic.ttf */; };
 		43A876EA1A446B1F00AD9CCD /* NTNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A876E91A446B1F00AD9CCD /* NTNavigationBar.m */; };
 		43A876ED1A4472D600AD9CCD /* NTTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A876EC1A4472D600AD9CCD /* NTTheme.m */; };
-		43A876F01A447A0E00AD9CCD /* NTFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A876EF1A447A0E00AD9CCD /* NTFilterView.m */; };
 		43A876F31A447A9800AD9CCD /* NTPoleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A876F21A447A9800AD9CCD /* NTPoleView.m */; };
 		43A876F61A4483B200AD9CCD /* NTFlagButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A876F51A4483B200AD9CCD /* NTFlagButton.m */; };
 		43A876F91A4483C000AD9CCD /* NTButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A876F81A4483C000AD9CCD /* NTButton.m */; };
@@ -156,6 +157,9 @@
 		4367F2D91A46F51E00B4E0D3 /* NTFilterTransformView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTFilterTransformView.h; sourceTree = "<group>"; };
 		4367F2DA1A46F51E00B4E0D3 /* NTFilterTransformView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTFilterTransformView.m; sourceTree = "<group>"; };
 		4367F2DD1A46F9B700B4E0D3 /* FilterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterView.xib; sourceTree = "<group>"; };
+		4367F2DF1A470B7B00B4E0D3 /* seattle_schools-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "seattle_schools-Bridging-Header.h"; sourceTree = "<group>"; };
+		4367F2E01A470B7C00B4E0D3 /* FilterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		4395BF041A47A8A2005E8CA2 /* CGRect+NTExtend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+NTExtend.swift"; sourceTree = "<group>"; };
 		43A876E01A4469B900AD9CCD /* Caviar_Dreams_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Caviar_Dreams_Bold.ttf; sourceTree = "<group>"; };
 		43A876E11A4469B900AD9CCD /* CaviarDreams.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams.ttf; sourceTree = "<group>"; };
 		43A876E21A4469B900AD9CCD /* CaviarDreams_BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = CaviarDreams_BoldItalic.ttf; sourceTree = "<group>"; };
@@ -164,8 +168,6 @@
 		43A876E91A446B1F00AD9CCD /* NTNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTNavigationBar.m; sourceTree = "<group>"; };
 		43A876EB1A4472D600AD9CCD /* NTTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTTheme.h; sourceTree = "<group>"; };
 		43A876EC1A4472D600AD9CCD /* NTTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTTheme.m; sourceTree = "<group>"; };
-		43A876EE1A447A0E00AD9CCD /* NTFilterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTFilterView.h; sourceTree = "<group>"; };
-		43A876EF1A447A0E00AD9CCD /* NTFilterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTFilterView.m; sourceTree = "<group>"; };
 		43A876F11A447A9800AD9CCD /* NTPoleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTPoleView.h; sourceTree = "<group>"; };
 		43A876F21A447A9800AD9CCD /* NTPoleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTPoleView.m; sourceTree = "<group>"; };
 		43A876F41A4483B200AD9CCD /* NTFlagButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTFlagButton.h; sourceTree = "<group>"; };
@@ -408,8 +410,6 @@
 				43A876E91A446B1F00AD9CCD /* NTNavigationBar.m */,
 				43A876EB1A4472D600AD9CCD /* NTTheme.h */,
 				43A876EC1A4472D600AD9CCD /* NTTheme.m */,
-				43A876EE1A447A0E00AD9CCD /* NTFilterView.h */,
-				43A876EF1A447A0E00AD9CCD /* NTFilterView.m */,
 				43A876F11A447A9800AD9CCD /* NTPoleView.h */,
 				43A876F21A447A9800AD9CCD /* NTPoleView.m */,
 				43A876F41A4483B200AD9CCD /* NTFlagButton.h */,
@@ -422,6 +422,9 @@
 				43A876FC1A448E7B00AD9CCD /* NTDetailLabel.m */,
 				4367F2D91A46F51E00B4E0D3 /* NTFilterTransformView.h */,
 				4367F2DA1A46F51E00B4E0D3 /* NTFilterTransformView.m */,
+				4367F2E01A470B7C00B4E0D3 /* FilterView.swift */,
+				4367F2DF1A470B7B00B4E0D3 /* seattle_schools-Bridging-Header.h */,
+				4395BF041A47A8A2005E8CA2 /* CGRect+NTExtend.swift */,
 			);
 			name = "Views & Themes";
 			sourceTree = "<group>";
@@ -581,7 +584,6 @@
 				431F85EA1A3E9B44003DA6E9 /* NTJSONNetworkCollector+NTSeattle.m in Sources */,
 				43A876FD1A448E7B00AD9CCD /* NTDetailLabel.m in Sources */,
 				4367F2D31A46F3FD00B4E0D3 /* BCMeshTransform+DemoTransforms.m in Sources */,
-				43A876F01A447A0E00AD9CCD /* NTFilterView.m in Sources */,
 				4367F2D41A46F3FD00B4E0D3 /* BCMeshTransform+Interpolation.m in Sources */,
 				43A876F91A4483C000AD9CCD /* NTButton.m in Sources */,
 				431F85DD1A3E977D003DA6E9 /* UIActivityIndicatorView+NTShow.m in Sources */,
@@ -591,6 +593,8 @@
 				431F86011A3EB738003DA6E9 /* NTLocationManager.m in Sources */,
 				4367F2DB1A46F51E00B4E0D3 /* NTFilterTransformView.m in Sources */,
 				4367F2D71A46F3FD00B4E0D3 /* BCMeshTransformView.m in Sources */,
+				4395BF051A47A8A2005E8CA2 /* CGRect+NTExtend.swift in Sources */,
+				4367F2E11A470B7C00B4E0D3 /* FilterView.swift in Sources */,
 				431F86071A3EDE1C003DA6E9 /* NTSchoolAnnotate.m in Sources */,
 				431F85AE1A3E9405003DA6E9 /* NTHomeViewController.m in Sources */,
 				4367F2D51A46F3FD00B4E0D3 /* BCMeshTransform.mm in Sources */,
@@ -739,11 +743,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = seattle_schools/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "seattle_schools/Sources/seattle_schools-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -752,11 +759,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = seattle_schools/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "seattle_schools/Sources/seattle_schools-Bridging-Header.h";
 			};
 			name = Release;
 		};

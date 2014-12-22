@@ -45,7 +45,7 @@
 - (BCMeshTransform *)waveTransformWithTime:(NSTimeInterval)time
 {
     const float Waves = 0.5;
-    const float Amplitude = 0.01;
+    const float Amplitude = 0.005;
     const float DistanceShrink = 0.0;
     const int Columns = 40;
     

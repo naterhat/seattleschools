@@ -21,14 +21,14 @@
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
-//- (void)drawRect:(CGRect)rect {
-//    // Drawing code
-//    
-//    CGContextRef ctx = UIGraphicsGetCurrentContext();
-//    [[[NTTheme instance] flagBackgroundColor] setFill];
-//    CGContextFillRect(ctx, rect);
-//    
-//    NSLog(@"Filter DrawRect:");
-//}
+- (void)drawRect:(CGRect)rect {
+    // Drawing code
+    
+    CGContextRef ctx = UIGraphicsGetCurrentContext();
+    [[[NTTheme instance] flagBackgroundColor] setFill];
+    CGContextFillRect(ctx, rect);
+    
+    NSLog(@"Filter DrawRect:");
+}
 
 @end
