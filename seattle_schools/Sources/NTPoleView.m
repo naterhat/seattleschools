@@ -11,7 +11,7 @@
 #import "NTMath.h"
 #import "seattle_schools-Swift.h"
 
-static CGFloat const kViewMaxHeight = 2200;
+//static CGFloat const kViewMaxHeight = 2200;
 
 @interface NTPoleView ()
 @property (nonatomic) UIView *scrollView;
@@ -26,10 +26,11 @@ static CGFloat const kViewMaxHeight = 2200;
     if (self = [super initWithCoder:aDecoder]) {
         CGSize size = self.frame.size;
         
-        
+  
+        CGFloat height = [[[[UIApplication sharedApplication] windows] firstObject] frame].size.height;
         
         // create scroll view
-        self.scrollView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, size.width, kViewMaxHeight)];
+        self.scrollView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, size.width, height * 3)];
         UIColor *patternColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"wood_tile.jpg"]];
         [self.scrollView setBackgroundColor:patternColor];
         [self addSubview:self.scrollView];
@@ -70,7 +71,7 @@ static CGFloat const kViewMaxHeight = 2200;
 
 - (void)scrollToPosition:(CGPoint)point
 {
-    CGRect frame = CGRectSetY(self.scrollView.frame, point.y - self.scrollView.frame.size.height/2);
+    CGRect frame = CGRectSetY(self.scrollView.frame, point.y);
     [self.scrollView setFrame:frame];
 }
 

@@ -17,6 +17,7 @@ x add copyright
 x animate a wave for the flag
 x Change Color of Annotation by Public or Private
 x BUG - fixed current location annotation
+x BUG - when pull down flag to the further point, able to see beyond the wood texture.
 
 - If its group of annotations, disable call out.
 - Fix annotation refresh
@@ -37,7 +38,7 @@ x BUG - fixed current location annotation
 - check internet connection
 - check if already  downloaded schools 
 
-- BUG - when pull down flag to the further point, able to see beyond the wood texture.
+
 - BUG - some annotation are not being removed, Stuck at a location. It has no interaction.
 - BUG - call for image from google wit NTJSONNetworkCollector
 - CRASH - when add new annotation. To get there, by zooming out and in.
