@@ -14,17 +14,19 @@
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
     if (self = [super initWithCoder:aDecoder]) {
+        // set title color - selected / unselected
         [self setTitleColor:[[NTTheme instance] flagTextColors] forState:UIControlStateNormal];
         [self setTitleColor:[[NTTheme instance] flagTextColors] forState:UIControlStateSelected];
         
+        // set button appearance
         [self.layer setShadowColor:[[NTTheme instance] flagShadowColor].CGColor];
         [self.layer setShadowRadius:0.5f];
         [self.layer setShadowOffset:CGSizeMake(2, 2)];
         [self.layer setBorderWidth:1];
         [self.layer setBorderColor:[UIColor clearColor].CGColor];
         
+        // set the appearance of the title label
         [self.titleLabel setFont:[[NTTheme instance] generalFont]];
-        
         [self.titleLabel setMinimumScaleFactor:.5f];
         [self.titleLabel setAdjustsFontSizeToFitWidth:YES];
     } return self;

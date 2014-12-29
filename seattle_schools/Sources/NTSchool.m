@@ -33,6 +33,7 @@ NSString *NSStringFromSchoolGrade(NTSchoolGrade grade)
     if (_grade) {
         NSInteger min = 0;
         NSInteger max = 0;
+        
         // break apart the components
         NSArray *comps = [_grade componentsSeparatedByString:@"-"];
         if(comps.count > 1){
@@ -43,6 +44,7 @@ NSString *NSStringFromSchoolGrade(NTSchoolGrade grade)
             max = min;
         }
         
+        // Grade System:
         // E: 0 - 6
         // M: 7 - 8
         // H: 9 - 12
@@ -84,6 +86,8 @@ NSString *NSStringFromSchoolGrade(NTSchoolGrade grade)
             _website = [_website stringByReplacingOccurrencesOfString:@"https://" withString:@""];
         }
         
+        // the school is determine if public, if the school type is brought
+        //  back from the network.
         _isPublic = YES;
         if(!_type) {
             _isPublic = NO;

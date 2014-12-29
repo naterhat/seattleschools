@@ -9,9 +9,11 @@
 import Foundation
 import UIKit
 
+/**
+Create a flag path with rectangle dimension.
+*/
 func flagPath(rect: CGRect, bottomHeight: CGFloat, closed: Bool) -> CGPathRef {
     let path = CGPathCreateMutable()
-    
     
     CGPathMoveToPoint(path, nil, rect.x, rect.y)
     CGPathAddLineToPoint(path, nil, rect.x, rect.bottom-bottomHeight)
@@ -30,8 +32,10 @@ func flagPath(rect: CGRect, bottomHeight: CGFloat, closed: Bool) -> CGPathRef {
 class FilterView: UIView {
     
     override func awakeFromNib() {
+
         backgroundColor = UIColor.clearColor()
         
+        // set shadow
         layer.shadowColor = NTTheme.instance().flagShadowColor().CGColor
         layer.shadowRadius = 0.5
         layer.shadowOffset = CGSize(width: 2, height: 2)
@@ -53,11 +57,13 @@ class FilterView: UIView {
         var offset : CGFloat = 3
         var ratio : CGFloat = 0
         
+        // draw flag
         backgroundColor.setFill()
         CGContextAddPath(ctx, flagPath(flagRect, bottomHeight, true))
         CGContextSetShadowWithColor(ctx, shadowOffset, shadowRadius, shadowColor.CGColor)
         CGContextFillPath(ctx)
         
+        // draw line path 1
         lineRect = flagRect.resize(-offset, top: 0, right: -offset, bottom: -offset)
         ratio = lineRect.height/flagRect.height
         lineColor.setStroke()
@@ -65,6 +71,7 @@ class FilterView: UIView {
         CGContextAddPath(ctx, flagPath(lineRect, bottomHeight * ratio * ratio, false))
         CGContextStrokePath(ctx)
         
+        // draw line path 2
         lineRect = flagRect.resize(-offset*2, top: 0, right: -offset*2, bottom: -offset*2)
         ratio = lineRect.height/flagRect.height
         lineColor.setStroke()

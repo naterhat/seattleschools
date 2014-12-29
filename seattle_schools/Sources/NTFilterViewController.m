@@ -204,10 +204,13 @@ static const CGFloat max = 200;
                 _restPoint.y = _max;
             }
             
+            // recreate the snap behavior
             [self createSnap];
             
+            // remove the 3D from layer
             self.view.transform = CGAffineTransformIdentity;
             
+            // animate the layer back to the orginal position.
             [self.animator addBehavior:_snapBehavior];
             [self.animator addBehavior:_dynamicBehavior];
             break;

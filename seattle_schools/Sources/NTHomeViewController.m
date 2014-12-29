@@ -26,20 +26,27 @@
 #import "NTTheme.h"
 #import "NTFilterTransformView.h"
 #import "NTFilterContainer.h"
+#import "Reachability.h"
+#import "NTMessageView.h"
 
 static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.0, 1.0}};
 
 @interface NTHomeViewController ()<MKMapViewDelegate, NTLocationManagerDelegate, NTFilterViewControllerDelegate>
-@property (nonatomic) NTJSONNetworkCollector *network;
-@property (nonatomic) NSMutableArray *schools;
-@property (nonatomic) NTFilterViewController *filterVC;
-@property (nonatomic) NTLocationManager *locationManager;
+
+@property (nonatomic) BOOL internetConnected;
 @property (nonatomic) BOOL rendered;
 @property (nonatomic) CGFloat zoomLevel;
 @property (nonatomic) NSArray *filterSchools;
-@property (nonatomic) UIView *filterContainer;
-@property (weak, nonatomic) IBOutlet NTPoleView *poleView;
+@property (nonatomic) NSMutableArray *schools;
 
+@property (nonatomic) Reachability *reach;
+@property (nonatomic) NTJSONNetworkCollector *network;
+@property (nonatomic) NTFilterViewController *filterVC;
+@property (nonatomic) NTLocationManager *locationManager;
+@property (nonatomic) UIView *filterContainer;
+@property (nonatomic) NTMessageView *noInternetMessageView;
+
+@property (weak, nonatomic) IBOutlet NTPoleView *poleView;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @end
 
@@ -57,6 +64,12 @@ static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.
     _locationManager = [NTLocationManager sharedInstance];
     [_locationManager setDelegate:self];
     
+    // load "no internet" message
+    _noInternetMessageView = [[NTMessageView alloc] initWithMessage:@"NO INTERNET" center:self.view.center];
+    [self.view addSubview:_noInternetMessageView];
+    [_noInternetMessageView setHidden:YES];
+    
+    // set filter container.
     CGRect bounds = self.view.bounds;
     bounds.origin.y = 3;
     _filterContainer = [[NTFilterContainer alloc] initWithFrame:bounds];
@@ -81,9 +94,11 @@ static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.
 
     // set mapview
     [self.mapView setDelegate:self];
+    
+    [self loadReachability];
 
     // retrieve data
-    [self retrieveSchools];
+//    [self retrieveSchools];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -103,6 +118,52 @@ static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.
 
 #pragma mark - Other Functions
 
+- (void)loadReachability
+{
+    // this will notify if internet is connected ot not. If not, display the appropiate message.
+    __weak typeof(self) weakself = self;
+    _reach = [Reachability reachabilityWithHostname:@"www.google.com"];
+    
+    // internet
+    _reach.reachableBlock = ^(Reachability *reach) {
+        NSLog(@"REACHABLE!");
+        weakself.internetConnected = YES;
+    };
+    
+    // no internet
+    _reach.unreachableBlock = ^(Reachability *reach) {
+        NSLog(@"UNREACHABLE");
+        weakself.internetConnected = NO;
+    };
+    
+    [_reach startNotifier];
+}
+
+- (void)setInternetConnected:(BOOL)internetConnected
+{
+    _internetConnected = internetConnected;
+    
+    // reload the views from the main thread
+    dispatch_async( dispatch_get_main_queue(), ^ {
+        
+        if (_internetConnected) {
+            // show map
+            [self.mapView setHidden:NO];
+            [self.noInternetMessageView setHidden:YES];
+            
+            [self retrieveSchools];
+        } else {
+            // validate if have not retrieve schools. display no internet.
+            if(self.schools.count == 0) {
+                // hide map
+                [self.mapView setHidden:YES];
+                [self.noInternetMessageView setHidden:NO];
+            }
+        }
+    });
+}
+
+
 - (void)showCurrentLocation
 {
     if (![self.locationManager authorizedLocation]) return;
@@ -113,6 +174,9 @@ static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.
 
 - (void)retrieveSchools
 {
+    // return if already retrieve schools.
+    if(_schools.count > 0) return;
+    
     __weak typeof(self) weakself = self;
     [_network retrieveSchoolsWithHandler:^(NSArray *items, NSError *error) {
         if(error) {
@@ -130,7 +194,8 @@ static const MKCoordinateRegion kBoundRegion = {{ 47.6425199, -122.3210886}, {1.
     // remove school name duplications
     NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
     NSMutableArray *tempArray = [NSMutableArray arrayWithArray:[schools sortedArrayUsingDescriptors:@[ sort ]]];
-    for (int i = 0; i < tempArray.count-1; i++) {
+    int count = (int32_t)tempArray.count;
+    for( int i = 0; i < count-2; i++) {
         if ( [[tempArray[i] name] isEqualToString:[tempArray[i+1] name]] ) {
             [tempArray removeObject:tempArray[i+1]];
         }

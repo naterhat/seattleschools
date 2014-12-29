@@ -42,3 +42,4 @@ x BUG - when pull down flag to the further point, able to see beyond the wood te
 - BUG - some annotation are not being removed, Stuck at a location. It has no interaction.
 - BUG - call for image from google wit NTJSONNetworkCollector
 - CRASH - when add new annotation. To get there, by zooming out and in.
+
