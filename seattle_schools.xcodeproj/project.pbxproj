@@ -14,7 +14,6 @@
 		4319BA781A47F55600A4FEA8 /* BCMeshTransform+DemoTransforms.m in Sources */ = {isa = PBXBuildFile; fileRef = 4367F2C21A46F3FD00B4E0D3 /* BCMeshTransform+DemoTransforms.m */; };
 		4319BA791A47F55600A4FEA8 /* BCMeshTransform+Interpolation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4367F2C41A46F3FD00B4E0D3 /* BCMeshTransform+Interpolation.m */; };
 		4319BA7A1A47F55600A4FEA8 /* NTButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A876F81A4483C000AD9CCD /* NTButton.m */; };
-		4319BA7B1A47F55600A4FEA8 /* UIActivityIndicatorView+NTShow.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85D81A3E977D003DA6E9 /* UIActivityIndicatorView+NTShow.m */; };
 		4319BA7C1A47F55600A4FEA8 /* BCMeshShader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4367F2BD1A46F3FD00B4E0D3 /* BCMeshShader.m */; };
 		4319BA7D1A47F55600A4FEA8 /* seattle_schools.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 431F85B01A3E9430003DA6E9 /* seattle_schools.xcdatamodeld */; };
 		4319BA7E1A47F55600A4FEA8 /* NTFlagButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A876F51A4483B200AD9CCD /* NTFlagButton.m */; };
@@ -34,21 +33,17 @@
 		4319BA8C1A47F55600A4FEA8 /* NTJSONLocalCollector+NTSeattle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4336A1EB1A421B9C005BC764 /* NTJSONLocalCollector+NTSeattle.m */; };
 		4319BA8D1A47F55600A4FEA8 /* NTNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A876E91A446B1F00AD9CCD /* NTNavigationBar.m */; };
 		4319BA8E1A47F55600A4FEA8 /* BCMeshBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4367F2B81A46F3FD00B4E0D3 /* BCMeshBuffer.m */; };
-		4319BA8F1A47F55600A4FEA8 /* NTDataCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85EC1A3E9E12003DA6E9 /* NTDataCollector.m */; };
 		4319BA901A47F55600A4FEA8 /* NTSchool.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85E61A3E98B4003DA6E9 /* NTSchool.m */; };
 		4319BA911A47F55600A4FEA8 /* BCMutableMeshTransform+Convenience.m in Sources */ = {isa = PBXBuildFile; fileRef = 4367F2CC1A46F3FD00B4E0D3 /* BCMutableMeshTransform+Convenience.m */; };
 		4319BA921A47F55600A4FEA8 /* UIImage+NTExtra.m in Sources */ = {isa = PBXBuildFile; fileRef = 4336A1F11A429327005BC764 /* UIImage+NTExtra.m */; };
 		4319BA931A47F55600A4FEA8 /* NTPoleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A876F21A447A9800AD9CCD /* NTPoleView.m */; };
-		4319BA941A47F55600A4FEA8 /* NSDictionary+ConvertValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85D31A3E977D003DA6E9 /* NSDictionary+ConvertValue.m */; };
 		4319BA951A47F55600A4FEA8 /* NTFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85EF1A3EA2A1003DA6E9 /* NTFilterViewController.m */; };
-		4319BA961A47F55600A4FEA8 /* NSDictionary+Null.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85D51A3E977D003DA6E9 /* NSDictionary+Null.m */; };
 		4319BA971A47F55600A4FEA8 /* NTJSONNetworkCollector+Google.m in Sources */ = {isa = PBXBuildFile; fileRef = 4336A1EE1A422642005BC764 /* NTJSONNetworkCollector+Google.m */; };
 		4319BA981A47F55600A4FEA8 /* NTDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85A91A3E9405003DA6E9 /* NTDetailViewController.m */; };
 		4319BA991A47F55600A4FEA8 /* NTSchoolFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F3A6A71A41809100F55C05 /* NTSchoolFilter.m */; };
 		4319BA9A1A47F55600A4FEA8 /* NTSchoolAnnotateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85F21A3EA352003DA6E9 /* NTSchoolAnnotateView.m */; };
 		4319BA9B1A47F55600A4FEA8 /* NTSchoolGroupAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4336A1F41A42A5F1005BC764 /* NTSchoolGroupAnnotation.m */; };
 		4319BA9C1A47F55600A4FEA8 /* BCMeshContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4367F2BA1A46F3FD00B4E0D3 /* BCMeshContentView.m */; };
-		4319BA9D1A47F55600A4FEA8 /* UIAlertView+NTShow.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85DA1A3E977D003DA6E9 /* UIAlertView+NTShow.m */; };
 		4319BA9F1A47F55600A4FEA8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43F6016E1A45E8640041B9C9 /* CoreGraphics.framework */; };
 		4319BAA01A47F55600A4FEA8 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43F6016C1A45E85F0041B9C9 /* QuartzCore.framework */; };
 		4319BAA11A47F55600A4FEA8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 431F85FD1A3EA756003DA6E9 /* CoreLocation.framework */; };
@@ -72,13 +67,8 @@
 		431F85AD1A3E9405003DA6E9 /* NTDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85A91A3E9405003DA6E9 /* NTDetailViewController.m */; };
 		431F85AE1A3E9405003DA6E9 /* NTHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85AB1A3E9405003DA6E9 /* NTHomeViewController.m */; };
 		431F85B21A3E9430003DA6E9 /* seattle_schools.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 431F85B01A3E9430003DA6E9 /* seattle_schools.xcdatamodeld */; };
-		431F85DB1A3E977D003DA6E9 /* NSDictionary+ConvertValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85D31A3E977D003DA6E9 /* NSDictionary+ConvertValue.m */; };
-		431F85DC1A3E977D003DA6E9 /* NSDictionary+Null.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85D51A3E977D003DA6E9 /* NSDictionary+Null.m */; };
-		431F85DD1A3E977D003DA6E9 /* UIActivityIndicatorView+NTShow.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85D81A3E977D003DA6E9 /* UIActivityIndicatorView+NTShow.m */; };
-		431F85DE1A3E977D003DA6E9 /* UIAlertView+NTShow.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85DA1A3E977D003DA6E9 /* UIAlertView+NTShow.m */; };
 		431F85E71A3E98B4003DA6E9 /* NTSchool.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85E61A3E98B4003DA6E9 /* NTSchool.m */; };
 		431F85EA1A3E9B44003DA6E9 /* NTJSONNetworkCollector+NTSeattle.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85E91A3E9B44003DA6E9 /* NTJSONNetworkCollector+NTSeattle.m */; };
-		431F85ED1A3E9E12003DA6E9 /* NTDataCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85EC1A3E9E12003DA6E9 /* NTDataCollector.m */; };
 		431F85F01A3EA2A1003DA6E9 /* NTFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85EF1A3EA2A1003DA6E9 /* NTFilterViewController.m */; };
 		431F85F31A3EA352003DA6E9 /* NTSchoolAnnotateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 431F85F21A3EA352003DA6E9 /* NTSchoolAnnotateView.m */; };
 		431F85F51A3EA588003DA6E9 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 431F85F41A3EA588003DA6E9 /* MapKit.framework */; };
@@ -117,10 +107,15 @@
 		43A876F61A4483B200AD9CCD /* NTFlagButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A876F51A4483B200AD9CCD /* NTFlagButton.m */; };
 		43A876F91A4483C000AD9CCD /* NTButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A876F81A4483C000AD9CCD /* NTButton.m */; };
 		43A876FD1A448E7B00AD9CCD /* NTDetailLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A876FC1A448E7B00AD9CCD /* NTDetailLabel.m */; };
-		43BCFA561A51FE0300921AAF /* LICENCE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 43BCFA531A51FE0300921AAF /* LICENCE.txt */; };
-		43BCFA571A51FE0300921AAF /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BCFA551A51FE0300921AAF /* Reachability.m */; };
 		43BCFA5B1A51FF4900921AAF /* NTMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43BCFA581A51FF4900921AAF /* NTMessageView.xib */; };
 		43BCFA5C1A51FF4900921AAF /* NTMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BCFA5A1A51FF4900921AAF /* NTMessageView.m */; };
+		43BCFA6F1A52024300921AAF /* NSDictionary+ConvertValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BCFA601A52024300921AAF /* NSDictionary+ConvertValue.m */; };
+		43BCFA701A52024300921AAF /* NSDictionary+Null.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BCFA621A52024300921AAF /* NSDictionary+Null.m */; };
+		43BCFA711A52024300921AAF /* NTDataCollector.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BCFA641A52024300921AAF /* NTDataCollector.m */; };
+		43BCFA721A52024300921AAF /* LICENCE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 43BCFA681A52024300921AAF /* LICENCE.txt */; };
+		43BCFA731A52024300921AAF /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BCFA6A1A52024300921AAF /* Reachability.m */; };
+		43BCFA741A52024300921AAF /* UIActivityIndicatorView+NTShow.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BCFA6C1A52024300921AAF /* UIActivityIndicatorView+NTShow.m */; };
+		43BCFA751A52024300921AAF /* UIAlertView+NTShow.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BCFA6E1A52024300921AAF /* UIAlertView+NTShow.m */; };
 		43E327F31A480D4700E63E28 /* FilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43E327F21A480D4700E63E28 /* FilterView.xib */; };
 		43E327F61A48133100E63E28 /* NTCopyrightLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E327F51A48133100E63E28 /* NTCopyrightLabel.m */; };
 		43E327F71A48133500E63E28 /* NTCopyrightLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 43E327F51A48133100E63E28 /* NTCopyrightLabel.m */; };
@@ -159,21 +154,10 @@
 		431F85AA1A3E9405003DA6E9 /* NTHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTHomeViewController.h; sourceTree = "<group>"; };
 		431F85AB1A3E9405003DA6E9 /* NTHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTHomeViewController.m; sourceTree = "<group>"; };
 		431F85B11A3E9430003DA6E9 /* seattle_schools.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = seattle_schools.xcdatamodel; sourceTree = "<group>"; };
-		431F85D21A3E977D003DA6E9 /* NSDictionary+ConvertValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+ConvertValue.h"; sourceTree = "<group>"; };
-		431F85D31A3E977D003DA6E9 /* NSDictionary+ConvertValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+ConvertValue.m"; sourceTree = "<group>"; };
-		431F85D41A3E977D003DA6E9 /* NSDictionary+Null.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Null.h"; sourceTree = "<group>"; };
-		431F85D51A3E977D003DA6E9 /* NSDictionary+Null.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Null.m"; sourceTree = "<group>"; };
-		431F85D61A3E977D003DA6E9 /* NTGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTGlobal.h; sourceTree = "<group>"; };
-		431F85D71A3E977D003DA6E9 /* UIActivityIndicatorView+NTShow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActivityIndicatorView+NTShow.h"; sourceTree = "<group>"; };
-		431F85D81A3E977D003DA6E9 /* UIActivityIndicatorView+NTShow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActivityIndicatorView+NTShow.m"; sourceTree = "<group>"; };
-		431F85D91A3E977D003DA6E9 /* UIAlertView+NTShow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+NTShow.h"; sourceTree = "<group>"; };
-		431F85DA1A3E977D003DA6E9 /* UIAlertView+NTShow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+NTShow.m"; sourceTree = "<group>"; };
 		431F85E51A3E98B4003DA6E9 /* NTSchool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTSchool.h; sourceTree = "<group>"; };
 		431F85E61A3E98B4003DA6E9 /* NTSchool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTSchool.m; sourceTree = "<group>"; };
 		431F85E81A3E9B44003DA6E9 /* NTJSONNetworkCollector+NTSeattle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NTJSONNetworkCollector+NTSeattle.h"; sourceTree = "<group>"; };
 		431F85E91A3E9B44003DA6E9 /* NTJSONNetworkCollector+NTSeattle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NTJSONNetworkCollector+NTSeattle.m"; sourceTree = "<group>"; };
-		431F85EB1A3E9E12003DA6E9 /* NTDataCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTDataCollector.h; sourceTree = "<group>"; };
-		431F85EC1A3E9E12003DA6E9 /* NTDataCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTDataCollector.m; sourceTree = "<group>"; };
 		431F85EE1A3EA2A1003DA6E9 /* NTFilterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTFilterViewController.h; sourceTree = "<group>"; };
 		431F85EF1A3EA2A1003DA6E9 /* NTFilterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTFilterViewController.m; sourceTree = "<group>"; };
 		431F85F11A3EA352003DA6E9 /* NTSchoolAnnotateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTSchoolAnnotateView.h; sourceTree = "<group>"; };
@@ -241,12 +225,24 @@
 		43A876F81A4483C000AD9CCD /* NTButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTButton.m; sourceTree = "<group>"; };
 		43A876FB1A448E7B00AD9CCD /* NTDetailLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTDetailLabel.h; sourceTree = "<group>"; };
 		43A876FC1A448E7B00AD9CCD /* NTDetailLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTDetailLabel.m; sourceTree = "<group>"; };
-		43BCFA531A51FE0300921AAF /* LICENCE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENCE.txt; sourceTree = "<group>"; };
-		43BCFA541A51FE0300921AAF /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
-		43BCFA551A51FE0300921AAF /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		43BCFA581A51FF4900921AAF /* NTMessageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = NTMessageView.xib; path = ../../Sources/NTMessageView.xib; sourceTree = "<group>"; };
 		43BCFA591A51FF4900921AAF /* NTMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTMessageView.h; sourceTree = "<group>"; };
 		43BCFA5A1A51FF4900921AAF /* NTMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTMessageView.m; sourceTree = "<group>"; };
+		43BCFA5F1A52024300921AAF /* NSDictionary+ConvertValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+ConvertValue.h"; sourceTree = "<group>"; };
+		43BCFA601A52024300921AAF /* NSDictionary+ConvertValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+ConvertValue.m"; sourceTree = "<group>"; };
+		43BCFA611A52024300921AAF /* NSDictionary+Null.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Null.h"; sourceTree = "<group>"; };
+		43BCFA621A52024300921AAF /* NSDictionary+Null.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Null.m"; sourceTree = "<group>"; };
+		43BCFA631A52024300921AAF /* NTDataCollector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTDataCollector.h; sourceTree = "<group>"; };
+		43BCFA641A52024300921AAF /* NTDataCollector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTDataCollector.m; sourceTree = "<group>"; };
+		43BCFA651A52024300921AAF /* NTGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTGlobal.h; sourceTree = "<group>"; };
+		43BCFA661A52024300921AAF /* NTMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTMath.h; sourceTree = "<group>"; };
+		43BCFA681A52024300921AAF /* LICENCE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENCE.txt; sourceTree = "<group>"; };
+		43BCFA691A52024300921AAF /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		43BCFA6A1A52024300921AAF /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		43BCFA6B1A52024300921AAF /* UIActivityIndicatorView+NTShow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActivityIndicatorView+NTShow.h"; sourceTree = "<group>"; };
+		43BCFA6C1A52024300921AAF /* UIActivityIndicatorView+NTShow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActivityIndicatorView+NTShow.m"; sourceTree = "<group>"; };
+		43BCFA6D1A52024300921AAF /* UIAlertView+NTShow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+NTShow.h"; sourceTree = "<group>"; };
+		43BCFA6E1A52024300921AAF /* UIAlertView+NTShow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+NTShow.m"; sourceTree = "<group>"; };
 		43E327F21A480D4700E63E28 /* FilterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterView.xib; sourceTree = "<group>"; };
 		43E327F41A48133100E63E28 /* NTCopyrightLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTCopyrightLabel.h; sourceTree = "<group>"; };
 		43E327F51A48133100E63E28 /* NTCopyrightLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTCopyrightLabel.m; sourceTree = "<group>"; };
@@ -255,7 +251,6 @@
 		43F3A6A61A41809100F55C05 /* NTSchoolFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTSchoolFilter.h; sourceTree = "<group>"; };
 		43F3A6A71A41809100F55C05 /* NTSchoolFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NTSchoolFilter.m; sourceTree = "<group>"; };
 		43F57BD61A4017630081E4B0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		43F57BD81A401BFD0081E4B0 /* NTMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NTMath.h; sourceTree = "<group>"; };
 		43F6016C1A45E85F0041B9C9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		43F6016E1A45E8640041B9C9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -369,11 +364,11 @@
 		431F85A51A3E9405003DA6E9 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				43BCFA5D1A52024300921AAF /* NTLibrary */,
 				4367F2B61A46F3FD00B4E0D3 /* BCMeshTransformView */,
 				43A876FA1A448D9800AD9CCD /* Views & Themes */,
 				43F57BDC1A40267D0081E4B0 /* Models & Others */,
 				43F57BDB1A4026750081E4B0 /* View Controllers */,
-				431F85D01A3E977D003DA6E9 /* NTLibrary */,
 				431F85A61A3E9405003DA6E9 /* AppDelegate.h */,
 				431F85A71A3E9405003DA6E9 /* AppDelegate.m */,
 			);
@@ -386,35 +381,6 @@
 				431F85B01A3E9430003DA6E9 /* seattle_schools.xcdatamodeld */,
 			);
 			path = Datamodels;
-			sourceTree = "<group>";
-		};
-		431F85D01A3E977D003DA6E9 /* NTLibrary */ = {
-			isa = PBXGroup;
-			children = (
-				431F85D11A3E977D003DA6E9 /* Helpers */,
-			);
-			name = NTLibrary;
-			path = ../../../NTLibrary;
-			sourceTree = "<group>";
-		};
-		431F85D11A3E977D003DA6E9 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				43BCFA521A51FE0300921AAF /* Reachability */,
-				431F85EB1A3E9E12003DA6E9 /* NTDataCollector.h */,
-				431F85EC1A3E9E12003DA6E9 /* NTDataCollector.m */,
-				431F85D21A3E977D003DA6E9 /* NSDictionary+ConvertValue.h */,
-				431F85D31A3E977D003DA6E9 /* NSDictionary+ConvertValue.m */,
-				431F85D41A3E977D003DA6E9 /* NSDictionary+Null.h */,
-				431F85D51A3E977D003DA6E9 /* NSDictionary+Null.m */,
-				431F85D61A3E977D003DA6E9 /* NTGlobal.h */,
-				431F85D71A3E977D003DA6E9 /* UIActivityIndicatorView+NTShow.h */,
-				431F85D81A3E977D003DA6E9 /* UIActivityIndicatorView+NTShow.m */,
-				431F85D91A3E977D003DA6E9 /* UIAlertView+NTShow.h */,
-				431F85DA1A3E977D003DA6E9 /* UIAlertView+NTShow.m */,
-				43F57BD81A401BFD0081E4B0 /* NTMath.h */,
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 		431F85F91A3EA694003DA6E9 /* Json */ = {
@@ -526,12 +492,40 @@
 			name = "Views & Themes";
 			sourceTree = "<group>";
 		};
-		43BCFA521A51FE0300921AAF /* Reachability */ = {
+		43BCFA5D1A52024300921AAF /* NTLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				43BCFA531A51FE0300921AAF /* LICENCE.txt */,
-				43BCFA541A51FE0300921AAF /* Reachability.h */,
-				43BCFA551A51FE0300921AAF /* Reachability.m */,
+				43BCFA5E1A52024300921AAF /* Helpers */,
+			);
+			path = NTLibrary;
+			sourceTree = "<group>";
+		};
+		43BCFA5E1A52024300921AAF /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				43BCFA5F1A52024300921AAF /* NSDictionary+ConvertValue.h */,
+				43BCFA601A52024300921AAF /* NSDictionary+ConvertValue.m */,
+				43BCFA611A52024300921AAF /* NSDictionary+Null.h */,
+				43BCFA621A52024300921AAF /* NSDictionary+Null.m */,
+				43BCFA631A52024300921AAF /* NTDataCollector.h */,
+				43BCFA641A52024300921AAF /* NTDataCollector.m */,
+				43BCFA651A52024300921AAF /* NTGlobal.h */,
+				43BCFA661A52024300921AAF /* NTMath.h */,
+				43BCFA671A52024300921AAF /* Reachability */,
+				43BCFA6B1A52024300921AAF /* UIActivityIndicatorView+NTShow.h */,
+				43BCFA6C1A52024300921AAF /* UIActivityIndicatorView+NTShow.m */,
+				43BCFA6D1A52024300921AAF /* UIAlertView+NTShow.h */,
+				43BCFA6E1A52024300921AAF /* UIAlertView+NTShow.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		43BCFA671A52024300921AAF /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				43BCFA681A52024300921AAF /* LICENCE.txt */,
+				43BCFA691A52024300921AAF /* Reachability.h */,
+				43BCFA6A1A52024300921AAF /* Reachability.m */,
 			);
 			path = Reachability;
 			sourceTree = "<group>";
@@ -694,11 +688,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				43BCFA561A51FE0300921AAF /* LICENCE.txt in Resources */,
 				431F85871A3E911D003DA6E9 /* Main.storyboard in Resources */,
 				43E327F31A480D4700E63E28 /* FilterView.xib in Resources */,
 				43A876E71A4469B900AD9CCD /* CaviarDreams_Italic.ttf in Resources */,
 				435B713D1A420DBB00D39352 /* private_schools.json in Resources */,
+				43BCFA721A52024300921AAF /* LICENCE.txt in Resources */,
 				43F57BD71A4017630081E4B0 /* Images.xcassets in Resources */,
 				43BCFA5B1A51FF4900921AAF /* NTMessageView.xib in Resources */,
 				43A876E51A4469B900AD9CCD /* CaviarDreams.ttf in Resources */,
@@ -731,7 +725,6 @@
 				4319BA781A47F55600A4FEA8 /* BCMeshTransform+DemoTransforms.m in Sources */,
 				4319BA791A47F55600A4FEA8 /* BCMeshTransform+Interpolation.m in Sources */,
 				4319BA7A1A47F55600A4FEA8 /* NTButton.m in Sources */,
-				4319BA7B1A47F55600A4FEA8 /* UIActivityIndicatorView+NTShow.m in Sources */,
 				4319BA7C1A47F55600A4FEA8 /* BCMeshShader.m in Sources */,
 				4319BA7D1A47F55600A4FEA8 /* seattle_schools.xcdatamodeld in Sources */,
 				4319BA7E1A47F55600A4FEA8 /* NTFlagButton.m in Sources */,
@@ -751,22 +744,18 @@
 				4319BA8C1A47F55600A4FEA8 /* NTJSONLocalCollector+NTSeattle.m in Sources */,
 				4319BA8D1A47F55600A4FEA8 /* NTNavigationBar.m in Sources */,
 				4319BA8E1A47F55600A4FEA8 /* BCMeshBuffer.m in Sources */,
-				4319BA8F1A47F55600A4FEA8 /* NTDataCollector.m in Sources */,
 				4319BA901A47F55600A4FEA8 /* NTSchool.m in Sources */,
 				4319BA911A47F55600A4FEA8 /* BCMutableMeshTransform+Convenience.m in Sources */,
 				4319BA921A47F55600A4FEA8 /* UIImage+NTExtra.m in Sources */,
 				43E327F71A48133500E63E28 /* NTCopyrightLabel.m in Sources */,
 				4319BA931A47F55600A4FEA8 /* NTPoleView.m in Sources */,
-				4319BA941A47F55600A4FEA8 /* NSDictionary+ConvertValue.m in Sources */,
 				4319BA951A47F55600A4FEA8 /* NTFilterViewController.m in Sources */,
-				4319BA961A47F55600A4FEA8 /* NSDictionary+Null.m in Sources */,
 				4319BA971A47F55600A4FEA8 /* NTJSONNetworkCollector+Google.m in Sources */,
 				4319BA981A47F55600A4FEA8 /* NTDetailViewController.m in Sources */,
 				4319BA991A47F55600A4FEA8 /* NTSchoolFilter.m in Sources */,
 				4319BA9A1A47F55600A4FEA8 /* NTSchoolAnnotateView.m in Sources */,
 				4319BA9B1A47F55600A4FEA8 /* NTSchoolGroupAnnotation.m in Sources */,
 				4319BA9C1A47F55600A4FEA8 /* BCMeshContentView.m in Sources */,
-				4319BA9D1A47F55600A4FEA8 /* UIAlertView+NTShow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -780,45 +769,45 @@
 				4367F2D31A46F3FD00B4E0D3 /* BCMeshTransform+DemoTransforms.m in Sources */,
 				4367F2D41A46F3FD00B4E0D3 /* BCMeshTransform+Interpolation.m in Sources */,
 				43A876F91A4483C000AD9CCD /* NTButton.m in Sources */,
-				431F85DD1A3E977D003DA6E9 /* UIActivityIndicatorView+NTShow.m in Sources */,
 				4367F2D01A46F3FD00B4E0D3 /* BCMeshShader.m in Sources */,
 				431F85B21A3E9430003DA6E9 /* seattle_schools.xcdatamodeld in Sources */,
+				43BCFA751A52024300921AAF /* UIAlertView+NTShow.m in Sources */,
 				43A876F61A4483B200AD9CCD /* NTFlagButton.m in Sources */,
 				431F86011A3EB738003DA6E9 /* NTLocationManager.m in Sources */,
 				4367F2DB1A46F51E00B4E0D3 /* NTFilterTransformView.m in Sources */,
 				4367F2D71A46F3FD00B4E0D3 /* BCMeshTransformView.m in Sources */,
+				43BCFA701A52024300921AAF /* NSDictionary+Null.m in Sources */,
 				4395BF051A47A8A2005E8CA2 /* CGRect+NTExtend.swift in Sources */,
-				43BCFA571A51FE0300921AAF /* Reachability.m in Sources */,
 				4367F2E11A470B7C00B4E0D3 /* FilterView.swift in Sources */,
 				431F86071A3EDE1C003DA6E9 /* NTSchoolAnnotate.m in Sources */,
+				43BCFA741A52024300921AAF /* UIActivityIndicatorView+NTShow.m in Sources */,
 				431F85AE1A3E9405003DA6E9 /* NTHomeViewController.m in Sources */,
+				43BCFA711A52024300921AAF /* NTDataCollector.m in Sources */,
 				4367F2D51A46F3FD00B4E0D3 /* BCMeshTransform.mm in Sources */,
 				4367F2D61A46F3FD00B4E0D3 /* BCMeshTransformAnimation.m in Sources */,
 				431F857B1A3E911D003DA6E9 /* main.m in Sources */,
 				4367F2D21A46F3FD00B4E0D3 /* BCMeshTexture.m in Sources */,
 				4319BA721A47EA2900A4FEA8 /* MiddlePoleView.swift in Sources */,
 				431F85AC1A3E9405003DA6E9 /* AppDelegate.m in Sources */,
+				43BCFA6F1A52024300921AAF /* NSDictionary+ConvertValue.m in Sources */,
 				4336A1EC1A421B9C005BC764 /* NTJSONLocalCollector+NTSeattle.m in Sources */,
 				43A876EA1A446B1F00AD9CCD /* NTNavigationBar.m in Sources */,
 				4367F2CD1A46F3FD00B4E0D3 /* BCMeshBuffer.m in Sources */,
 				43BCFA5C1A51FF4900921AAF /* NTMessageView.m in Sources */,
-				431F85ED1A3E9E12003DA6E9 /* NTDataCollector.m in Sources */,
+				43BCFA731A52024300921AAF /* Reachability.m in Sources */,
 				431F85E71A3E98B4003DA6E9 /* NTSchool.m in Sources */,
 				4367F2D81A46F3FD00B4E0D3 /* BCMutableMeshTransform+Convenience.m in Sources */,
 				43E327FA1A481E7100E63E28 /* NTFilterContainer.m in Sources */,
 				4336A1F21A429327005BC764 /* UIImage+NTExtra.m in Sources */,
 				43E327F61A48133100E63E28 /* NTCopyrightLabel.m in Sources */,
 				43A876F31A447A9800AD9CCD /* NTPoleView.m in Sources */,
-				431F85DB1A3E977D003DA6E9 /* NSDictionary+ConvertValue.m in Sources */,
 				431F85F01A3EA2A1003DA6E9 /* NTFilterViewController.m in Sources */,
-				431F85DC1A3E977D003DA6E9 /* NSDictionary+Null.m in Sources */,
 				4336A1EF1A422642005BC764 /* NTJSONNetworkCollector+Google.m in Sources */,
 				431F85AD1A3E9405003DA6E9 /* NTDetailViewController.m in Sources */,
 				43F3A6A81A41809100F55C05 /* NTSchoolFilter.m in Sources */,
 				431F85F31A3EA352003DA6E9 /* NTSchoolAnnotateView.m in Sources */,
 				4336A1F51A42A5F2005BC764 /* NTSchoolGroupAnnotation.m in Sources */,
 				4367F2CE1A46F3FD00B4E0D3 /* BCMeshContentView.m in Sources */,
-				431F85DE1A3E977D003DA6E9 /* UIAlertView+NTShow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
