@@ -97,10 +97,6 @@ static const CGFloat max = 200;
     [super viewDidLayoutSubviews];
     
     [self.filterView setFrame:self.view.bounds];
-    
-    
-    CGRect rect = CGRectMake(0, 3-self.view.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height);
-    UIBezierPath *aPath = [UIBezierPath bezierPathWithRect:rect];
 }
 
 - (void)createSnap
@@ -112,6 +108,9 @@ static const CGFloat max = 200;
     };
 }
 
+/**
+ *  Setup filter before passing the filter to the calling the delegated method.
+ */
 - (void)refreshFilter
 {
     NTSchoolType type;

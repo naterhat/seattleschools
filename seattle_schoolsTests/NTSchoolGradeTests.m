@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
-#import "NTSchool.h"
+//#import "NTSchool.h"
 
 @interface NTSchoolGradeTests : XCTestCase
 
@@ -26,34 +26,34 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    NTSchool *school = [[NTSchool alloc] init];
-    
-    [school setGrade:@"K-8"];
-    NSLog(@"%@", NSStringFromSchoolGrade(school.gradeIndex));
-    XCTAssert(school.gradeIndex & NTSchoolGradeMiddle, @"Invalid grade setter");
-    
-    [school setGrade:@"K-5"];
-    NSLog(@"%@", NSStringFromSchoolGrade(school.gradeIndex));
-    XCTAssert((school.gradeIndex & NTSchoolGradeMiddle) == false, @"Invalid grade setter");
-    
-    [school setGrade:@"K-5"];
-    NSLog(@"%@", NSStringFromSchoolGrade(school.gradeIndex));
-    XCTAssert((school.gradeIndex & NTSchoolGradeHigh) == false, @"Invalid setter");
-    
-    [school setGrade:@"P-12"];
-    NSLog(@"%@", NSStringFromSchoolGrade(school.gradeIndex));
-    XCTAssert((school.gradeIndex & NTSchoolGradeHigh), @"Invalid setter");
-    
-    [school setGrade:@"9-12"];
-    NSLog(@"%@", NSStringFromSchoolGrade(school.gradeIndex));
-    XCTAssert((school.gradeIndex & NTSchoolGradeElementary) == false, @"Invalid setter");
-    
-    [school setGrade:@"9-12"];
-    NSLog(@"%@", NSStringFromSchoolGrade(school.gradeIndex));
-    XCTAssert((school.gradeIndex & NTSchoolGradeMiddle) == false, @"Invalid setter");
-}
+//- (void)testExample {
+//    // This is an example of a functional test case.
+//    NTSchool *school = [[NTSchool alloc] init];
+//    
+//    [school setGrade:@"K-8"];
+//    NSLog(@"%@", NSStringFromSchoolGrade(school.gradeIndex));
+//    XCTAssert(school.gradeIndex & NTSchoolGradeMiddle, @"Invalid grade setter");
+//    
+//    [school setGrade:@"K-5"];
+//    NSLog(@"%@", NSStringFromSchoolGrade(school.gradeIndex));
+//    XCTAssert((school.gradeIndex & NTSchoolGradeMiddle) == false, @"Invalid grade setter");
+//    
+//    [school setGrade:@"K-5"];
+//    NSLog(@"%@", NSStringFromSchoolGrade(school.gradeIndex));
+//    XCTAssert((school.gradeIndex & NTSchoolGradeHigh) == false, @"Invalid setter");
+//    
+//    [school setGrade:@"P-12"];
+//    NSLog(@"%@", NSStringFromSchoolGrade(school.gradeIndex));
+//    XCTAssert((school.gradeIndex & NTSchoolGradeHigh), @"Invalid setter");
+//    
+//    [school setGrade:@"9-12"];
+//    NSLog(@"%@", NSStringFromSchoolGrade(school.gradeIndex));
+//    XCTAssert((school.gradeIndex & NTSchoolGradeElementary) == false, @"Invalid setter");
+//    
+//    [school setGrade:@"9-12"];
+//    NSLog(@"%@", NSStringFromSchoolGrade(school.gradeIndex));
+//    XCTAssert((school.gradeIndex & NTSchoolGradeMiddle) == false, @"Invalid setter");
+//}
 
 - (void)testPerformanceExample {
     // This is an example of a performance test case.
